@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -213,6 +214,17 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .box-no{background:var(--red-bg)}.box-no svg{color:var(--red)}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;border:2px solid var(--blue);border-radius:4px;padding:9px 22px;text-decoration:none;font-weight:500;font-size:15px;cursor:pointer}
 .btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);text-decoration:none}
+.stepnav{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:36px 0 0}
+.stepnav h2{font-size:18px;color:var(--navy);margin:0 0 16px;line-height:1.4;font-weight:700}
+.stepnav ol{list-style:none;padding:0;margin:0 0 22px}
+.stepnav li{display:flex;align-items:center;gap:10px;margin:0 0 9px;font-size:15px}
+.stepnav .num{flex:none;width:21px;height:21px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.stepnav li[aria-current="step"] a{font-weight:700}
+.stepnav .navbtns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-out{background:#fff;color:var(--link);border:2px solid var(--blue)}
+.btn-out:hover{background:#eef5fc;color:var(--link);border-color:var(--blue)}
+.btn[disabled]{background:#e4e6e8;border-color:#e4e6e8;color:#8d9195;cursor:default}
+.btn[disabled]:hover{background:#e4e6e8;border-color:#e4e6e8}
 .acc{border:1px solid var(--line);margin:18px 0}
 .acc-item + .acc-item{border-top:1px solid var(--line)}
 .acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#f1f3f5;border:0;padding:12px 16px;color:var(--link);font:600 16px "Noto Sans",Arial,sans-serif;text-align:left;cursor:pointer}
@@ -306,6 +318,7 @@ const I = {
   chevRight:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
   chevLeft:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
   chevDown:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>',
+  arrowLeft:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>',
   arrowRight:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>',
   arrowUp:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20V4M6 10l6-6 6 6"/></svg>',
   circleArrow:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12h9M12.5 8l4 4-4 4"/></svg>',
@@ -727,6 +740,14 @@ function renderStep(i){
     ? `<div class="callout"><h2>Get immediate help</h2><p>${LOREM}</p></div><h2 class="sec">Resources</h2>${list(s.core)}`
     : `${list(s.core)}${s.support.length ? `<h2 class="sec">Supporting resources</h2>${list(s.support)}` : ''}`;
   const interested = STEP_INTERESTED.map(n => `<li><a href="#/${SLUG(STEPS[n].t)}" data-page="${SLUG(STEPS[n].t)}">${STEPS[n].t}</a></li>`).join('');
+  const navItems = STEPS.map((x,n) => `<li${n===i ? ' aria-current="step"' : ''}><span class="num" aria-hidden="true">${n+1}</span><a href="#/${SLUG(x.t)}" data-page="${SLUG(x.t)}">${x.t}</a></li>`).join('');
+  const prev = i > 0 ? `<button type="button" class="btn btn-out" data-page="${SLUG(STEPS[i-1].t)}">${I.arrowLeft}Previous</button>` : `<button type="button" class="btn btn-out" disabled>${I.arrowLeft}Previous</button>`;
+  const next = i < STEPS.length-1 ? `<button type="button" class="btn" data-page="${SLUG(STEPS[i+1].t)}">Next${I.arrowRight}</button>` : `<button type="button" class="btn" disabled>Next${I.arrowRight}</button>`;
+  const stepnav = `<nav class="stepnav" aria-label="Steps in this step-by-step">
+      <h2>Part of the ${P('', 'Navigating the criminal justice system')} step-by-step</h2>
+      <ol>${navItems}</ol>
+      <div class="navbtns">${prev}${next}</div>
+    </nav>`;
   return `<div class="container"><div class="col">
     ${crumbsHTML([...BASE_CRUMBS, GUIDE], s.t)}
     ${backHTML(GUIDE)}
@@ -736,6 +757,7 @@ function renderStep(i){
     <p class="lead">${LOREM}</p>
     <hr class="rule">
     <div class="content">${body}</div>
+    ${stepnav}
     <div class="interested"><h2>You may be interested in</h2><ul>${interested}</ul></div>
     ${pageFootHTML()}
   </div></div>`;
@@ -839,7 +861,7 @@ window.addEventListener('pagehide', saveState);
 document.addEventListener('click', e => {
   const a = e.target.closest('a,button');
   if (!a) return;
-  if (a.matches('a[data-page]')) { e.preventDefault(); go(a.dataset.page); return; }
+  if (a.matches('a[data-page], button[data-page]')) { e.preventDefault(); go(a.dataset.page); return; }
   if (a.matches('a[data-jump]')) {
     e.preventDefault();
     const t = document.querySelector(`main.page:not([hidden]) #${a.dataset.jump}`) || document.getElementById(a.dataset.jump);
