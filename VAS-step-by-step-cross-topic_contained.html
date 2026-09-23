@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigating the criminal justice system | Queensland Government</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
+  --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
+  --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
+  --qe:#0b2a57; --yellow:#ffe500;
+  --green-bg:#eef8f0; --green:#2e7d32; --red-bg:#fcecec; --red:#c62828;
+  --helpful:#e3e5e8; --focus:#0a73e0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;font-family:"Noto Sans",Arial,Helvetica,sans-serif;color:var(--text);font-size:16px;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.container{max-width:1232px;margin:0 auto;padding:0 52px}
+@media (max-width:991px){.container{padding:0 24px}}
+@media (max-width:575px){.container{padding:0 16px}}
+svg{flex:none}
+
+/* Quick exit */
+.qe{background:var(--qe);color:#fff;position:sticky;top:0;z-index:50;font-size:14px;line-height:1.45}
+.qe .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.qe p{margin:0}
+.qe a{color:#fff}
+.qe button{background:var(--yellow);color:#111;border:0;border-radius:4px;padding:10px 22px;font:600 14px/1.2 "Noto Sans",Arial,sans-serif;cursor:pointer;white-space:nowrap}
+.qe button:hover{background:#fff176}
+
+/* Desktop header */
+.preheader{background:var(--blue);color:#fff;font-size:13px}
+.preheader .container{display:flex;justify-content:space-between;align-items:center;min-height:32px}
+.preheader a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.preheader a:hover{text-decoration:underline}
+.masthead .container{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+.logo{display:inline-flex;align-items:center;gap:12px;color:var(--blue);text-decoration:none}
+.logo .dfq{display:flex;flex-direction:column;line-height:1;font-style:italic}
+.logo .dfq b{font-size:21px;font-weight:800;letter-spacing:-.02em}
+.logo .dfq small{font-size:10.5px;font-weight:700;letter-spacing:.01em;margin-top:2px}
+.logo .div{width:1.5px;height:40px;background:currentColor;opacity:.9}
+.logo .qg{display:flex;flex-direction:column;line-height:1.05}
+.logo .qg b{font-size:17px;font-weight:700}
+.logo .qg small{font-size:16px;font-weight:400}
+.search{display:flex}
+.search input{width:250px;height:38px;border:1px solid #6f6f6f;border-right:0;border-radius:4px 0 0 4px;padding:0 12px 0 36px;font:inherit;font-size:15px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E") no-repeat 12px center}
+.search button{height:38px;background:var(--blue);color:#fff;border:0;border-radius:0 4px 4px 0;padding:0 18px;font:500 14px "Noto Sans",Arial,sans-serif;cursor:pointer}
+.navband{background:#f5f5f5;border-bottom:6px solid var(--sky)}
+.navband .container{display:flex;align-items:center;gap:24px;min-height:46px}
+.navband a,.navband button{color:#333;background:none;border:0;font:inherit;font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:6px 0}
+.navband a{color:var(--link)}
+
+/* Mobile header */
+.mhead{display:none;background:var(--blue);color:#fff;border-bottom:4px solid var(--sky)}
+.mhead .container{display:flex;justify-content:space-between;align-items:stretch;padding-right:0}
+.mhead .logo{color:#fff;gap:8px;padding:10px 0}
+.mhead .logo .dfq b{font-size:13px}.mhead .logo .dfq small{font-size:7px}
+.mhead .logo .div{height:26px}
+.mhead .logo .qg b,.mhead .logo .qg small{font-size:11px}
+.mhead .logo svg{width:22px;height:26px}
+.mhead .icons{display:flex}
+.mhead .icons button{background:none;border:0;border-left:1px solid rgba(255,255,255,.35);color:#fff;font:400 11px "Noto Sans",Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0 14px;min-width:60px;cursor:pointer}
+@media (max-width:991px){.preheader,.masthead,.navband{display:none}.mhead{display:block}}
+
+/* Page shell */
+.page{padding:28px 0 0}
+.col{max-width:736px}
+.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;padding:0;margin:0 0 20px;font-size:14px;row-gap:4px}
+.crumbs li{display:inline-flex;align-items:center}
+.crumbs li:not(:last-child)::after{content:"";width:7px;height:7px;border-right:1.5px solid #6b6b6b;border-top:1.5px solid #6b6b6b;transform:rotate(45deg);display:inline-block;margin:0 12px 0 8px}
+.crumbs li[aria-current]{color:#555}
+.backlink{display:none;align-items:center;gap:6px;font-size:14px;margin:0 0 18px}
+@media (max-width:991px){.crumbs{display:none}.backlink{display:inline-flex}.page{padding-top:18px}}
+.tag{display:inline-block;border:1px solid #8a8a8a;border-radius:999px;padding:0 10px;font-size:12px;color:#3d3d3d;line-height:20px;margin:0 0 12px}
+h1{color:var(--navy);font-size:40px;line-height:1.2;font-weight:700;margin:0 0 16px;letter-spacing:-.01em}
+h1:focus{outline:none}
+@media (max-width:575px){h1{font-size:30px}}
+.partof{font-size:14px;margin:0 0 16px}
+.lead{font-size:20px;line-height:1.5;margin:0 0 24px;color:#333}
+@media (max-width:575px){.lead{font-size:18px}}
+.readtime{display:flex;gap:8px;align-items:center;font-size:14px;margin:0 0 28px}
+.readtime svg{color:var(--link)}
+hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
+[id]{scroll-margin-top:90px}
+
+/* Callout (grey) */
+.callout{background:var(--grey-bg);border-left:4px solid var(--sky);padding:20px 24px;margin:32px 0}
+.callout h2{font-size:14px;font-weight:700;margin:0 0 8px;color:#222;line-height:1.4}
+.callout p{margin:0;font-size:14px}
+
+/* Step-by-step */
+.step{padding:22px 0 30px;border-bottom:1px solid var(--line)}
+.step:last-of-type{border-bottom:0}
+.step-label{font-size:13px;color:var(--muted);margin:0 0 2px}
+.step h2{font-size:22px;color:var(--navy);margin:0 0 12px;line-height:1.3;font-weight:700}
+.step h2 a{color:var(--link)}
+.step > p{margin:0 0 18px;font-size:15px}
+.more{background:none;border:0;padding:4px 0;color:var(--link);font:400 14px "Noto Sans",Arial,sans-serif;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.more:hover span{text-decoration:underline}
+.more svg{transition:transform .2s ease}
+.more[aria-expanded="true"] svg{transform:rotate(90deg)}
+.core{list-style:none;padding:0;margin:0 0 20px}
+.core li{margin:0 0 12px;font-size:15px}
+.core li:last-child{margin-bottom:0}
+.panel ul{list-style:none;padding:0;margin:16px 0 0}
+.panel li{margin:0 0 14px;font-size:15px}
+.panel li:last-child{margin-bottom:0}
+
+/* Help box */
+.helpbox{background:var(--light-blue);border-radius:8px;padding:24px 24px 20px;margin:40px 0 0}
+.helpbox h2{font-size:22px;color:var(--navy);margin:0 0 8px;line-height:1.3}
+.helpbox p{margin:0 0 12px;font-size:14px}
+.helpbox ul{list-style:none;padding:0;margin:0}
+.helpbox li{border-bottom:1px solid var(--light-blue-line)}
+.helpbox li a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-weight:600;font-size:14px;text-decoration:none}
+.helpbox li a:hover{text-decoration:underline}
+.helpbox .find{display:flex;justify-content:flex-end;margin-top:16px}
+.helpbox .find a{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;text-decoration:none}
+.helpbox .find a:hover{text-decoration:underline}
+
+/* Interested + page footer */
+.interested{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+.interested h2{font-size:22px;color:var(--navy);margin:0 0 16px;line-height:1.3}
+.interested ul{list-style:none;padding:0;margin:0}
+.interested li{margin:0 0 12px;font-size:15px}
+.interested li a{display:inline-flex;align-items:center;gap:8px}
+.pagefoot{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:40px 0 0;padding-bottom:28px;gap:12px}
+.pagefoot b{font-weight:600}
+.pagefoot .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+@media (max-width:575px){.pagefoot{flex-direction:column;align-items:flex-start}}
+.helpful{background:var(--helpful)}
+.helpful .container{display:flex;align-items:center;gap:22px;min-height:72px;font-size:14px;flex-wrap:wrap}
+.helpful b{font-weight:600}
+.helpful label{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.helpful input{appearance:none;width:24px;height:24px;border:2px solid #333;border-radius:50%;margin:0;background:#fff;cursor:pointer}
+.helpful input:checked{box-shadow:inset 0 0 0 5px #fff;background:#333}
+
+/* Footer */
+.footer{background:var(--blue);color:#fff;border-top:3px solid var(--sky);font-size:13px;line-height:1.55}
+.footer a{color:#fff}
+.footer .container{padding-top:40px;padding-bottom:48px}
+.footer h2{font-size:18px;margin:0 0 22px;font-weight:700}
+.footer h3{font-size:16px;margin:0 0 10px;font-weight:700}
+.footer p{margin:0 0 12px}
+.fgrid{display:grid;grid-template-columns:1.35fr .8fr .75fr 1.3fr;gap:0}
+.fgrid > div{padding:0 28px}
+.fgrid > div:first-child{padding-left:0}
+.fgrid > div:last-child{padding-right:0}
+.fgrid > div + div + div{border-left:1px solid rgba(255,255,255,.45)}
+.flinks{list-style:none;padding:0;margin:0}
+.flinks li{margin:0 0 8px}
+.phone{display:flex;align-items:center;gap:8px;margin:0 0 22px}
+.fbtn{display:inline-block;border:2px solid #fff;border-radius:4px;padding:8px 28px;text-decoration:none;font-size:14px}
+.fbtn:hover{background:rgba(255,255,255,.12)}
+.social{list-style:none;padding:0;margin:0}
+.social li{margin:0 0 8px}
+.social a{display:inline-flex;align-items:center;gap:10px}
+.copy{margin-top:16px}
+@media (max-width:991px){
+  .fgrid{grid-template-columns:1fr}
+  .fgrid > div{padding:0!important;border-left:0!important}
+  .fgrid > .fcontact{display:grid;grid-template-columns:1fr auto;column-gap:24px;padding-bottom:24px!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .fcontact h3{grid-column:1}.fcontact p,.fcontact .phone{grid-column:1}
+  .fcontact .fbtn{grid-column:2;grid-row:1 / span 3;align-self:start}
+  .fcontact .phone{margin-bottom:0}
+  .fgrid > .flinkswrap{padding:22px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .flinkswrap h3{display:none}
+  .flinks{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px}
+  .fgrid > .followwrap{padding:20px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important;display:flex;align-items:center;gap:20px}
+  .followwrap h3{margin:0;font-size:18px}
+  .social{display:flex;gap:18px}
+  .social li{margin:0}
+  .social .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .social svg{width:22px;height:22px}
+  .fgrid > .ackwrap{padding-top:22px!important}
+  .ackwrap h3{font-size:18px}
+  .fgov{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:16px;margin-bottom:20px!important}
+}
+@media (max-width:575px){
+  .fgrid > .fcontact{grid-template-columns:1fr}
+  .fcontact .fbtn{grid-column:1;grid-row:auto;display:block;text-align:center;margin:8px 0 16px}
+  .flinks{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Content templates */
+.onthispage{border-left:3px solid var(--link);padding:4px 0 4px 18px;margin:32px 0}
+.onthispage h2{font-size:14px;font-weight:700;margin:0 0 6px;color:#222}
+.onthispage ul{list-style:none;padding:0;margin:0}
+.onthispage li{font-size:14px;margin:0 0 5px}
+.inshort{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:32px 0 8px}
+.inshort h2{font-size:28px;color:var(--navy);margin:0 0 12px;line-height:1.25}
+.inshort p{margin:0 0 12px;font-size:15px}
+.inshort p:last-child,.inshort ul:last-child{margin-bottom:0}
+.content h2.sec{font-size:28px;color:var(--navy);margin:40px 0 14px;line-height:1.25}
+.content h3{font-size:19px;color:var(--navy);margin:26px 0 10px;line-height:1.3}
+.content p{margin:0 0 14px;font-size:15px}
+.content ul{padding-left:20px;margin:0 0 14px;font-size:15px}
+.content li{margin:0 0 6px}
+@media (max-width:575px){.content h2.sec,.inshort h2{font-size:24px}}
+.box{display:flex;gap:12px;padding:20px 24px;margin:16px 0}
+.box svg{margin-top:3px}
+.box > div > :last-child{margin-bottom:0}
+.box ul{margin-bottom:8px}
+.box-yes{background:var(--green-bg)}.box-yes svg{color:var(--green)}
+.box-no{background:var(--red-bg)}.box-no svg{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;border:2px solid var(--blue);border-radius:4px;padding:9px 22px;text-decoration:none;font-weight:500;font-size:15px;cursor:pointer}
+.btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);text-decoration:none}
+.acc{border:1px solid var(--line);margin:18px 0}
+.acc-item + .acc-item{border-top:1px solid var(--line)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#f1f3f5;border:0;padding:12px 16px;color:var(--link);font:600 16px "Noto Sans",Arial,sans-serif;text-align:left;cursor:pointer}
+.acc-btn:hover span{text-decoration:underline}
+.acc-btn svg{transition:transform .2s ease}
+.acc-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.acc-panel{padding:14px 16px 6px}
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to main content</a>
+
+<div class="qe" role="region" aria-label="Quick exit">
+  <div class="container">
+    <p>Select 'Close this site' or press 'ESC' on your keyboard to go to google.com.au.<br><a href="https://www.qld.gov.au/help/online-safety">View more tips to browse safely online.</a></p>
+    <button type="button" id="quickExit">Close this site</button>
+  </div>
+</div>
+
+<header>
+  <div class="preheader"><div class="container">
+    <a href="https://www.qld.gov.au">qld.gov.au</a>
+    <a href="https://www.qld.gov.au/contact-us"><span data-icon="phone"></span>Contact us</a>
+  </div></div>
+  <div class="masthead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logo"></span></a>
+    <form class="search" role="search" onsubmit="return false"><label class="sr-only" for="q">Search</label><input id="q" type="search"><button type="submit">Search</button></form>
+  </div></div>
+  <div class="navband"><div class="container">
+    <a href="https://www.qld.gov.au" aria-label="Home"><span data-icon="home"></span></a>
+    <button type="button" aria-expanded="false">Menu <span data-icon="chevDown"></span></button>
+  </div></div>
+  <div class="mhead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logo"></span></a>
+    <div class="icons">
+      <button type="button"><span data-icon="searchLg"></span>Search</button>
+      <button type="button"><span data-icon="menu"></span>Menu</button>
+    </div>
+  </div></div>
+</header>
+
+<div id="main" tabindex="-1"></div>
+
+<div class="helpful"><div class="container">
+  <b>Was this page helpful?</b>
+  <label><input type="radio" name="helpful">Yes</label>
+  <label><input type="radio" name="helpful">No</label>
+</div></div>
+
+<footer class="footer"><div class="container">
+  <h2 class="fgov">Queensland Government</h2>
+  <div class="fgrid">
+    <div class="fcontact">
+      <h3>Contact us</h3>
+      <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+      <p class="phone"><span data-icon="phone"></span><span><b>Phone:</b> <a href="tel:137468">13 QGOV (13 74 68)</a></span></p>
+      <a class="fbtn" href="https://www.qld.gov.au/contact-us">Contact us</a>
+    </div>
+    <div class="flinkswrap">
+      <h3 class="sr-only">Site links</h3>
+      <ul class="flinks">
+        <li><a href="https://www.qld.gov.au/help">Help</a></li>
+        <li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+        <li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
+        <li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
+        <li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+        <li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+        <li><a href="https://smartjobs.qld.gov.au">Jobs in Queensland Government</a></li>
+        <li><a href="https://www.qld.gov.au/languages">Other languages</a></li>
+      </ul>
+    </div>
+    <div class="followwrap">
+      <h3>Follow us</h3>
+      <ul class="social">
+        <li><a href="#" onclick="return false"><span data-icon="facebook"></span><span class="lbl">Facebook</span></a></li>
+        <li><a href="#" onclick="return false"><span data-icon="linkedin"></span><span class="lbl">LinkedIn</span></a></li>
+        <li><a href="#" onclick="return false"><span data-icon="instagram"></span><span class="lbl">Instagram</span></a></li>
+      </ul>
+    </div>
+    <div class="ackwrap">
+      <h3>Acknowledgement of Country</h3>
+      <p>We pay our respects to the Aboriginal and Torres Strait Islander ancestors of this land, their spirits and their legacy. The foundations laid by these ancestors—our First Nations peoples—give strength, inspiration and courage to current and future generations towards creating a better Queensland.</p>
+      <p class="copy">© The State of Queensland 1995 - 2026</p>
+    </div>
+  </div>
+</div></footer>
+
+<script>
+/* ---------- Icons ---------- */
+const I = {
+  chevRight:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  chevLeft:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  chevDown:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>',
+  arrowRight:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>',
+  arrowUp:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20V4M6 10l6-6 6 6"/></svg>',
+  circleArrow:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12h9M12.5 8l4 4-4 4"/></svg>',
+  home:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>',
+  phone:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+  searchLg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  menu:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  external:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  doc:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h7"/></svg>',
+  yes:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>',
+  no:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>',
+  facebook:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg>',
+  linkedin:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9h4v12H4zM6 3a2.2 2.2 0 1 1 0 4.4A2.2 2.2 0 0 1 6 3zm5 6h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.6 4.3 6V21h-4v-5.6c0-1.5 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H11z"/></svg>',
+  instagram:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+  /* Simplified stand-in for the Queensland Government logo lock-up (not the official crest artwork) */
+  logo:'<span class="dfq"><b>DELIVERING</b><small>FOR QUEENSLAND</small></span><span class="div"></span><svg width="32" height="38" viewBox="0 0 32 38" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 5l9 3.5v9.5c0 7-4.2 11.5-9 14-4.8-2.5-9-7-9-14V8.5z"/><path d="M16 5V2M12 3.5l4 1.5 4-1.5M11 14h10M16 10v14M5 16c-2 2-2.5 5-1.5 8M27 16c2 2 2.5 5 1.5 8M9 33l7 3 7-3"/></svg><span class="qg"><b>Queensland</b><small>Government</small></span>'
+};
+
+/* ---------- Real URLs (from VAS_webpage_structure_V1.xlsx, 'VAS step-by-step' tab) ---------- */
+const U = {
+  home:'https://www.qld.gov.au',
+  justice:'https://www.qld.gov.au/justice',
+  voc:'https://www.qld.gov.au/justice/victims-of-crime',
+  report:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime/report-crime',
+  withdraw:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime/withdraw-crime-report',
+  types:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime',
+  alt:'https://www.police.qld.gov.au/units/victims-of-crime/support-for-victims-of-crime/adult-sexual-assault/alternative-reporting-options',
+  dfvpolice:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse/need-to-know/how-can-i-stay-safe/practical-steps-to-stay-safe/reporting-dfv-to-the-police',
+  questioned:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime/getting-questioned-arrested-charged',
+  courts:'https://www.courts.qld.gov.au/the-courts',
+  searchdocs:'https://www.qld.gov.au/justice/court-and-mediation/appeals-actions/search-copy-court-documents',
+  adult:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders',
+  youth:'https://www.qld.gov.au/justice/prison-and-detention/sentences-for-youth-offenders',
+  rjyouth:'https://www.qld.gov.au/justice/prison-and-detention/sentences-for-youth-offenders/restorative-justice-for-youth',
+  rjguide:'https://www.qld.gov.au/justice/court-and-mediation/dispute-resolution/restorative-justice',
+  prepare:'https://www.odpp.qld.gov.au/preparing-for-court',
+  vis:'https://www.odpp.qld.gov.au/victims-and-witnesses/victim-impact-statement',
+  appeals:'https://www.qld.gov.au/justice/court-and-mediation/appeals-actions',
+  parole:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders/parole-orders',
+  parolerules:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders/rules-for-parole-orders',
+  paroledec:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders/parole-decision-making',
+  registers:'https://www.qld.gov.au/justice/victims-of-crime/victims-registers',
+  findsupport:'https://www.qld.gov.au/justice/victims-of-crime/find-a-support-service',
+  vaq:'https://www.qld.gov.au/justice/victims-of-crime/request-vaq-information-referral',
+  qhvss:'https://www.health.qld.gov.au/qhvss',
+  abuse:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse',
+  dfv:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse/need-to-know/domestic-and-family-violence',
+  financial:'https://www.qld.gov.au/justice/victims-of-crime/financial-assistance-for-victims',
+  protection:'https://www.qld.gov.au/justice/victims-of-crime/protection',
+  rights:'https://www.qld.gov.au/justice/victims-of-crime/victims-rights',
+  agencies:'https://www.qld.gov.au/justice/for-organisations/victim-support-agencies',
+  esafety:'https://www.esafety.gov.au'
+};
+const SLUG = t => 'step-' + t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const STEP_OF = {
+  'victims-advocate-service':0,
+  'why-report-a-crime':1,
+  'safety-after-the-crime':2,
+  'criminal-investigation-process':2,
+  'understanding-bail':2,
+  'support-for-you-in-court':4,
+  'protecting-you-and-your-family':4,
+  'witnesses-and-giving-evidence':4,
+  'tips-for-supporting-yourself':6,
+  'tips-for-supporting-someone-else':6
+};
+const LOREM = 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.';
+
+/* ---------- Landing page (step-by-step) ---------- */
+/* link types: page = new page built locally, jump = in-page anchor, href = real page */
+const STEPS = [
+  {t:'When a crime occurs',
+   core:[{x:"Victims' Advocate Service", page:'victims-advocate-service'}],
+   support:[]},
+  {t:'Report a crime to police',
+   core:[{x:'Report a crime', href:U.report},
+         {x:'Update or withdraw a report', href:U.withdraw}],
+   support:[{x:'Types of crime', href:U.types},
+         {x:'Why report a crime', page:'why-report-a-crime'},
+         {x:'Alternative reporting options (opens another website)', href:U.alt},
+         {x:'Reporting domestic and family violence to the police', href:U.dfvpolice}]},
+  {t:'After the crime',
+   core:[{x:'Safety after the crime', page:'safety-after-the-crime'},
+         {x:'Criminal investigation process', page:'criminal-investigation-process'}],
+   support:[{x:'Getting questioned, arrested and charged (opens another website)', href:U.questioned},
+         {x:'Understanding bail', page:'understanding-bail'}]},
+  {t:'Before court',
+   core:[{x:'Types of courts (opens another website)', href:U.courts}],
+   support:[{x:'Request to search and copy court documents', href:U.searchdocs},
+         {x:'Sentences for adult offenders', href:U.adult},
+         {x:'Sentences for youth offenders', href:U.youth},
+         {x:'Restorative justice processes', href:U.rjyouth},
+         {x:'Guide to restorative justice', href:U.rjguide}]},
+  {t:'Preparing for court',
+   core:[{x:'Preparing for court (opens another website)', href:U.prepare},
+         {x:'Support for you in court', page:'support-for-you-in-court'},
+         {x:'Protecting you and your family', page:'protecting-you-and-your-family'},
+         {x:'Witnesses and giving evidence', page:'witnesses-and-giving-evidence'}],
+   support:[{x:'Victim impact statement (opens another website)', href:U.vis}]},
+  {t:'After court',
+   core:[{x:'Appeals and actions', href:U.appeals},
+         {x:'Parole orders', href:U.parole}],
+   support:[{x:'Rules for parole orders', href:U.parolerules},
+         {x:'Parole decision making', href:U.paroledec},
+         {x:"Victims' registers", href:U.registers}]},
+  {t:'Support and recovery',
+   core:[{x:'Tips for supporting yourself', page:'tips-for-supporting-yourself'},
+         {x:'Tips for supporting someone else', page:'tips-for-supporting-someone-else'},
+         {x:'Find support services for victims', href:U.findsupport}],
+   support:[{x:'Request information or referral for Victim Assist', href:U.vaq},
+         {x:'Queensland Health Victim Support Service (opens another website)', href:U.qhvss},
+         {x:'Support for victims of abuse', href:U.abuse},
+         {x:'Victims of domestic and family violence', href:U.dfv},
+         {x:'Financial assistance for victims', href:U.financial},
+         {x:'Protection for victims', href:U.protection},
+         {x:'Understanding your rights as a victim', href:U.rights},
+         {x:'Victim support agencies', href:U.agencies}]}
+];
+
+/* ---------- New pages (built locally, mock content) ---------- */
+const P = (slug, text) => `<a href="#/${slug}" data-page="${slug}">${text}</a>`;
+const L = (url, text) => `<a href="${url}">${text}</a>`;
+const GUIDE = {x:'Navigating the criminal justice system', page:''};
+const VOC = {x:'Victims of crime', href:U.voc};
+
+const PAGES = {
+'victims-advocate-service': {
+  template:'service', tag:'Service', title:"Victims' Advocate Service", parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:"The Victims' Advocate Service gives free and confidential support to people affected by crime in Queensland. Contact us by phone or online chat.",
+  alert:{h:'Get immediate help', html:'If you are in danger or need urgent help, call <b>000</b>. For 24/7 crisis support, call Lifeline on <a href="tel:131114">13 11 14</a> or DVConnect Womensline on <a href="tel:1800811811">1800 811 811</a>.'},
+  inshort:`<p>You can use this service to:</p><ul><li>talk to someone about what happened to you</li><li>understand what happens in the criminal justice system</li><li>get help to connect with other support services.</li></ul><p><a class="btn" href="#vas-how" data-jump="vas-how">Contact the service</a></p>`,
+  sections:[
+    {id:'vas-know', h:'What you should know', html:`
+      <h3>About the service</h3>
+      <p>The Victims' Advocate Service is a free service for victims of crime and the people who support them. An advocate can listen, explain your options and help you get support at every stage of the criminal justice system.</p>
+      <p>You can contact us whether or not you have reported the crime to police.</p>
+      <h3>What happens when you contact us</h3>
+      <p>An advocate will ask how they can help and what support you need. You only need to share what you feel comfortable sharing.</p>
+      <p>Depending on what you need, the advocate may:</p>
+      <ul><li>give you information about the justice process</li><li>help you understand ${L(U.rights,'your rights as a victim')}</li><li>refer you to counselling, legal or financial support services.</li></ul>
+      <h3>Your privacy</h3>
+      <p>What you tell us is kept confidential. We will not share your information without your consent, unless we are required to by law or someone's safety is at risk.</p>`},
+    {id:'vas-who', h:'Who can use this service', html:`
+      <div class="box box-yes">${I.yes}<div><p>You can contact the service if any of these apply:</p><ul><li>you are a victim of a crime that happened in Queensland</li><li>you are a family member of a victim</li><li>you are supporting someone affected by crime.</li></ul></div></div>
+      <div class="box box-no">${I.no}<div><p>Don't use this service if:</p><ul><li>you need emergency help<br>Instead, call 000</li><li>you want to report a crime<br>Instead, ${L(U.report,'report a crime to police')}</li></ul></div></div>`},
+    {id:'vas-how', h:'How to contact us', html:`
+      <p>Choose how you want to contact us.</p>
+      <div class="acc">
+        <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="true" aria-controls="vas-acc-1"><span>By phone</span>${I.chevDown}</button>
+          <div class="acc-panel" id="vas-acc-1"><p>Call the Victims' Advocate Service on <b>[phone number]</b>.</p><p>Phone lines are open [days and hours].</p><p>If you need an interpreter, call the Translating and Interpreting Service (TIS National) on <b>131 450</b> and ask them to call us.</p></div></div>
+        <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false" aria-controls="vas-acc-2"><span>By online chat</span>${I.chevDown}</button>
+          <div class="acc-panel" id="vas-acc-2" hidden><p>Select the <b>Message us</b> button on this page to start a chat with an advocate.</p><p>Online chat is available [days and hours].</p><p>You can close the chat window at any time.</p></div></div>
+      </div>`},
+    {id:'vas-time', h:'How long it takes', html:`
+      <p>When you call during opening hours, you will usually speak to an advocate straight away.</p>
+      <p>If you leave a message or contact us outside opening hours, we will respond within [timeframe].</p>`}
+  ],
+  helpbox:'Victims of crime'
+},
+
+'why-report-a-crime': {
+  template:'guidance', tag:'Guidance', title:'Why report a crime', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:"Reporting a crime is your choice. Find out why people report crime, what to think about before you report, and what you can do if you're not ready.",
+  inshort:`<p>Reporting a crime can help police investigate and can help you get support. You can take the time you need to decide. Support is available whether or not you report.</p>`,
+  sections:[
+    {id:'why-reasons', h:'Reasons to report a crime', html:`
+      <p>People report crime for many reasons. Reporting can:</p>
+      <ul><li>help police investigate and hold the person responsible to account</li><li>help protect you and others from further harm</li><li>give you access to support and some types of financial assistance</li><li>create a record of what happened, even if you don't want to take it further now.</li></ul>
+      <p>Find out how to ${L(U.report,'report a crime')}.</p>`},
+    {id:'why-consider', h:'What to consider when reporting a crime', html:`
+      <p>It's normal to have questions or feel unsure about reporting. You might want to think about:</p>
+      <ul><li>what you want to happen after you report</li><li>who you would like with you for support</li><li>whether you need to keep yourself or others safe first.</li></ul>
+      <h3>Who will know if I make a report</h3>
+      <p>Police will keep your report as confidential as possible. If the matter goes to court, the person charged and their lawyer may see your statement. Police can explain what this means for you before you decide.</p>
+      <h3>Victims of sexual assault or domestic and family violence</h3>
+      <p>If you have experienced sexual assault, you can choose other ways to tell police what happened without making a formal complaint. Read about ${L(U.alt,'alternative reporting options')} on the Queensland Police Service website.</p>
+      <p>Find out more about ${L(U.dfvpolice,'reporting domestic and family violence to the police')}.</p>`},
+    {id:'why-notready', h:'What if you are not ready to report yet', html:`
+      <p>You don't have to report straight away. Some people report days, months or years after a crime.</p>
+      <p>If you think you might report later, it can help to:</p>
+      <ul><li>write down what happened, including dates, times and places</li><li>keep any messages, photos or other items that could be evidence</li><li>tell someone you trust.</li></ul>`},
+    {id:'why-support', h:'Support is available', html:`
+      <p>You can get support whether or not you report a crime. The ${P('victims-advocate-service',"Victims' Advocate Service")} can talk through your options with you.</p>
+      <p>You can also ${L(U.findsupport,'find support services for victims')}.</p>`}
+  ],
+  related:[{x:'Report a crime',href:U.report},{x:'Update or withdraw a report',href:U.withdraw},{x:'Find support services for victims',href:U.findsupport}]
+},
+
+'safety-after-the-crime': {
+  template:'guidance', tag:'Guidance', title:'Safety after the crime', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Learn how to plan for your safety after a crime, including steps you can take to stay safe online.',
+  inshort:`<p>After a crime, you may feel unsafe at home, at work or online. A safety plan can help you think through what to do if you feel at risk. You don't have to do this alone.</p>`,
+  sections:[
+    {id:'safety-plan', h:'Making a safety plan', html:`
+      <p>A safety plan is a personal plan to help you stay safe. It can include:</p>
+      <ul><li>people you can contact if you feel unsafe</li><li>safe places you can go</li><li>important documents and items to keep ready</li><li>changes to your daily routine.</li></ul>
+      <p>A support service can help you make a safety plan that suits your situation. ${L(U.findsupport,'Find a support service')}.</p>
+      <p>If you are in immediate danger, call 000.</p>`},
+    {id:'safety-online', h:'Online safety', html:`
+      <p>If the crime involved your phone, email or social media, you may want to:</p>
+      <ul><li>change your passwords and turn on two-step verification</li><li>check your privacy and location-sharing settings</li><li>block or report accounts that are contacting you.</li></ul>
+      <p>Keep copies of messages or posts before you delete or report them, as they may be used as evidence.</p>
+      <p>The ${L(U.esafety,'eSafety Commissioner (opens another website)')} has more information about staying safe online.</p>`}
+  ],
+  related:[{x:'Protection for victims',href:U.protection},{x:'Support for victims of abuse',href:U.abuse},{x:'Victims of domestic and family violence',href:U.dfv}]
+},
+
+'criminal-investigation-process': {
+  template:'guidance', tag:'Guidance', title:'Criminal investigation process', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Understand what happens when police investigate a crime, including making a statement and how evidence is collected.',
+  inshort:`<p>After a crime is reported, police may investigate to find out what happened. You may be asked to give a statement. Police can keep you informed about the investigation.</p>`,
+  sections:[
+    {id:'cip-process', h:'Understanding the investigation process', html:`
+      <p>Every investigation is different. Police may:</p>
+      <ul><li>speak to you and other witnesses</li><li>collect and examine evidence</li><li>identify and speak to a suspect</li><li>decide whether to charge someone.</li></ul>
+      <p>Some investigations are finished quickly. Others can take months.</p>`},
+    {id:'cip-statement', h:'Making a statement', html:`
+      <p>A statement is a written or recorded account of what happened. Police will ask you questions and write down or record your answers.</p>
+      <p>You can ask for a break at any time. You can also ask to have a support person with you, and ask for an interpreter if you need one.</p>
+      <p>Before you sign a written statement, read it carefully and ask police to correct anything that isn't right.</p>`},
+    {id:'cip-evidence', h:'How evidence is collected', html:`
+      <p>Evidence is anything that helps show what happened. It can include:</p>
+      <ul><li>photos, videos and messages</li><li>clothing or other items</li><li>medical or forensic examinations</li><li>CCTV footage.</li></ul>
+      <p>Police will explain why they need any items from you and when you may get them back.</p>`},
+    {id:'cip-info', h:'Getting information during the investigation', html:`
+      <p>As a victim, you can ask to be kept informed about the investigation. Contact the police officer handling your matter to ask about its progress.</p>
+      <p>Read more about ${L(U.rights,'your rights as a victim')}.</p>`}
+  ],
+  related:[{x:'Getting questioned, arrested and charged',href:U.questioned},{x:'Understanding your rights as a victim',href:U.rights},{x:'Report a crime',href:U.report}]
+},
+
+'understanding-bail': {
+  template:'guidance', tag:'Guidance', title:'Understanding bail', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Find out what bail is and what happens if the person accused of a crime is released while they wait for their court case.',
+  inshort:`<p>If someone is charged with a crime, police or a court decide whether they can be released on bail until their court case. Bail usually has conditions the person must follow.</p>`,
+  sections:[
+    {id:'bail-none', h:'If no charges are laid', html:`
+      <p>Police may not charge anyone if there isn't enough evidence or a suspect can't be found. This doesn't mean police don't believe you.</p>
+      <p>You can ask police to explain their decision. If new information comes to light, the investigation may be reopened.</p>`},
+    {id:'bail-adult', h:'Bail for adult offenders', html:`
+      <p>An adult who has been charged may be released on bail or held in custody until their court case.</p>
+      <p>Bail conditions may include:</p>
+      <ul><li>living at a set address</li><li>reporting to police regularly</li><li>not contacting you or going near your home or work.</li></ul>
+      <p>If the person breaks a bail condition, tell police.</p>`},
+    {id:'bail-youth', h:'Bail for youth offenders', html:`
+      <p>Different rules apply to young people aged 10 to 17 who are charged with a crime.</p>
+      <p>A young person may be released with conditions while they wait for their court case. Police can tell you about any conditions that relate to your safety.</p>
+      <p>Read more about ${L(U.youth,'sentences for youth offenders')}.</p>`}
+  ],
+  related:[{x:'Protection for victims',href:U.protection},{x:"Victims' registers",href:U.registers},{x:'Sentences for adult offenders',href:U.adult}]
+},
+
+'support-for-you-in-court': {
+  template:'guidance', tag:'Guidance', title:'Support for you in court', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Find out what support is available if you need to go to court, including support people and interpreters.',
+  inshort:`<p>Going to court can be stressful. You can get help to understand what will happen, bring someone with you and ask for an interpreter.</p>`,
+  sections:[
+    {id:'court-services', h:'Support services for attending court', html:`
+      <p>Support services can help you prepare for court and be with you on the day. They can:</p>
+      <ul><li>explain how court works and who will be there</li><li>arrange a tour of the courtroom before the hearing</li><li>help you find a safe waiting area at court.</li></ul>
+      <p>${L(U.findsupport,'Find a support service')}.</p>`},
+    {id:'court-vlo', h:'Victim Liaison Officers', html:`
+      <p>If the Office of the Director of Public Prosecutions (ODPP) is prosecuting your case, a Victim Liaison Officer may contact you. They can tell you about the progress of your case and explain court processes.</p>`},
+    {id:'court-pact', h:'PACT', html:`
+      <p>PACT (Protect All Children Today) supports children and young people who are witnesses in criminal court cases. Trained volunteers can help them prepare for court and support them on the day.</p>`},
+    {id:'court-person', h:'Choosing a support person', html:`
+      <p>You can ask someone you trust to come to court with you, such as a family member or friend. Your support person should not be a witness in the same case.</p>
+      <p>Let the prosecutor know if you would like a support person with you when you give evidence.</p>`},
+    {id:'court-interp', h:'Interpreters', html:`
+      <p>If you need an interpreter, tell the police officer or prosecutor handling your case as early as possible.</p>`}
+  ],
+  related:[{x:'Preparing for court',href:U.prepare},{x:'Victim impact statement',href:U.vis},{x:'Find support services for victims',href:U.findsupport}]
+},
+
+'protecting-you-and-your-family': {
+  template:'guidance', tag:'Guidance', title:'Protecting you and your family', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Learn about ways to keep you and your family safe before, during and after court.',
+  inshort:`<p>If you are worried about your safety or your family's safety, there are steps you can take and people who can help.</p>`,
+  sections:[
+    {id:'protect-unsafe', h:'If you feel unsafe', html:`
+      <p>If you are in danger, call 000.</p>
+      <p>If you are worried about your safety but it's not an emergency, contact your local police station or call Policelink on <b>131 444</b>.</p>`},
+    {id:'protect-orders', h:'Protection orders', html:`
+      <p>A court can make an order to protect you from the person who harmed you. Depending on your situation, this may be a domestic violence order or another type of protection order.</p>
+      <p>Read more about ${L(U.protection,'protection for victims')}.</p>`},
+    {id:'protect-court', h:'Safety at court', html:`
+      <p>Tell the prosecutor or court staff before your court date if you are worried about seeing the accused person. They may be able to arrange:</p>
+      <ul><li>a separate waiting area</li><li>a different entry or exit</li><li>a support person to stay with you.</li></ul>`},
+    {id:'protect-register', h:'Getting information about an offender', html:`
+      <p>If the offender is sent to prison or detention, you may be able to join a victims' register. This means you can get information about things like their release dates.</p>
+      <p>Read more about ${L(U.registers,"victims' registers")}.</p>`}
+  ],
+  related:[{x:'Protection for victims',href:U.protection},{x:"Victims' registers",href:U.registers},{x:'Victims of domestic and family violence',href:U.dfv}]
+},
+
+'witnesses-and-giving-evidence': {
+  template:'guidance', tag:'Guidance', title:'Witnesses and giving evidence', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Understand what it means to be a witness and what happens when you give evidence in court.',
+  inshort:`<p>If you are a victim of crime, you may be asked to give evidence as a witness. You will be told what to expect, and support is available before and on the day.</p>`,
+  sections:[
+    {id:'wit-being', h:'Being a witness', html:`
+      <p>A witness tells the court what they saw, heard or experienced. If you are asked to be a witness, you will usually receive a document called a subpoena that tells you when and where to go.</p>`},
+    {id:'wit-before', h:'Before you give evidence', html:`
+      <p>Before your court date, you can:</p>
+      <ul><li>read your statement again to refresh your memory</li><li>ask the prosecutor any questions about the process</li><li>arrange a support person and any help you need, such as an interpreter.</li></ul>`},
+    {id:'wit-giving', h:'Giving evidence in court', html:`
+      <p>When you give evidence, you will be asked to promise to tell the truth. The prosecutor will ask you questions first. The defence lawyer may then ask you questions. This is called cross-examination.</p>
+      <p>Take your time. If you don't understand a question, you can ask for it to be repeated or explained.</p>`},
+    {id:'wit-special', h:'Special arrangements for giving evidence', html:`
+      <p>Some witnesses can give evidence in ways that make it less stressful, such as:</p>
+      <ul><li>by video link from another room</li><li>with a screen so you can't see the accused person</li><li>with a support person near you.</li></ul>
+      <p>Ask the prosecutor whether these arrangements are available for you.</p>`},
+    {id:'wit-after', h:'After you give evidence', html:`
+      <p>After you give evidence, you may be free to leave or you may choose to stay and watch the rest of the case. It's normal to feel tired or upset. Talk to your support person or a support service about how you're feeling.</p>`}
+  ],
+  related:[{x:'Preparing for court',href:U.prepare},{x:'Victim impact statement',href:U.vis},{x:'Find support services for victims',href:U.findsupport}]
+},
+
+'tips-for-supporting-yourself': {
+  template:'guidance', tag:'Guidance', title:'Tips for supporting yourself', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Learn about common reactions to trauma and ways to look after yourself after a crime.',
+  inshort:`<p>Everyone reacts differently after a crime. There is no right or wrong way to feel. Looking after yourself and getting support can help you recover.</p>`,
+  sections:[
+    {id:'self-reactions', h:'Common reactions to trauma', html:`
+      <p>After a crime, you may notice changes in how you feel, think or act. You might:</p>
+      <ul><li>feel anxious, scared, angry or numb</li><li>have trouble sleeping or concentrating</li><li>keep thinking about what happened</li><li>avoid people or places that remind you of the crime.</li></ul>
+      <p>These reactions are common and usually ease over time.</p>`},
+    {id:'self-looking', h:'Looking after yourself', html:`
+      <p>Small steps can help you feel more in control. You could try to:</p>
+      <ul><li>keep to a regular routine where you can</li><li>spend time with people you trust</li><li>eat regular meals and get some physical activity</li><li>limit alcohol and other drugs.</li></ul>`},
+    {id:'self-help', h:'When to get more help', html:`
+      <p>Talk to a doctor or support service if your reactions are very strong, don't improve after a few weeks or affect your daily life.</p>
+      <p>For 24/7 crisis support, call Lifeline on <b>13 11 14</b>.</p>
+      <p>You can also ${L(U.findsupport,'find support services for victims')}.</p>`}
+  ],
+  related:[{x:'Find support services for victims',href:U.findsupport},{x:'Queensland Health Victim Support Service',href:U.qhvss},{x:'Financial assistance for victims',href:U.financial}]
+},
+
+'tips-for-supporting-someone-else': {
+  template:'guidance', tag:'Guidance', title:'Tips for supporting someone else', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Find out how you can support a child, teenager, family member or friend who has been affected by crime, and look after yourself while you do.',
+  inshort:`<p>When someone you care about is affected by crime, your support can make a real difference. Listening, staying calm and helping them feel safe are good places to start.</p>`,
+  sections:[
+    {id:'other-young', h:'Supporting a young child who is a victim', html:`
+      <p>Young children may not have the words to explain how they feel. You might notice changes in their behaviour, sleep or play.</p>
+      <p>You can help by:</p>
+      <ul><li>reassuring them that they are safe and it's not their fault</li><li>keeping to familiar routines</li><li>answering questions simply and honestly.</li></ul>`},
+    {id:'other-teens', h:'Supporting older children and teenagers', html:`
+      <p>Older children and teenagers may want more independence in how they cope. Let them know you are there to listen when they are ready to talk.</p>
+      <p>Encourage them to stay connected with friends and activities they enjoy. If you're worried about them, help them talk to a doctor, school counsellor or support service.</p>`},
+    {id:'other-family', h:'For family and friends – your support and wellbeing', html:`
+      <p>Supporting someone after a crime can be hard. You may also feel shocked, angry or sad.</p>
+      <p>Make time to look after yourself and get support if you need it. Support services can help family members and friends, not just victims.</p>
+      <p>${L(U.findsupport,'Find support services for victims')}.</p>`}
+  ],
+  related:[{x:'Find support services for victims',href:U.findsupport},{x:'Support for victims of abuse',href:U.abuse},{x:'Victims of domestic and family violence',href:U.dfv}]
+}
+};
+
+/* ---------- Rendering ---------- */
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function linkHTML(l){
+  if (l.page !== undefined) return P(l.page, l.x);
+  if (l.jump) return `<a href="#${l.jump}" data-jump="${l.jump}">${l.x}</a>`;
+  return L(l.href, l.x);
+}
+function crumbsHTML(items, current){
+  const li = items.map(c => `<li>${c.page!==undefined ? P(c.page,c.x) : c.href ? L(c.href,c.x) : `<a href="#" data-noop>${c.x}</a>`}</li>`).join('');
+  return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${li}<li aria-current="page">${current}</li></ol></nav>`;
+}
+const BASE_CRUMBS = [{x:'Home',href:U.home},{x:'Category'},{x:'Victims of crime',href:U.voc}];
+function backHTML(p){
+  const inner = `${I.chevLeft}<span>${p.x}</span>`;
+  return p.page!==undefined ? `<a class="backlink" href="#/${p.page}" data-page="${p.page}">${inner}</a>` : `<a class="backlink" href="${p.href}">${inner}</a>`;
+}
+function helpboxHTML(section){
+  return `<aside class="helpbox">
+    <h2>Help with ${section}</h2>
+    <p>Find answers to frequently asked questions about services, including:</p>
+    <ul><li><a href="#" data-noop><span>Help item 1</span>${I.arrowRight}</a></li><li><a href="#" data-noop><span>Help item 2</span>${I.arrowRight}</a></li></ul>
+    <div class="find"><a href="#" data-noop>Find more in the help centre ${I.circleArrow}</a></div>
+  </aside>`;
+}
+function pageFootHTML(){
+  return `<div class="pagefoot"><div><b>Managed by:</b> <a href="#" data-noop>[Department]</a></div><button type="button" class="top" data-top>Back to top ${I.arrowUp}</button></div>`;
+}
+
+function renderLanding(){
+  const steps = STEPS.map((s,i) => `
+    <section class="step">
+      <p class="step-label">Step ${i+1} of ${STEPS.length}</p>
+      <h2><a href="#/${SLUG(s.t)}" data-page="${SLUG(s.t)}">${s.t}</a></h2>
+      <p>${LOREM}</p>
+    </section>`).join('');
+  return `<div class="container"><div class="col">
+    ${crumbsHTML(BASE_CRUMBS,'Navigating the criminal justice system')}
+    ${backHTML(VOC)}
+    <div><span class="tag">Step-by-step</span></div>
+    <h1 tabindex="-1">Navigating the criminal justice system</h1>
+    <p class="partof">Part of the ${L(U.voc,'Victims of crime')} topic</p>
+    <p class="lead">A guide to what happens in the criminal justice system and what to expect as a victim of crime (placeholder)</p>
+    <hr class="rule">
+    <div class="callout" id="home-immediate"><h2>Get immediate help</h2><p>${LOREM}</p></div>
+    ${steps}
+    ${helpboxHTML('[Section]')}
+    <div class="interested"><h2>You may be interested in</h2><ul>
+      <li><a href="#" data-noop>Provisional licence</a></li><li><a href="#" data-noop>Open licence</a></li><li><a href="#" data-noop>Guidance for supervisors</a></li>
+    </ul></div>
+    ${pageFootHTML()}
+  </div></div>`;
+}
+
+/* Level 2 — one step, with links to the content for that step */
+const STEP_INTERESTED = [1,2,3];
+function renderStep(i){
+  const s = STEPS[i];
+  const list = links => `<ul class="core">${links.map(l=>`<li>${linkHTML(l)}</li>`).join('')}</ul>`;
+  const body = i === 0
+    ? `<div class="callout"><h2>Get immediate help</h2><p>${LOREM}</p></div><h2 class="sec">Resources</h2>${list(s.core)}`
+    : `${list(s.core)}${s.support.length ? `<h2 class="sec">Supporting resources</h2>${list(s.support)}` : ''}`;
+  const interested = STEP_INTERESTED.map(n => `<li><a href="#/${SLUG(STEPS[n].t)}" data-page="${SLUG(STEPS[n].t)}">${STEPS[n].t}</a></li>`).join('');
+  return `<div class="container"><div class="col">
+    ${crumbsHTML([...BASE_CRUMBS, GUIDE], s.t)}
+    ${backHTML(GUIDE)}
+    <div><span class="tag">Step ${i+1} of ${STEPS.length}</span></div>
+    <h1 tabindex="-1">${s.t}</h1>
+    <p class="partof">Part of the ${P('', 'Navigating the criminal justice system')} step-by-step</p>
+    <p class="lead">${LOREM}</p>
+    <hr class="rule">
+    <div class="content">${body}</div>
+    <div class="interested"><h2>You may be interested in</h2><ul>${interested}</ul></div>
+    ${pageFootHTML()}
+  </div></div>`;
+}
+
+function readTime(p){
+  const txt = (p.lead+' '+p.inshort+' '+p.sections.map(s=>s.h+' '+s.html).join(' ')).replace(/<[^>]+>/g,' ');
+  return Math.max(1, Math.ceil(txt.split(/\s+/).filter(Boolean).length/200));
+}
+
+/* Level 3 — content page, a child of one step of the step-by-step */
+function renderContent(slug, p){
+  const si = STEP_OF[slug];
+  const step = STEPS[si], stepSlug = SLUG(step.t);
+  const crumbs = [...BASE_CRUMBS, GUIDE, {x: step.t, page: stepSlug}];
+  const otp = p.sections.map(s=>`<li><a href="#${s.id}" data-jump="${s.id}">${s.h}</a></li>`).join('');
+  const secs = p.sections.map(s=>`<h2 class="sec" id="${s.id}">${s.h}</h2>${s.html}`).join('');
+  const alert = p.alert ? `<div class="callout"><h2>${p.alert.h}</h2><p>${p.alert.html}</p></div>` : '';
+  const related = p.related ? `<div class="interested"><h2>You may be interested in</h2><ul>${p.related.map(r=>`<li><a href="${r.href}">${r.x} ${I.external}</a></li>`).join('')}</ul></div>` : '';
+  const helpbox = p.helpbox ? helpboxHTML(p.helpbox) : '';
+  const title = `${p.title} (new page)`;
+  return `<div class="container"><div class="col">
+    ${crumbsHTML(crumbs, title)}
+    ${backHTML({x: step.t, page: stepSlug})}
+    <div><span class="tag">${p.tag}</span></div>
+    <h1 tabindex="-1">${title}</h1>
+    <p class="partof">Part of ${P(stepSlug, 'Step ' + (si+1) + ': ' + step.t)}, in the ${P('', 'Navigating the criminal justice system')} step-by-step</p>
+    <p class="lead">${p.lead}</p>
+    ${p.template==='guidance' ? `<p class="readtime">${I.doc}<span>${readTime(p)} minute read</span></p>` : ''}
+    <hr class="rule">
+    ${alert}
+    <nav class="onthispage" aria-labelledby="otp-${slug}"><h2 id="otp-${slug}">On this page</h2><ul>${otp}</ul></nav>
+    <div class="inshort"><h2>In short</h2>${p.inshort}</div>
+    <div class="content">${secs}</div>
+    ${helpbox}
+    ${related}
+    ${pageFootHTML()}
+  </div></div>`;
+}
+
+/* Build all pages once, keep DOM alive so accordion state persists on Back (like a browser's back-forward cache) */
+const mainEl = document.getElementById('main');
+const TITLES = {'':'Navigating the criminal justice system'};
+function addPage(slug, html){
+  const m = document.createElement('main');
+  m.className = 'page'; m.dataset.slug = slug; m.hidden = true; m.innerHTML = html;
+  mainEl.appendChild(m);
+}
+addPage('', renderLanding());
+STEPS.forEach((s,i) => { addPage(SLUG(s.t), renderStep(i)); TITLES[SLUG(s.t)] = s.t; });
+Object.entries(PAGES).forEach(([slug,p]) => { addPage(slug, renderContent(slug,p)); TITLES[slug] = `${p.title} (new page)`; });
+
+/* Icons in static markup */
+document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
+/* All links open in the same window */
+
+/* ---------- Routing with scroll restoration ---------- */
+let current = null;
+function show(slug){
+  if (!(slug in TITLES)) slug = '';
+  document.querySelectorAll('main.page').forEach(m => m.hidden = (m.dataset.slug !== slug));
+  current = slug;
+  document.title = `${TITLES[slug]} | Queensland Government`;
+}
+const slugFromHash = () => (location.hash.startsWith('#/') ? decodeURIComponent(location.hash.slice(2)) : '');
+let histOK = true;
+try { history.scrollRestoration = 'manual'; if (!history.state || history.state.slug === undefined) history.replaceState({slug: slugFromHash(), y:0}, ''); } catch(e){ histOK = false; }
+const memStack = [];
+function go(slug){
+  if (slug === current) { window.scrollTo(0,0); return; }
+  if (histOK){
+    try {
+      history.replaceState({slug: current, y: window.scrollY}, '');
+      history.pushState({slug, y:0}, '', '#/' + slug);
+    } catch(e){ histOK = false; }
+  }
+  if (!histOK) memStack.push({slug: current, y: window.scrollY});
+  show(slug);
+  window.scrollTo(0,0);
+  const h1 = document.querySelector(`main.page[data-slug="${slug}"] h1`);
+  if (h1) h1.focus({preventScroll:true});
+}
+window.addEventListener('popstate', e => {
+  const st = e.state || {slug: slugFromHash(), y:0};
+  show(st.slug);
+  requestAnimationFrame(() => window.scrollTo(0, st.y || 0));
+});
+show(slugFromHash());
+const openPanels = () => [...document.querySelectorAll('[aria-expanded="true"][aria-controls]')].map(b => b.getAttribute('aria-controls'));
+function saveState(){ try { history.replaceState({slug: current, y: window.scrollY, open: openPanels()}, ''); } catch(e){} }
+window.addEventListener('pagehide', saveState);
+(function restore(){
+  const st = history.state;
+  if (!st || !st.open) return;
+  st.open.forEach(id => { const b = document.querySelector(`[aria-controls="${id}"]`), el = document.getElementById(id); if (b && el){ b.setAttribute('aria-expanded','true'); el.hidden = false; } });
+  document.querySelectorAll('.acc-btn[aria-expanded="true"]').forEach(b => { if (!st.open.includes(b.getAttribute('aria-controls'))) { b.setAttribute('aria-expanded','false'); document.getElementById(b.getAttribute('aria-controls')).hidden = true; } });
+  requestAnimationFrame(() => window.scrollTo(0, st.y || 0));
+})();
+
+/* ---------- Interactions ---------- */
+document.addEventListener('click', e => {
+  const a = e.target.closest('a,button');
+  if (!a) return;
+  if (a.matches('a[data-page]')) { e.preventDefault(); go(a.dataset.page); return; }
+  if (a.matches('a[data-jump]')) {
+    e.preventDefault();
+    const t = document.querySelector(`main.page:not([hidden]) #${a.dataset.jump}`) || document.getElementById(a.dataset.jump);
+    if (t){ t.scrollIntoView({behavior:'smooth', block:'start'}); t.setAttribute('tabindex','-1'); t.focus({preventScroll:true}); }
+    return;
+  }
+  if (a.matches('a[data-noop]')) { e.preventDefault(); return; }
+  if (a.matches('a[href^="http"]')) { saveState(); return; }
+  if (a.matches('[data-top]')) { window.scrollTo({top:0, behavior:'smooth'}); return; }
+  if (a.matches('.more, .acc-btn')) {
+    const open = a.getAttribute('aria-expanded') === 'true';
+    a.setAttribute('aria-expanded', String(!open));
+    document.getElementById(a.getAttribute('aria-controls')).hidden = open;
+  }
+});
+
+/* Quick exit: new tab to Google, and replace this page when not inside a preview frame */
+function quickExit(){
+  try { window.open('https://www.google.com.au', '_blank', 'noopener'); } catch(e){}
+  if (window.top === window.self) { try { location.replace('https://www.google.com.au'); } catch(e){} }
+}
+document.getElementById('quickExit').addEventListener('click', quickExit);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') quickExit(); });
+</script>
+</body>
+</html>
