@@ -215,7 +215,9 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;border:2px solid var(--blue);border-radius:4px;padding:9px 22px;text-decoration:none;font-weight:500;font-size:15px;cursor:pointer}
 .btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);text-decoration:none}
 .stepnav{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:36px 0 0}
-.stepnav h2{font-size:18px;color:var(--navy);margin:0 0 16px;line-height:1.4;font-weight:700}
+.stepnav h2{font-size:20px;color:var(--navy);margin:0 0 10px;line-height:1.4;font-weight:700}
+.stepnav .guideline{font-size:16px;margin:0 0 16px}
+.content .callout h2{font-size:14px;font-weight:700;color:#222;margin:0 0 8px;line-height:1.4}
 .stepnav ol{list-style:none;padding:0;margin:0 0 22px}
 .stepnav li{display:flex;align-items:center;gap:10px;margin:0 0 9px;font-size:15px}
 .stepnav .num{flex:none;width:21px;height:21px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
@@ -378,7 +380,8 @@ const STEP_OF = {
   'why-report-a-crime':1,
   'safety-after-the-crime':2,
   'criminal-investigation-process':2,
-  'understanding-bail':2,
+  'bail-and-remand':2,
+  'find-24-7-crisis-services':0,
   'support-for-you-in-court':4,
   'protecting-you-and-your-family':4,
   'witnesses-and-giving-evidence':4,
@@ -391,51 +394,60 @@ const LOREM = 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vul
 /* link types: page = new page built locally, jump = in-page anchor, href = real page */
 const STEPS = [
   {t:'When a crime occurs',
-   core:[{x:"Victims' Advocate Service", page:'victims-advocate-service'}],
-   support:[]},
+   s:'Your safety and the safety of others come first. Support services can help with safety, information and emotional support.',
+   note:{h:'Get immediate help', p:'Is the crime happening now? Is the suspect still at the scene? Is anyone seriously injured or in immediate danger? Call Triple Zero (000) and ask for police if you are in a dangerous or life-threatening situation.'},
+   panel:() => `<p>${P('find-24-7-crisis-services','Find 24/7 crisis services')}</p>
+     <p>${P('victims-advocate-service','Victims Advocate Service')} – The Victims Advocate Service provides practical help for victims at every stage of their recovery and criminal justice journey. The service is available for victims of crime, family members, witnesses and others seeking support or information.</p>
+     <p><b>Contact the Victims Advocate Service</b><br>Phone contact centre: <a href="tel:1300842846">1300 VICTIM (1300 842 846)</a> available 24hrs a day, 7 days a week<br>or chat online <a href="#" data-noop>Online chat</a></p>`,
+   links:[]},
   {t:'Report a crime to police',
-   core:[{x:'Report a crime', href:U.report},
-         {x:'Update or withdraw a report', href:U.withdraw}],
-   support:[{x:'Types of crime', href:U.types},
-         {x:'Why report a crime', page:'why-report-a-crime'},
-         {x:'Alternative reporting options (opens another website)', href:U.alt},
-         {x:'Reporting domestic and family violence to the police', href:U.dfvpolice}]},
+   s:'Reporting a crime helps police understand what happened. Police can explain the reporting process and answer your questions. If you are not ready to report, there may be other options available.',
+   note:{h:'Who will know if I make a report?', p:'Police will treat your information carefully and only share it when needed for an investigation, court process or as required by law.'},
+   links:[{x:'Why report a crime', page:'why-report-a-crime'},
+          {x:'Types of crime', href:U.types},
+          {x:'Report a crime', href:U.report},
+          {x:'Alternative reporting options (opens another website)', href:U.alt},
+          {x:'Update or withdraw a report', href:U.withdraw}]},
   {t:'After the crime',
-   core:[{x:'Safety after the crime', page:'safety-after-the-crime'},
-         {x:'Criminal investigation process', page:'criminal-investigation-process'}],
-   support:[{x:'Getting questioned, arrested and charged (opens another website)', href:U.questioned},
-         {x:'Understanding bail', page:'understanding-bail'}]},
+   s:'Police will assess the information available and investigate what happened. They may collect evidence, speak with witnesses, and decide whether charges can be laid. You may also receive information about bail and your safety.',
+   links:[{x:'Criminal investigation process', page:'criminal-investigation-process'},
+          {x:'Getting questioned, arrested and charged', href:U.questioned},
+          {x:'Bail and remand', page:'bail-and-remand'}]},
   {t:'Before court',
-   core:[{x:'Types of courts (opens another website)', href:U.courts}],
-   support:[{x:'Request to search and copy court documents', href:U.searchdocs},
-         {x:'Sentences for adult offenders', href:U.adult},
-         {x:'Sentences for youth offenders', href:U.youth},
-         {x:'Restorative justice processes', href:U.rjyouth},
-         {x:'Guide to restorative justice', href:U.rjguide}]},
+   s:'If a person is charged, the matter may go to court or follow a restorative justice process. Understanding what may happen next can help you prepare.',
+   links:[{x:'Types of courts (opens another website)', href:U.courts},
+          {x:'Request to search and copy court documents', href:U.searchdocs},
+          {x:'Sentences for adult offenders', href:U.adult},
+          {x:'Sentences for youth offenders', href:U.youth},
+          {x:'Restorative justice processes', href:U.rjyouth},
+          {x:'Guide to restorative justice', href:U.rjguide}]},
   {t:'Preparing for court',
-   core:[{x:'Preparing for court (opens another website)', href:U.prepare},
-         {x:'Support for you in court', page:'support-for-you-in-court'},
-         {x:'Protecting you and your family', page:'protecting-you-and-your-family'},
-         {x:'Witnesses and giving evidence', page:'witnesses-and-giving-evidence'}],
-   support:[{x:'Victim impact statement (opens another website)', href:U.vis}]},
+   s:'You may need to attend court as a victim or witness. Support services can explain what to expect. They can also help you prepare and access support.',
+   links:[{x:'Preparing for court (opens another website)', href:U.prepare},
+          {x:'Support for you in court', page:'support-for-you-in-court'},
+          {x:'Protecting you and your family', page:'protecting-you-and-your-family'},
+          {x:'Witnesses and giving evidence', page:'witnesses-and-giving-evidence'},
+          {x:'Victim impact statement (opens another website)', href:U.vis}]},
   {t:'After court',
-   core:[{x:'Appeals and actions', href:U.appeals},
-         {x:'Parole orders', href:U.parole}],
-   support:[{x:'Rules for parole orders', href:U.parolerules},
-         {x:'Parole decision making', href:U.paroledec},
-         {x:"Victims' registers", href:U.registers}]},
+   s:'The court will make a decision about the matter. You may receive information about appeals, parole or offender updates. Support remains available after the court process ends.',
+   links:[{x:'Appeals and actions', href:U.appeals},
+          {x:'Parole orders', href:U.parole},
+          {x:'Rules for parole orders', href:U.parolerules},
+          {x:'Parole decision making', href:U.paroledec},
+          {x:"Victims' registers", href:U.registers}]},
   {t:'Support and recovery',
-   core:[{x:'Tips for supporting yourself', page:'tips-for-supporting-yourself'},
-         {x:'Tips for supporting someone else', page:'tips-for-supporting-someone-else'},
-         {x:'Find support services for victims', href:U.findsupport}],
-   support:[{x:'Request information or referral for Victim Assist', href:U.vaq},
-         {x:'Queensland Health Victim Support Service (opens another website)', href:U.qhvss},
-         {x:'Support for victims of abuse', href:U.abuse},
-         {x:'Victims of domestic and family violence', href:U.dfv},
-         {x:'Financial assistance for victims', href:U.financial},
-         {x:'Protection for victims', href:U.protection},
-         {x:'Understanding your rights as a victim', href:U.rights},
-         {x:'Victim support agencies', href:U.agencies}]}
+   s:'Recovery is different for everyone. You may need support immediately after a crime or much later. Support services are available at all stages and can help with practical support, emotional support, and financial support.',
+   links:[{x:'Tips for supporting yourself', page:'tips-for-supporting-yourself'},
+          {x:'Tips for supporting someone else', page:'tips-for-supporting-someone-else'},
+          {x:'Find support services for victims', href:U.findsupport},
+          {x:'Request information or referral for Victim Assist', href:U.vaq},
+          {x:'Queensland Health Victim Support Service (opens another website)', href:U.qhvss},
+          {x:'Support for victims of abuse', href:U.abuse},
+          {x:'Victims of domestic and family violence', href:U.dfv},
+          {x:'Financial assistance for victims', href:U.financial},
+          {x:'Protection for victims', href:U.protection},
+          {x:'Understanding your rights as a victim', href:U.rights},
+          {x:'Victim support agencies', href:U.agencies}]}
 ];
 
 /* ---------- New pages (built locally, mock content) ---------- */
@@ -550,9 +562,9 @@ const PAGES = {
   related:[{x:'Getting questioned, arrested and charged',href:U.questioned},{x:'Understanding your rights as a victim',href:U.rights},{x:'Report a crime',href:U.report}]
 },
 
-'understanding-bail': {
-  template:'guidance', tag:'Guidance', title:'Understanding bail', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
-  lead:'Find out what bail is and what happens if the person accused of a crime is released while they wait for their court case.',
+'bail-and-remand': {
+  template:'guidance', tag:'Guidance', title:'Bail and remand', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Find out what bail and remand mean, and what happens if the person accused of a crime is released while they wait for their court case.',
   inshort:`<p>If someone is charged with a crime, police or a court decide whether they can be released on bail until their court case. Bail usually has conditions the person must follow.</p>`,
   sections:[
     {id:'bail-none', h:'If no charges are laid', html:`
@@ -562,6 +574,7 @@ const PAGES = {
       <p>An adult who has been charged may be released on bail or held in custody until their court case.</p>
       <p>Bail conditions may include:</p>
       <ul><li>living at a set address</li><li>reporting to police regularly</li><li>not contacting you or going near your home or work.</li></ul>
+      <p>If bail is refused, the person is held in custody. This is called remand.</p>
       <p>If the person breaks a bail condition, tell police.</p>`},
     {id:'bail-youth', h:'Bail for youth offenders', html:`
       <p>Different rules apply to young people aged 10 to 17 who are charged with a crime.</p>
@@ -569,6 +582,29 @@ const PAGES = {
       <p>Read more about ${L(U.youth,'sentences for youth offenders')}.</p>`}
   ],
   related:[{x:'Protection for victims',href:U.protection},{x:"Victims' registers",href:U.registers},{x:'Sentences for adult offenders',href:U.adult}]
+},
+
+'find-24-7-crisis-services': {
+  template:'guidance', tag:'Guidance', title:'Find 24/7 crisis services', parent:GUIDE, partOf:{...GUIDE, kind:'step-by-step'}, child:true,
+  lead:'Crisis services you can contact at any time of the day or night, wherever you are in Queensland.',
+  alert:{h:'Get immediate help', html:'If you are in danger or need urgent help, call <b>000</b> and ask for police.'},
+  inshort:`<p>You don't have to wait until business hours to get help. These services are free and available 24 hours a day, 7 days a week.</p>`,
+  sections:[
+    {id:'crisis-who', h:'Who you can call', html:`
+      <ul>
+        <li><b>Victims Advocate Service</b> – <a href="tel:1300842846">1300 VICTIM (1300 842 846)</a>, for practical help and information at any stage of your recovery or criminal justice journey</li>
+        <li><b>Lifeline</b> – <a href="tel:131114">13 11 14</a>, for crisis support</li>
+        <li><b>1800RESPECT</b> – <a href="tel:1800737732">1800 737 732</a>, for sexual assault, domestic and family violence counselling</li>
+        <li><b>DVConnect Womensline</b> – <a href="tel:1800811811">1800 811 811</a></li>
+        <li><b>DVConnect Mensline</b> – <a href="tel:1800600636">1800 600 636</a></li>
+        <li><b>13YARN</b> – <a href="tel:139276">13 92 76</a>, for Aboriginal and Torres Strait Islander peoples</li>
+      </ul>`},
+    {id:'crisis-what', h:'What happens when you call', html:`
+      <p>You will speak to someone trained to listen and help. You only need to share what you feel comfortable sharing.</p>
+      <p>They can talk through your options, help you think about your safety and connect you with other services.</p>
+      <p>If you would rather not talk on the phone, some services offer online chat. ${P('victims-advocate-service',"The Victims Advocate Service")} has an online chat option.</p>`}
+  ],
+  related:[{x:'Find support services for victims',href:U.findsupport},{x:'Queensland Health Victim Support Service',href:U.qhvss},{x:'Support for victims of abuse',href:U.abuse}]
 },
 
 'support-for-you-in-court': {
@@ -711,7 +747,7 @@ function renderLanding(){
     <section class="step">
       <p class="step-label">Step ${i+1} of ${STEPS.length}</p>
       <h2><a href="#/${SLUG(s.t)}" data-page="${SLUG(s.t)}">${s.t}</a></h2>
-      <p>${LOREM}</p>
+      <p>${s.s}</p>
     </section>`).join('');
   return `<div class="container"><div class="col">
     ${crumbsHTML(BASE_CRUMBS,'Navigating the criminal justice system')}
@@ -719,9 +755,9 @@ function renderLanding(){
     <div><span class="tag">Step-by-step</span></div>
     <h1 tabindex="-1">Navigating the criminal justice system</h1>
     <p class="partof">Part of the ${L(U.voc,'Victims of crime')} topic</p>
-    <p class="lead">A guide to what happens in the criminal justice system and what to expect as a victim of crime (placeholder)</p>
+    <p class="lead">A guide to what may happen after you experience or witness a crime. Not every matter follows the same path. Some matters go to court, while others do not. There are different pathways to recovery, with support available at every stage.</p>
     <hr class="rule">
-    <div class="callout" id="home-immediate"><h2>Get immediate help</h2><p>${LOREM}</p></div>
+    <div class="callout" id="home-immediate"><h2>Get immediate help</h2><p>Call Triple Zero (000) and ask for police if you are in immediate danger.</p></div>
     ${steps}
     ${helpboxHTML('[Section]')}
     <div class="interested"><h2>You may be interested in</h2><ul>
@@ -736,15 +772,14 @@ const STEP_INTERESTED = [1,2,3];
 function renderStep(i){
   const s = STEPS[i];
   const list = links => `<ul class="core">${links.map(l=>`<li>${linkHTML(l)}</li>`).join('')}</ul>`;
-  const body = i === 0
-    ? `<div class="callout"><h2>Get immediate help</h2><p>${LOREM}</p></div><h2 class="sec">Resources</h2>${list(s.core)}`
-    : `${list(s.core)}${s.support.length ? `<h2 class="sec">Supporting resources</h2>${list(s.support)}` : ''}`;
+  const body = `${s.note ? `<div class="callout"><h2>${s.note.h}</h2><p>${s.note.p}</p></div>` : ''}${s.panel ? s.panel() : list(s.links)}`;
   const interested = STEP_INTERESTED.map(n => `<li><a href="#/${SLUG(STEPS[n].t)}" data-page="${SLUG(STEPS[n].t)}">${STEPS[n].t}</a></li>`).join('');
   const navItems = STEPS.map((x,n) => `<li${n===i ? ' aria-current="step"' : ''}><span class="num" aria-hidden="true">${n+1}</span><a href="#/${SLUG(x.t)}" data-page="${SLUG(x.t)}">${x.t}</a></li>`).join('');
   const prev = i > 0 ? `<button type="button" class="btn btn-out" data-page="${SLUG(STEPS[i-1].t)}">${I.arrowLeft}Previous</button>` : `<button type="button" class="btn btn-out" disabled>${I.arrowLeft}Previous</button>`;
   const next = i < STEPS.length-1 ? `<button type="button" class="btn" data-page="${SLUG(STEPS[i+1].t)}">Next${I.arrowRight}</button>` : `<button type="button" class="btn" disabled>Next${I.arrowRight}</button>`;
   const stepnav = `<nav class="stepnav" aria-label="Steps in this step-by-step">
-      <h2>Part of the ${P('', 'Navigating the criminal justice system')} step-by-step</h2>
+      <h2>In this guide</h2>
+      <p class="guideline">${P('', 'Navigating the criminal justice system')} step-by-step</p>
       <ol>${navItems}</ol>
       <div class="navbtns">${prev}${next}</div>
     </nav>`;
@@ -754,7 +789,7 @@ function renderStep(i){
     <div><span class="tag">Step ${i+1} of ${STEPS.length}</span></div>
     <h1 tabindex="-1">${s.t}</h1>
     <p class="partof">Part of the ${P('', 'Navigating the criminal justice system')} step-by-step</p>
-    <p class="lead">${LOREM}</p>
+    <p class="lead">${s.s}</p>
     <hr class="rule">
     <div class="content">${body}</div>
     ${stepnav}
