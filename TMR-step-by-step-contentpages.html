@@ -386,6 +386,7 @@ const U = {
   steps:'https://www.qld.gov.au/transport/licensing/getting/steps',
   progression:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/driver-licence-progression',
   practical:'https://www.qld.gov.au/transport/licensing/getting/practical-tests',
+  schools:'https://www.qld.gov.au/transport/licensing/getting/schools',
   appleApp:'https://apps.apple.com/au/app/qld-learner-logbook/id1094522699',
   googleApp:'https://play.google.com/store/apps/details?id=au.gov.qld.tmr.logbook.logbook&amp;hl=en_AU&amp;pli=1',
   help:'https://www.qld.gov.au/help'
@@ -427,8 +428,8 @@ const PAGES = {
   helpbox:{t:'Help with learner licence', items:["I'm 25 or older", 'I have interstate or overseas driving experience']},
   interested:[{x:'Rules for learner drivers', page:'rules-learner'}]},
 
-'provisional': { kind:'sbs', title:'Get your provisional licence', partOf:{x:'Licencing', page:''},
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence'}],
+'provisional': { kind:'sbs', title:'Get your provisional licence (P1 and P2)', partOf:{x:'Licencing', page:''},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)'}],
   lead:'Get your provisional (P1 or P2 class) licence in Queensland. Follow the steps to learn to drive, log driving hours, take a hazard perception test and pass a car practical driving test.',
   callout:`You must have a <a href="#/learner" data-page="learner">learner licence</a> before you can continue.`,
   steps:[
@@ -538,12 +539,12 @@ const PAGES = {
 
 /* ====== LEVEL 2 — provisional licence step pages ====== */
 'get-supervisor': { kind:'content', title:'Get a supervisor and start learning to drive', guide:'provisional', step:1, readtime:2,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Get a supervisor and start learning to drive'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Get a supervisor and start learning to drive'}],
   lead:'Once you have your learner licence, you can start learning to drive. You must always be supervised by an eligible driver and cannot drive alone.',
   otp:['Finding a driving instructor or supervisor','Practicing driving','Learner logbook','Special circumstances'],
   inshort:`<p>Once you have your learner licence, you can start learning to drive. You must always be supervised by an eligible driver and cannot drive alone.</p>`,
   sections:[
-    {id:'gs-find', h:'Finding a driving instructor or supervisor', html:`<p>Supervisors must have an legible open licence. You must have at leastt x hours with a licenced supervisor from a driving school - <a href="${U.practical}">find a driving school</a>.</p>`},
+    {id:'gs-find', h:'Finding a driving instructor or supervisor', html:`<p>Supervisors must have an legible open licence. You must have at leastt x hours with a licenced supervisor from a driving school - <a href="${U.schools}">find a driving school</a>.</p>`},
     {id:'gs-practice', h:'Practicing driving', html:`<p>If you are under 25 you will need to log 100 hours of supervised driving. Use the logbook app to document the hours driven.</p>`},
     {id:'gs-logbook', h:'Learner logbook', html:`<p>The learner logbook app is available for download on both the <a href="${U.appleApp}">Apple app store</a> and <a href="${U.googleApp}">Google play store.</a></p><p>You must follow the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements.</a></p>`},
     {id:'gs-special', h:'Special circumstances', html:`<p><a href="#/logbook-exemption" data-page="logbook-exemption">Apply for a learner logbook exemption</a></p>`}
@@ -551,7 +552,7 @@ const PAGES = {
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
 
 'hazard-perception': { kind:'content', title:'Pass a hazard perception test', guide:'provisional', step:2,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Pass a hazard perception test'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Pass a hazard perception test'}],
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
   inshort:`<p>You must complete a hazard perception test as part of the journey to get your provisional licence.</p><p><a class="btn" href="${U.tests}">Enrol in the hazard perception test</a></p>`,
@@ -568,7 +569,7 @@ const PAGES = {
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
 
 'submit-logbook': { kind:'content', title:'Submit your completed learner logbook (under 25 years only)', guide:'provisional', step:3,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Submit your completed learner logbook (under 25 years only)'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Submit your completed learner logbook (under 25 years only)'}],
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
   inshort:`<p>If you are under 25 years you need to submit your completed learner logbook showing 100 hours of driving and that you have passed your hazard perception test before you can book your drivers test.</p>
@@ -586,7 +587,7 @@ const PAGES = {
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
 
 'book-test': { kind:'content', title:'Book a practical driving test', guide:'provisional', step:4,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Book a practical driving test'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Book a practical driving test'}],
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
   inshort:`<p>${K}</p><p><a class="btn" href="${U.practical}">Book a practical driving test</a></p>`,
@@ -602,7 +603,7 @@ const PAGES = {
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
 
 'take-test': { kind:'content', title:'Take a practical driving test', guide:'provisional', step:5, readtime:2,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Take a practical driving test'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Take a practical driving test'}],
   lead:K,
   otp:['Preparing for your practical driving test','Rules for your car'],
   inshort:`<p>${K}</p>`,
@@ -613,7 +614,7 @@ const PAGES = {
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
 
 'get-provisional': { kind:'content', title:'Get your provisional licence', guide:'provisional', step:6, readtime:2,
-  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Take a practical driving test'}],
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Take a practical driving test'}],
   lead:K,
   otp:['Get your P1 provisional licence (under 25)','Get your P2 provisional licence (25 and over)','High powered vehicles'],
   inshort:`<p>${K}</p>`,
