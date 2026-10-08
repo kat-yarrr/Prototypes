@@ -387,6 +387,7 @@ const U = {
   progression:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/driver-licence-progression',
   practical:'https://www.qld.gov.au/transport/licensing/getting/practical-tests',
   schools:'https://www.qld.gov.au/transport/licensing/getting/schools',
+  hazard:'https://www.qld.gov.au/transport/licensing/getting/hazard',
   appleApp:'https://apps.apple.com/au/app/qld-learner-logbook/id1094522699',
   googleApp:'https://play.google.com/store/apps/details?id=au.gov.qld.tmr.logbook.logbook&amp;hl=en_AU&amp;pli=1',
   help:'https://www.qld.gov.au/help'
@@ -555,13 +556,13 @@ const PAGES = {
   crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Pass a hazard perception test'}],
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
-  inshort:`<p>You must complete a hazard perception test as part of the journey to get your provisional licence.</p><p><a class="btn" href="${U.tests}">Enrol in the hazard perception test</a></p>`,
+  inshort:`<p>You must complete a hazard perception test as part of the journey to get your provisional licence.</p><p><a class="btn" href="${U.hazard}">Enrol in the hazard perception test</a></p>`,
   sections:[
     {id:'hp-know', h:'What you should know', html:`<p>${D}</p>`},
     {id:'hp-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have your learner licence</li></ul></div></div>
       <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you do not have your learner licence<br>instead <a href="#/learner" data-page="learner">get your learner licence</a></li></ul></div></div>`},
     {id:'hp-how', h:'How to pass a hazard perception test', html:`<div class="acc"><details><summary>Practice for the test</summary><div class="accbody"><p>Practice the hazard perception test before you enrol.</p></div></details>
-      <details open><summary>Enrol in the test</summary><div class="accbody"><p><a href="${U.tests}">Enrol in the hazard perception test</a>.</p></div></details></div>`},
+      <details open><summary>Enrol in the test</summary><div class="accbody"><p><a href="${U.hazard}">Enrol in the hazard perception test</a>.</p></div></details></div>`},
     {id:'hp-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
     {id:'hp-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
   ],
