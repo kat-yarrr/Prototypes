@@ -377,6 +377,7 @@ const U = {
   centres:'https://www.qld.gov.au/transport/contacts/centres',
   practiceTest:'https://www.service.transport.qld.gov.au/practiceroadrulestest/public/Welcome.xhtml?dswid=-5322',
   learner:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/learner',
+  digital:'https://www.qld.gov.au/digital-licence/getting-the-digital-licence-app',
   gettingLearner:'https://www.qld.gov.au/transport/licensing/getting/learner/getting-a-learner-licence',
   keys:'https://www.publications.qld.gov.au/dataset/your-keys-to-driving-in-queensland',
   logbook:'https://www.qld.gov.au/transport/licensing/getting/learner-logbook',
@@ -520,7 +521,7 @@ const PAGES = {
   sections:[
     {id:'gll-know', h:'What you should know', html:`<p>Before you can get your licence you need to have <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">passed the road rules test</a>.</p>
       <p>To get your licence you'll need to provide evidence of your identity and a photo taken at a <a href="${U.centres}">TMR service centre</a> that provides licencing services.</p>
-      <p>Once approved, you can start driving with a supervisor straight away using your driver licence receipt or the <a href="${U.learner}">Digital Licence app</a>, while your card is posted to you.</p>
+      <p>Once approved, you can start driving with a supervisor straight away using your driver licence receipt or the <a href="${U.digital}">Digital Licence app</a>, while your card is posted to you.</p>
       <h3>Special circumstances</h3>
       <p>In very rare situations, you may be able to get your learner licence before you are 16, if you have a special need to drive.</p>
       <p><a href="#/special-need" data-page="special-need">Apply to get a learner licence early</a>.</p>`},
@@ -528,7 +529,7 @@ const PAGES = {
       <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you have not yet passed the road rules test,<br>instead go to <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">step 2 road rules test</a></li></ul></div></div>`},
     {id:'gll-how', h:'How to get your learner licence', html:`<p>Choose how to get your learner licence</p>
       <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p><a href="${U.centres}">Visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence which will be sent to you by post.</p></div></details>
-      <details open><summary>Digital licence app</summary><div class="accbody"><p>First <a href="${U.centres}">visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence. You will be given your licence number which you can use to set up your learner licence on the <a href="${U.learner}">Digital licence app</a>.</p></div></details></div>`},
+      <details open><summary>Digital licence app</summary><div class="accbody"><p>First <a href="${U.centres}">visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence. You will be given your licence number which you can use to set up your learner licence on the <a href="${U.digital}">Digital licence app</a>.</p></div></details></div>`},
     {id:'gll-long', h:'How long it takes', html:`<p>Taking a photo will take 30min</p><p>Post for your licence will take 2 weeks</p>`},
     {id:'gll-cost', h:'How much it costs', html:`<p>$50</p>`}
   ],
