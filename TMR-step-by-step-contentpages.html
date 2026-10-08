@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Licencing | Queensland Government</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
+  --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
+  --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
+  --qe:#0b2a57; --yellow:#ffe500;
+  --green-bg:#eef8f0; --green:#2e7d32; --red-bg:#fcecec; --red:#c62828;
+  --helpful:#e3e5e8; --focus:#0a73e0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;font-family:"Noto Sans",Arial,Helvetica,sans-serif;color:var(--text);font-size:16px;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.container{max-width:1232px;margin:0 auto;padding:0 52px}
+@media (max-width:991px){.container{padding:0 24px}}
+@media (max-width:575px){.container{padding:0 16px}}
+svg{flex:none}
+
+/* Quick exit */
+.qe{background:var(--qe);color:#fff;position:sticky;top:0;z-index:50;font-size:14px;line-height:1.45}
+.qe .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.qe p{margin:0}
+.qe a{color:#fff}
+.qe button{background:var(--yellow);color:#111;border:0;border-radius:4px;padding:10px 22px;font:600 14px/1.2 "Noto Sans",Arial,sans-serif;cursor:pointer;white-space:nowrap}
+.qe button:hover{background:#fff176}
+
+/* Desktop header */
+.preheader{background:var(--blue);color:#fff;font-size:13px}
+.preheader .container{display:flex;justify-content:space-between;align-items:center;min-height:32px}
+.preheader a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.preheader a:hover{text-decoration:underline}
+.preheader .prelinks{display:flex;gap:22px}
+.masthead .container{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+.logo{display:inline-flex;align-items:center;gap:12px;color:var(--blue);text-decoration:none}
+.logo .dfq{display:flex;flex-direction:column;line-height:1;font-style:italic}
+.logo .dfq b{font-size:21px;font-weight:800;letter-spacing:-.02em}
+.logo .dfq small{font-size:10.5px;font-weight:700;letter-spacing:.01em;margin-top:2px}
+.logo .div{width:1.5px;height:40px;background:currentColor;opacity:.9}
+.logo .qg{display:flex;flex-direction:column;line-height:1.05}
+.logo .qg b{font-size:17px;font-weight:700}
+.logo .qg small{font-size:16px;font-weight:400}
+.search{display:flex}
+.search input{width:250px;height:38px;border:1px solid #6f6f6f;border-right:0;border-radius:4px 0 0 4px;padding:0 12px 0 36px;font:inherit;font-size:15px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E") no-repeat 12px center}
+.search button{height:38px;background:var(--blue);color:#fff;border:0;border-radius:0 4px 4px 0;padding:0 18px;font:500 14px "Noto Sans",Arial,sans-serif;cursor:pointer}
+.navband{background:#f5f5f5;border-bottom:6px solid var(--sky)}
+.navband .container{display:flex;align-items:center;gap:24px;min-height:46px}
+.navband a,.navband button{color:#333;background:none;border:0;font:inherit;font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:6px 0}
+.navband a{color:var(--link)}
+
+/* Mobile header */
+.mhead{display:none;background:var(--blue);color:#fff;border-bottom:4px solid var(--sky)}
+.mhead .container{display:flex;justify-content:space-between;align-items:stretch;padding-right:0}
+.mhead .logo{color:#fff;gap:8px;padding:10px 0}
+.mhead .logo .dfq b{font-size:13px}.mhead .logo .dfq small{font-size:7px}
+.mhead .logo .div{height:26px}
+.mhead .logo .qg b,.mhead .logo .qg small{font-size:11px}
+.mhead .logo svg{width:22px;height:26px}
+.mhead .icons{display:flex}
+.mhead .icons button{background:none;border:0;border-left:1px solid rgba(255,255,255,.35);color:#fff;font:400 11px "Noto Sans",Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0 14px;min-width:60px;cursor:pointer}
+@media (max-width:991px){.preheader,.masthead,.navband{display:none}.mhead{display:block}}
+
+/* Page shell */
+.page{padding:28px 0 0}
+.col{max-width:736px}
+.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;padding:0;margin:0 0 20px;font-size:14px;row-gap:4px}
+.crumbs li{display:inline-flex;align-items:center}
+.crumbs li:not(:last-child)::after{content:"";width:7px;height:7px;border-right:1.5px solid #6b6b6b;border-top:1.5px solid #6b6b6b;transform:rotate(45deg);display:inline-block;margin:0 12px 0 8px}
+.crumbs li[aria-current]{color:#555}
+.backlink{display:none;align-items:center;gap:6px;font-size:14px;margin:0 0 18px}
+@media (max-width:991px){.crumbs{display:none}.backlink{display:inline-flex}.page{padding-top:18px}}
+.tag{display:inline-block;border:1px solid #8a8a8a;border-radius:999px;padding:0 10px;font-size:12px;color:#3d3d3d;line-height:20px;margin:0 0 12px}
+h1{color:var(--navy);font-size:40px;line-height:1.2;font-weight:700;margin:0 0 16px;letter-spacing:-.01em}
+h1:focus{outline:none}
+@media (max-width:575px){h1{font-size:30px}}
+.partof{font-size:14px;margin:0 0 16px}
+.lead{font-size:20px;line-height:1.5;margin:0 0 24px;color:#333}
+@media (max-width:575px){.lead{font-size:18px}}
+.readtime{display:flex;gap:8px;align-items:center;font-size:14px;margin:0 0 28px}
+.readtime svg{color:var(--link)}
+hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
+[id]{scroll-margin-top:90px}
+
+/* Callout (grey) */
+.callout{background:var(--grey-bg);border-left:4px solid var(--sky);padding:20px 24px;margin:32px 0}
+.callout h2{font-size:14px;font-weight:700;margin:0 0 8px;color:#222;line-height:1.4}
+.callout p{margin:0;font-size:14px}
+
+/* Step-by-step */
+.step{padding:22px 0 30px;border-bottom:1px solid var(--line)}
+.step:last-of-type{border-bottom:0}
+.step-label{font-size:13px;color:var(--muted);margin:0 0 2px}
+.step h2{font-size:22px;color:var(--navy);margin:0 0 12px;line-height:1.3;font-weight:700}
+.step h2 a{color:var(--link)}
+.step > p{margin:0 0 18px;font-size:15px}
+.more{background:none;border:0;padding:4px 0;color:var(--link);font:400 14px "Noto Sans",Arial,sans-serif;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.more:hover span{text-decoration:underline}
+.more svg{transition:transform .2s ease}
+.more[aria-expanded="true"] svg{transform:rotate(90deg)}
+.core{list-style:none;padding:0;margin:0 0 20px}
+.core li{margin:0 0 20px;font-size:15px}
+.content .expect{margin:0 0 28px;max-width:62ch}
+.content h2.sec.expect-h{margin-top:0}
+.core .desc, .panel .desc, .step .desc{display:block;font-size:14px;line-height:1.5;color:#4f4f4f;margin-top:4px;max-width:62ch}
+.core li:last-child{margin-bottom:0}
+.panel ul{list-style:none;padding:0;margin:16px 0 0}
+.panel li{margin:0 0 14px;font-size:15px}
+.panel li:last-child{margin-bottom:0}
+
+/* Help box */
+.helpbox{background:var(--light-blue);border-radius:8px;padding:24px 24px 20px;margin:40px 0 0}
+.helpbox h2{font-size:22px;color:var(--navy);margin:0 0 8px;line-height:1.3}
+.helpbox p{margin:0 0 12px;font-size:14px}
+.helpbox ul{list-style:none;padding:0;margin:0}
+.helpbox li{border-bottom:1px solid var(--light-blue-line)}
+.helpbox li a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-weight:600;font-size:14px;text-decoration:none}
+.helpbox li a:hover{text-decoration:underline}
+.helpbox .find{display:flex;justify-content:flex-end;margin-top:16px}
+.helpbox .find a{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;text-decoration:none}
+.helpbox .find a:hover{text-decoration:underline}
+
+/* Interested + page footer */
+.interested{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+.interested h2{font-size:22px;color:var(--navy);margin:0 0 16px;line-height:1.3}
+.interested ul{list-style:none;padding:0;margin:0}
+.interested li{margin:0 0 12px;font-size:15px}
+.interested li a{display:inline-flex;align-items:center;gap:8px}
+.pagefoot{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:40px 0 0;padding-bottom:28px;gap:12px}
+.pagefoot b{font-weight:600}
+.pagefoot .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+@media (max-width:575px){.pagefoot{flex-direction:column;align-items:flex-start}}
+.helpful{background:var(--helpful)}
+.helpful .container{display:flex;align-items:center;gap:22px;min-height:72px;font-size:14px;flex-wrap:wrap}
+.helpful b{font-weight:600}
+.helpful label{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.helpful input{appearance:none;width:24px;height:24px;border:2px solid #333;border-radius:50%;margin:0;background:#fff;cursor:pointer}
+.helpful input:checked{box-shadow:inset 0 0 0 5px #fff;background:#333}
+
+/* Footer */
+.footer{background:var(--blue);color:#fff;border-top:3px solid var(--sky);font-size:13px;line-height:1.55}
+.footer a{color:#fff}
+.footer .container{padding-top:40px;padding-bottom:48px}
+.footer h2{font-size:18px;margin:0 0 22px;font-weight:700}
+.footer h3{font-size:16px;margin:0 0 10px;font-weight:700}
+.footer p{margin:0 0 12px}
+.fgrid{display:grid;grid-template-columns:1.35fr .8fr .75fr 1.3fr;gap:0}
+.fgrid > div{padding:0 28px}
+.fgrid > div:first-child{padding-left:0}
+.fgrid > div:last-child{padding-right:0}
+.fgrid > div + div + div{border-left:1px solid rgba(255,255,255,.45)}
+.flinks{list-style:none;padding:0;margin:0}
+.flinks li{margin:0 0 8px}
+.phone{display:flex;align-items:center;gap:8px;margin:0 0 22px}
+.fbtn{display:inline-block;border:2px solid #fff;border-radius:4px;padding:8px 28px;text-decoration:none;font-size:14px}
+.fbtn:hover{background:rgba(255,255,255,.12)}
+.social{list-style:none;padding:0;margin:0}
+.social li{margin:0 0 8px}
+.social a{display:inline-flex;align-items:center;gap:10px}
+.copy{margin-top:16px}
+@media (max-width:991px){
+  .fgrid{grid-template-columns:1fr}
+  .fgrid > div{padding:0!important;border-left:0!important}
+  .fgrid > .fcontact{display:grid;grid-template-columns:1fr auto;column-gap:24px;padding-bottom:24px!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .fcontact h3{grid-column:1}.fcontact p,.fcontact .phone{grid-column:1}
+  .fcontact .fbtn{grid-column:2;grid-row:1 / span 3;align-self:start}
+  .fcontact .phone{margin-bottom:0}
+  .fgrid > .flinkswrap{padding:22px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .flinkswrap h3{display:none}
+  .flinks{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px}
+  .fgrid > .followwrap{padding:20px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important;display:flex;align-items:center;gap:20px}
+  .followwrap h3{margin:0;font-size:18px}
+  .social{display:flex;gap:18px}
+  .social li{margin:0}
+  .social .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .social svg{width:22px;height:22px}
+  .fgrid > .ackwrap{padding-top:22px!important}
+  .ackwrap h3{font-size:18px}
+  .fgov{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:16px;margin-bottom:20px!important}
+}
+@media (max-width:575px){
+  .fgrid > .fcontact{grid-template-columns:1fr}
+  .fcontact .fbtn{grid-column:1;grid-row:auto;display:block;text-align:center;margin:8px 0 16px}
+  .flinks{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Content templates */
+.onthispage{border-left:3px solid var(--link);padding:4px 0 4px 18px;margin:32px 0}
+.onthispage h2{font-size:14px;font-weight:700;margin:0 0 6px;color:#222}
+.onthispage ul{list-style:none;padding:0;margin:0}
+.onthispage li{font-size:14px;margin:0 0 5px}
+.inshort{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:32px 0 8px}
+.inshort h2{font-size:28px;color:var(--navy);margin:0 0 12px;line-height:1.25}
+.inshort p{margin:0 0 12px;font-size:15px}
+.inshort p:last-child,.inshort ul:last-child{margin-bottom:0}
+.content h2.sec{font-size:28px;color:var(--navy);margin:40px 0 14px;line-height:1.25}
+.content h3{font-size:19px;color:var(--navy);margin:26px 0 10px;line-height:1.3}
+.content p{margin:0 0 14px;font-size:15px}
+.content ul{padding-left:20px;margin:0 0 14px;font-size:15px}
+.content li{margin:0 0 6px}
+@media (max-width:575px){.content h2.sec,.inshort h2{font-size:24px}}
+.box{display:flex;gap:12px;padding:20px 24px;margin:16px 0}
+.box svg{margin-top:3px}
+.box > div > :last-child{margin-bottom:0}
+.box ul{margin-bottom:8px}
+.box-yes{background:var(--green-bg)}.box-yes svg{color:var(--green)}
+.box-no{background:var(--red-bg)}.box-no svg{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;border:2px solid var(--blue);border-radius:4px;padding:9px 22px;text-decoration:none;font-weight:500;font-size:15px;cursor:pointer}
+.btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);text-decoration:none}
+.stepnav{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:36px 0 0}
+.stepnav h2{font-size:20px;color:var(--navy);margin:0 0 10px;line-height:1.4;font-weight:700}
+.stepnav .guideline{font-size:16px;margin:0 0 16px}
+.content .callout h2{font-size:14px;font-weight:700;color:#222;margin:0 0 8px;line-height:1.4}
+.stepnav ol{list-style:none;padding:0;margin:0 0 22px}
+.stepnav li{display:flex;align-items:center;gap:10px;margin:0 0 9px;font-size:15px}
+.stepnav .num{flex:none;width:21px;height:21px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.stepnav li[aria-current="step"] a{font-weight:700}
+.stepnav .navbtns{display:flex;gap:14px;flex-wrap:wrap}
+.stepnav ol > li{display:block;margin:0 0 15px}
+.stepnav .steprow{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:var(--navy)}
+.stepnav ol > li > ul{list-style:none;padding:0;margin:7px 0 0 31px}
+.stepnav ol > li > ul li{display:block;margin:0 0 5px;font-size:15px}
+.stepnav ol > li > ul li[aria-current="page"] a{font-weight:700;color:var(--navy);text-decoration:none}
+.acc{margin:0 0 14px}
+.acc details{background:var(--grey-bg);border-bottom:1px solid #d9dcde}
+.acc summary{cursor:pointer;list-style:none;padding:14px 18px;font-weight:700;color:var(--link);font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:'\25BE';font-size:12px;color:var(--link)}
+.acc details[open] summary::after{content:'\25B4'}
+.acc .accbody{padding:0 18px 16px;font-size:15px}
+.stepnav ol > li{display:flex;align-items:center;gap:10px;margin:0 0 9px}
+.stepnav ol > li b{font-size:15px;color:var(--navy)}
+.stepnav ol > li{display:flex;align-items:center;gap:10px;margin:0 0 9px}
+.stepnav ol > li[aria-current="page"] a{font-weight:700;color:var(--navy);text-decoration:none}
+.btn-out{background:#fff;color:var(--link);border:2px solid var(--blue)}
+.btn-out:hover{background:#eef5fc;color:var(--link);border-color:var(--blue)}
+.btn[disabled]{background:#e4e6e8;border-color:#e4e6e8;color:#8d9195;cursor:default}
+.btn[disabled]:hover{background:#e4e6e8;border-color:#e4e6e8}
+.acc{border:1px solid var(--line);margin:18px 0}
+.acc-item + .acc-item{border-top:1px solid var(--line)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#f1f3f5;border:0;padding:12px 16px;color:var(--link);font:600 16px "Noto Sans",Arial,sans-serif;text-align:left;cursor:pointer}
+.acc-btn:hover span{text-decoration:underline}
+.acc-btn svg{transition:transform .2s ease}
+.acc-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.acc-panel{padding:14px 16px 6px}
+
+/* ---- licencing prototype ---- */
+.hero{background:var(--light-blue)}
+.hero .col{padding:26px 0 34px}
+.hero .crumbs{margin:0 0 18px}
+.hero h1{margin:0 0 16px}
+.hero .lead{margin:0;color:#313131}
+.body .col{padding:34px 0 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:0 0 40px}
+.card{border:1px solid #c9ced3;border-radius:8px;padding:24px}
+.card h2{font-size:21px;margin:0 0 12px;line-height:1.3}
+.card h2 a{color:var(--link)}
+.card p{margin:0;font-size:15px;color:#313131}
+.wide{max-width:1128px}
+.stepblock{padding:0 0 30px;border-bottom:1px solid var(--line);margin:0 0 26px}
+.stepblock .step-label{font-size:13px;color:#4f4f4f;margin:0 0 4px}
+.stepblock h2{font-size:21px;margin:0 0 12px;line-height:1.3}
+.stepblock h2 a{color:var(--link)}
+.stepblock p{margin:0;font-size:15px}
+.nextstage{padding:0 0 26px;border-bottom:1px solid var(--line);margin:0 0 30px}
+.nextstage h2{font-size:21px;color:var(--navy);margin:0 0 12px;line-height:1.3}
+.nextstage p{margin:0 0 16px;font-size:15px}
+.nextstage > a{display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.svcgroup{margin:0 0 36px}
+.svcgroup h2{font-size:22px;color:var(--navy);margin:0 0 6px;line-height:1.3}
+.svcgroup > p{font-size:15px;margin:0 0 14px;color:#313131}
+.svclist{list-style:none;padding:0;margin:0}
+.svclist li{border-bottom:1px solid var(--line)}
+.svclist a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 2px;font-weight:600;font-size:15px;text-decoration:none}
+.svclist a:hover{text-decoration:underline}
+.arrowlist{list-style:none;padding:0;margin:14px 0 0}
+.arrowlist li{border-bottom:1px solid var(--light-blue-line)}
+.arrowlist li:first-child{border-top:1px solid var(--light-blue-line)}
+.arrowlist a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 2px;font-weight:600;font-size:14px;text-decoration:none}
+.arrowlist a:hover{text-decoration:underline}
+.acc{margin:0 0 14px}
+.acc details{background:var(--grey-bg);border-bottom:1px solid #d9dcde}
+.acc summary{cursor:pointer;list-style:none;padding:14px 18px;font-weight:700;color:var(--link);font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:'\25BE';font-size:12px;color:var(--link)}
+.acc details[open] summary::after{content:'\25B4'}
+.acc .accbody{padding:0 18px 16px;font-size:15px;background:#fff}
+.acc .accbody p{margin:0 0 10px}.acc .accbody p:last-child{margin:0}
+.content h3{font-size:17px;color:var(--navy);margin:24px 0 8px}
+.content .callout h2{font-size:14px;font-weight:700;margin:0 0 8px;color:#222;line-height:1.4}
+.content .callout p{margin:0;font-size:14px}
+.inshort .btn{margin-top:4px}
+.managed{padding:26px 0 34px;font-size:14px}
+.managed b{font-weight:600}
+.managed .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.stepnav ol > li{display:flex;align-items:center;gap:10px;margin:0 0 9px}
+.stepnav ol > li b{font-size:15px;color:var(--navy)}
+.feedwrap h3{font-size:17px;margin:0 0 10px}
+.feedwrap p{margin:0 0 16px;font-size:14px}
+.fbtn{white-space:nowrap}
+.fsocial{list-style:none;padding:0;margin:14px 0 18px}
+.fsocial li{margin:0 0 8px}
+.fsocial a{display:inline-flex;align-items:center;gap:10px;font-size:14px}
+@media (max-width:991px){.cards{grid-template-columns:repeat(2,1fr)}.hero .col,.body .col{max-width:none}}
+@media (max-width:700px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to main content</a>
+
+<header>
+  <div class="preheader"><div class="container">
+    <a href="https://www.qld.gov.au">qld.gov.au</a>
+    <span class="prelinks"><a href="https://www.qld.gov.au/services">Find services</a><a href="https://www.business.qld.gov.au">Business Queensland</a><a href="https://www.forgov.qld.gov.au">Government employees</a><a href="https://www.qld.gov.au/contact-us">Contact us</a></span>
+  </div></div>
+  <div class="masthead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logo"></span></a>
+    <form class="search" role="search" onsubmit="return false"><label class="sr-only" for="q">Search</label><input id="q" type="search"><button type="submit">Search</button></form>
+  </div></div>
+  <div class="navband"><div class="container">
+    <a href="https://www.qld.gov.au" aria-label="Home"><span data-icon="home"></span></a>
+    <button type="button" aria-expanded="false">Menu <span data-icon="chevDown"></span></button>
+  </div></div>
+  <div class="mhead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logo"></span></a>
+    <div class="icons">
+      <button type="button"><span data-icon="searchLg"></span>Search</button>
+      <button type="button"><span data-icon="menu"></span>Menu</button>
+    </div>
+  </div></div>
+</header>
+
+<div id="main" tabindex="-1"></div>
+
+<script>
+const I = {
+  chevRight:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  chevLeft:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  chevDown:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>',
+  arrowLeft:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>',
+  arrowRight:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>',
+  arrowUp:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20V4M6 10l6-6 6 6"/></svg>',
+  circleArrow:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12h9M12.5 8l4 4-4 4"/></svg>',
+  home:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>',
+  phone:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+  searchLg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  menu:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  external:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  doc:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h7"/></svg>',
+  yes:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>',
+  no:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>',
+  facebook:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg>',
+  linkedin:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9h4v12H4zM6 3a2.2 2.2 0 1 1 0 4.4A2.2 2.2 0 0 1 6 3zm5 6h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.6 4.3 6V21h-4v-5.6c0-1.5 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H11z"/></svg>',
+  instagram:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+  /* Simplified stand-in for the Queensland Government logo lock-up (not the official crest artwork) */
+  xmark:'<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.5L6.3 22H3.2l7.3-8.3L2.4 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L8.3 3.7H6.5L17.8 20Z"/></svg>',
+  logo:'<span class="dfq"><b>DELIVERING</b><small>FOR QUEENSLAND</small></span><span class="div"></span><svg width="32" height="38" viewBox="0 0 32 38" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 5l9 3.5v9.5c0 7-4.2 11.5-9 14-4.8-2.5-9-7-9-14V8.5z"/><path d="M16 5V2M12 3.5l4 1.5 4-1.5M11 14h10M16 10v14M5 16c-2 2-2.5 5-1.5 8M27 16c2 2 2.5 5 1.5 8M9 33l7 3 7-3"/></svg><span class="qg"><b>Queensland</b><small>Government</small></span>'
+};
+/* ---------- real qld.gov.au links where they exist ---------- */
+const U = {
+  home:'https://www.qld.gov.au',
+  tmr:'https://www.qld.gov.au/transport',
+  prepl:'https://www.qld.gov.au/transport/licensing/getting/learner/prepl',
+  preplCourse:'https://www.qld.gov.au/transport/licensing/getting/learner/prepl/prepl/prepl-online-learning-and-assessment',
+  tests:'https://www.qld.gov.au/transport/licensing/getting/tests',
+  learner:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/learner',
+  gettingLearner:'https://www.qld.gov.au/transport/licensing/getting/learner/getting-a-learner-licence',
+  logbook:'https://www.qld.gov.au/transport/licensing/getting/learner-logbook',
+  exempt:'https://www.service.transport.qld.gov.au/requestlogbookexemption/public/Welcome.xhtml',
+  steps:'https://www.qld.gov.au/transport/licensing/getting/steps',
+  progression:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/driver-licence-progression',
+  practical:'https://www.qld.gov.au/transport/licensing/getting/practical-tests',
+  help:'https://www.qld.gov.au/help'
+};
+
+/* placeholder copy used in the mockups */
+const K = 'Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.';
+const D = 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.';
+const L5 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum purus at efficitur imperdiet. Maecenas placerat accumn nulla, vel semper enim. In turpis.';
+
+const CRUMB_BASE = [{x:'Home', href:U.home}, {x:'Transport and main roads', href:U.tmr}];
+
+/* ---------- pages ---------- */
+const PAGES = {
+
+/* ====== LEVEL 0 — subject page ====== */
+'': { kind:'subject', title:'Licencing',
+  crumbs:[...CRUMB_BASE, {x:'Subject', noop:true}],
+  cards:[
+    {t:'Get your learner licence', page:'learner', d:'The first step to becoming a fully licenced car driver in Queensland is to get your learner licence. You can apply for a learner licence from age 16. Follow the steps on this page and check what you need to do.'},
+    {t:'Get your provisional licence (P1 and P2)', page:'provisional', d:L5},
+    {t:'Get your open licence', d:L5},
+    {t:'Rules and exemptions for your licence', page:'rules', d:L5},
+    {t:'Information for supervisors', page:'supervisors', d:L5}
+  ]},
+
+/* ====== LEVEL 1 — step-by-steps ====== */
+'learner': { kind:'sbs', title:'Get your learner licence', partOf:{x:'Licencing', page:''},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your learner licence'}],
+  lead:'The first step to becoming a fully licenced car driver in Queensland is to get your learner licence. You can apply for a learner licence from age 16. Follow the steps on this page and check what you need to do.',
+  steps:[
+    {t:'Learn the road rules', page:'learn-road-rules', d:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.'},
+    {t:'Pass a road rules test', page:'pass-road-rules-test', d:'From the age of 16, you can take the Queensland road rules knowledge test.  You will need to pass this test before you can apply for your learner licence.'},
+    {t:'Get your learner licence', page:'get-learner-licence', d:'Once you have passed the road rules knowledge test, you can apply for your learner licence online or in person.'}
+  ],
+  next:{h:'Next stage get your provisional licence (P1 and P2)',
+        p:'Once you have completed all steps in the get your learner licence, you can continue onto the next stage of your licencing journey.',
+        x:'Go to get your provisional licence (P1 and P2)', page:'provisional'},
+  helpbox:{t:'Help with learner licence', items:["I'm 25 or older", 'I have interstate or overseas driving experience']},
+  interested:[{x:'Rules for learner drivers', page:'rules-learner'}]},
+
+'provisional': { kind:'sbs', title:'Get your provisional licence', partOf:{x:'Licencing', page:''},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence'}],
+  lead:'Get your provisional (P1 or P2 class) licence in Queensland. Follow the steps to learn to drive, log driving hours, take a hazard perception test and pass a car practical driving test.',
+  callout:`You must have a <a href="#/learner" data-page="learner">learner licence</a> before you can continue.`,
+  steps:[
+    {t:'Get a supervisor and start learning to drive', page:'get-supervisor', d:'Once you have your learner licence, you can start learning to drive. You must always be supervised by an eligible driver and cannot drive alone.'},
+    {t:'Pass a hazard perception test', page:'hazard-perception', d:K},
+    {t:'Submit your completed learner logbook (under 25 years only)', page:'submit-logbook', d:K},
+    {t:'Book a practical driving test', page:'book-test', d:K},
+    {t:'Take a practical driving test', page:'take-test', d:K},
+    {t:'Get your provisional licence', page:'get-provisional', d:K}
+  ],
+  next:{h:'Next stage get your open licence',
+        p:'Once you have completed all steps in the get your learner licence, you can continue onto the next stage of your licencing journey.',
+        x:'Go to get your open licence'},
+  helpbox:{t:'Help with provisional licence', items:['Driving experience from another state or country','If you turn 25 during the journey','If you do not pass or need to reschedule a test','Logbook exemptions and special circumstances']},
+  interested:[{x:'Rules for P1 drivers', page:'rules-p1'},{x:'Rules for P2 drivers', page:'rules-p2'},{x:'Learner logbook rules and requirements', page:'logbook-rules'}]},
+
+/* ====== LEVEL 1 — topic pages (hero banner) ====== */
+'rules': { kind:'topic', title:'Rules and exemptions for your licence',
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence'}],
+  lead:L5,
+  groups:[
+    {h:'Services', sub:'Applications, transactions and registrations', links:[
+      {x:'Special need for a Class C learner or provisional licence', page:'special-need'},
+      {x:'Learner logbook exemption', page:'logbook-exemption'}]},
+    {h:'Guidance', sub:'Information, rules and guides', links:[
+      {x:'Rules for learner drivers', page:'rules-learner'},
+      {x:'Rules for drivers on a P1 provisional licence', page:'rules-p1'},
+      {x:'Rules for drivers on a P2 licence', page:'rules-p2'},
+      {x:'Rules for drivers on an open licence', page:'rules-open'},
+      {x:'Learner logbook rules and requirements', page:'logbook-rules'}]}
+  ],
+  interested:[{x:'Get your learner licence', page:'learner'},{x:'Get your provisional licence (P1 and P2)', page:'provisional'},
+              {x:'Get your open licence', noop:true},{x:'Check demerit points', noop:true},
+              {x:'Buying a car', noop:true},{x:'Renewing licence', noop:true}]},
+
+'supervisors': { kind:'topic', title:'For supervisors',
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'For supervisors'}],
+  lead:L5,
+  groups:[
+    {h:'Services', sub:'Applications, transactions and registrations', links:[{x:'PrepL learner supervisor course', page:'prepl-supervisor'}]},
+    {h:'Guidance', sub:'Information, rules and guides', links:[{x:'Guide to supervising a learner driver', page:'supervising-guide'}]}
+  ],
+  interested:[{x:'Rules for learner drivers', page:'rules-learner'}]},
+
+/* ====== LEVEL 2 — learner licence step pages ====== */
+'learn-road-rules': { kind:'content', title:'Learn the road rules', guide:'learner', step:1,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your learner licence', page:'learner'}, {x:'Learn the road rules'}],
+  lead:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
+  inshort:`<p>You can learn the road rules online on PrepL, or by downloading a copy of "your keys to driving in Queensland".</p>
+    <ul class="arrowlist"><li><a href="${U.prepl}"><span>Enrol in PrepL</span>${'{AR}'}</a></li>
+    <li><a href="${U.gettingLearner}"><span>Download "your keys to driving in Queensland" (PDF, 24mb)</span>${'{AR}'}</a></li></ul>`,
+  sections:[
+    {id:'lrr-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. This can either be one online using the PrepL online learner driver course or by downloading a copy of the "Your keys to driving in Queensland" PDF.</p>
+      <h3>Practice for the test</h3><p>Before you take the test, practice your knowledge with the <a href="${U.tests}">road rules practice test</a>.</p>`},
+    {id:'lrr-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are at least 15 years and 11 months</li></ul></div></div>`},
+    {id:'lrr-how', h:'How to learn the road rules', html:`<p>Choose how to learn the road rules and follow the steps</p>
+      <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL</a> to practice the road rules test online.</p></div></details>
+      <details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody"><p>Download a copy of the <a href="${U.gettingLearner}">Your keys to driving in Queensland PDF</a></p></div></details></div>`},
+    {id:'lrr-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
+    {id:'lrr-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`},
+    {id:'lrr-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the <a href="${U.tests}">road rules practice test.</a></p>`}
+  ],
+  helpbox:{t:'Help with Report a crime to police', items:['Help item 1','Help item 2']}},
+
+'pass-road-rules-test': { kind:'content', title:'Pass a road rules test', guide:'learner', step:2,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your learner licence', page:'learner'}, {x:'Pass a road rules test'}],
+  lead:'From the age of 16, you can take the Queensland road rules knowledge test.  You will need to pass this test before you can apply for your learner licence.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
+  inshort:`<p>You can take the road rules test online or in person.</p>
+    <ul class="arrowlist"><li><a href="${U.preplCourse}"><span>Log into PrepL to take the test online</span>${'{AR}'}</a></li>
+    <li><a href="${U.tests}"><span>Find a TMR service centre to take the test in person</span>${'{AR}'}</a></li></ul>`,
+  sections:[
+    {id:'prt-know', h:'What you should know', html:`<p>You can take the test online through PrepL or in person at a TMR service centre. You can attempt the test once per day.</p>
+      <p>See <a href="#prt-cost" data-jump="prt-cost">how much it costs</a> for pricing information.</p>
+      <div class="callout"><h2>Practice for the test</h2><p>Before you take the test, practice your knowledge with the <a href="${U.tests}">road rules practice test</a>.</p></div>`},
+    {id:'prt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are 16 year old</li><li>you have <a href="#/learn-road-rules" data-page="learn-road-rules">learnt the road rules</a></li></ul></div></div>`},
+    {id:'prt-how', h:'How to take a road rules test', html:`<p>Choose how to take a road rules test</p>
+      <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL</a> to take the road rules test online.</p></div></details>
+      <details open><summary>In person at a TMR service centre</summary><div class="accbody"><p>You can take the test without an appointment at a TMR service centre.</p><p><a href="${U.tests}">Find a TMR service centre</a>.</p></div></details></div>`},
+    {id:'prt-long', h:'How long it takes', html:`<p>The road rules test takes about 30min to complete.</p><p>If attending in person please allow 30min waiting time.</p>`},
+    {id:'prt-cost', h:'How much it costs', html:`<p>PrepL (online)</p><ul><li>Pay a one-off fee of $XX when you enrol.</li></ul><p>In person at a TMR service centre</p><ul><li>Pay $XX for each test attempt.</li></ul>`}
+  ],
+  helpbox:{t:'Help with road rules test', items:['Help item 1','Help item 2']}},
+
+'get-learner-licence': { kind:'content', title:'Get your learner licence', guide:'learner', step:3,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your learner licence', page:'learner'}, {x:'Get your learner licence'}],
+  lead:'Once you have passed the road rules knowledge test, you can apply for your learner licence online or in person.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
+  inshort:`<p>Once you have <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">passed the road rules test</a>, you will need to get your photo taken to get a learner licence. In special circumstances you can apply to get it early.</p>`,
+  sections:[
+    {id:'gll-know', h:'What you should know', html:`<p>Before you can get your licence you need to have <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">passed the road rules test</a>.</p>
+      <p>To get your licence you'll need to provide evidence of your identity and a photo taken at a <a href="${U.tests}">TMR service centre</a> that provides licencing services.</p>
+      <p>Once approved, you can start driving with a supervisor straight away using your driver licence receipt or the <a href="${U.learner}">Digital Licence app</a>, while your card is posted to you.</p>
+      <h3>Special circumstances</h3>
+      <p>In very rare situations, you may be able to get your learner licence before you are 16, if you have a special need to drive.</p>
+      <p><a href="#/special-need" data-page="special-need">Apply to get a learner licence early</a>.</p>`},
+    {id:'gll-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have passed the road rules test</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you have not yet passed the road rules test,<br>instead go to <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">step 2 road rules test</a></li></ul></div></div>`},
+    {id:'gll-how', h:'How to get your learner licence', html:`<p>Choose how to get your learner licence</p>
+      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p><a href="${U.tests}">Visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence which will be sent to you by post.</p></div></details>
+      <details open><summary>Digital licence app</summary><div class="accbody"><p>First <a href="${U.tests}">visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence. You will be given your licence number which you can use to set up your learner licence on the <a href="${U.learner}">Digital licence app</a>.</p></div></details></div>`},
+    {id:'gll-long', h:'How long it takes', html:`<p>Taking a photo will take 30min</p><p>Post for your licence will take 2 weeks</p>`},
+    {id:'gll-cost', h:'How much it costs', html:`<p>$50</p>`}
+  ],
+  helpbox:{t:'Help with road rules test', items:['Help item 1','Help item 2']}},
+
+/* ====== LEVEL 2 — provisional licence step pages ====== */
+'get-supervisor': { kind:'content', title:'Get a supervisor and start learning to drive', guide:'provisional', step:1, readtime:2,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Get a supervisor and start learning to drive'}],
+  lead:'Once you have your learner licence, you can start learning to drive. You must always be supervised by an eligible driver and cannot drive alone.',
+  otp:['Finding a driving instructor or supervisor','Practicing driving','Learner logbook','Special circumstances'],
+  inshort:`<p>Once you have your learner licence, you can start learning to drive. You must always be supervised by an eligible driver and cannot drive alone.</p>`,
+  sections:[
+    {id:'gs-find', h:'Finding a driving instructor or supervisor', html:`<p>Supervisors must have an legible open licence. You must have at leastt x hours with a licenced supervisor from a driving school - <a href="${U.practical}">find a driving school</a>.</p>`},
+    {id:'gs-practice', h:'Practicing driving', html:`<p>If you are under 25 you will need to log 100 hours of supervised driving. Use the logbook app to document the hours driven.</p>`},
+    {id:'gs-logbook', h:'Learner logbook', html:`<p>The learner logbook app is available for download on both the <a href="${U.logbook}">Apple app store</a> and <a href="${U.logbook}">Google play store.</a></p><p>You must follow the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements.</a></p>`},
+    {id:'gs-special', h:'Special circumstances', html:`<p><a href="#/logbook-exemption" data-page="logbook-exemption">Apply for a learner logbook exemption</a></p>`}
+  ],
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+'hazard-perception': { kind:'content', title:'Pass a hazard perception test', guide:'provisional', step:2,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Pass a hazard perception test'}],
+  lead:K,
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
+  inshort:`<p>You must complete a hazard perception test as part of the journey to get your provisional licence.</p><p><a class="btn" href="${U.tests}">Enrol in the hazard perception test</a></p>`,
+  sections:[
+    {id:'hp-know', h:'What you should know', html:`<p>${D}</p>`},
+    {id:'hp-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have your learner licence</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you do not have your learner licence<br>instead <a href="#/learner" data-page="learner">get your learner licence</a></li></ul></div></div>`},
+    {id:'hp-how', h:'How to pass a hazard perception test', html:`<div class="acc"><details><summary>Practice for the test</summary><div class="accbody"><p>Practice the hazard perception test before you enrol.</p></div></details>
+      <details open><summary>Enrol in the test</summary><div class="accbody"><p><a href="${U.tests}">Enrol in the hazard perception test</a>.</p></div></details></div>`},
+    {id:'hp-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
+    {id:'hp-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
+  ],
+  helpbox:{t:'Help with provisional licence', items:['Help item 1','Help item 2']},
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+'submit-logbook': { kind:'content', title:'Submit your completed learner logbook (under 25 years only)', guide:'provisional', step:3,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Submit your completed learner logbook (under 25 years only)'}],
+  lead:K,
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
+  inshort:`<p>If you are under 25 years you need to submit your completed learner logbook showing 100 hours of driving and that you have passed your hazard perception test before you can book your drivers test.</p>
+    <p>If you are over 25 years or over you do not need to log 100 hours and can go straight to booking your drivers test.</p>
+    <p><a class="btn" href="${U.logbook}">Submit your learner logbook</a></p>`,
+  sections:[
+    {id:'sl-know', h:'What you should know', html:`<p>If you are under 25 years you need to submit your completed learner logbook showing 100 hours of driving and that you have passed your hazard perception test before you can book your drivers test.</p><p>If you are over 25 years or over you do not need to log 100 hours and can go straight to booking your drivers test.</p>`},
+    {id:'sl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are under 25 years old</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you are 25 years or older<br>instead book your <a href="#/book-test" data-page="book-test">practical driving test</a></li></ul></div></div>`},
+    {id:'sl-how', h:'How to submit your learners logbook', html:`<div class="acc"><details><summary>Online</summary><div class="accbody"><p>Submit your completed learner logbook online.</p></div></details></div>`},
+    {id:'sl-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
+    {id:'sl-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
+  ],
+  helpbox:{t:'Help with provisional licence', items:['Help item 1','Help item 2']},
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+'book-test': { kind:'content', title:'Book a practical driving test', guide:'provisional', step:4,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Book a practical driving test'}],
+  lead:K,
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
+  inshort:`<p>${K}</p><p><a class="btn" href="${U.practical}">Book a practical driving test</a></p>`,
+  sections:[
+    {id:'bt-know', h:'What you should know', html:`<p>${K}</p><p>See rules under <a href="#/take-test" data-page="take-test">take a practical driving test</a></p>`},
+    {id:'bt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have your learner licence</li><li>you have completed 100 hours of supervised driving (under 25)</li><li>you have passed a hazard perception test</li><li>you have an eligible vehicle for the drivers test</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>haven't completed the requirements above</li></ul></div></div>`},
+    {id:'bt-how', h:'How to book a practical driving test', html:`<div class="acc"><details><summary>Online</summary><div class="accbody"><p>Book your practical driving test online.</p></div></details></div>`},
+    {id:'bt-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
+    {id:'bt-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
+  ],
+  helpbox:{t:'Help with provisional licence', items:['Help item 1','Help item 2']},
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+'take-test': { kind:'content', title:'Take a practical driving test', guide:'provisional', step:5, readtime:2,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Take a practical driving test'}],
+  lead:K,
+  otp:['Preparing for your practical driving test','Rules for your car'],
+  inshort:`<p>${K}</p>`,
+  sections:[
+    {id:'tt-prep', h:'Preparing for your practical driving test', html:`<p>${K}</p>`},
+    {id:'tt-car', h:'Rules for your car', html:`<p>${K}</p>`}
+  ],
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+'get-provisional': { kind:'content', title:'Get your provisional licence', guide:'provisional', step:6, readtime:2,
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence', page:'provisional'}, {x:'Take a practical driving test'}],
+  lead:K,
+  otp:['Get your P1 provisional licence (under 25)','Get your P2 provisional licence (25 and over)','High powered vehicles'],
+  inshort:`<p>${K}</p>`,
+  sections:[
+    {id:'gp-p1', h:'Get your P1 provisional licence (under 25)', html:`<p>${K}</p>`},
+    {id:'gp-p2', h:'Get your P2 provisional licence (25 and over)', html:`<p>${K}</p>`},
+    {id:'gp-hp', h:'High powered vehicles', html:`<p>${K}</p>`}
+  ],
+  interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
+
+/* ====== service summary under the rules topic ====== */
+'special-need': { kind:'content', title:'Special need for a Class C learner or provisional licence',
+  tag:'Service summary', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Special need for a Class C learner or provisional licence'}],
+  lead:'In very rare situations, you may be able to get your learner licence before you are 16, if you have a special need to drive.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
+  inshort:`<p>In very rare situations, you may be able to get a licence early if you can demonstrate that you have a special need to drive. This includes getting your learner licence before you're 16 or your provisional licence before you've had your learner licence for 12 months.</p>
+    <p><a class="btn" href="${U.gettingLearner}">Apply to get a learner licence early</a></p>`,
+  sections:[
+    {id:'sn-know', h:'What you should know', html:`<p>As a young driver in Queensland aged 16 to 24, you are 60 per cent more likely to have a serious crash than drivers aged 25 to 59. This is why these exemptions are rarely granted.</p>
+      <p>In very rare situations, you may be able to get a licence early if you can demonstrate that you have a special need to drive. This includes getting your learner licence before you're 16 or your provisional licence before you've had your learner licence for 12 months.</p>
+      <p>We will carefully consider both your safety and the safety of others on the road before granting you an exemption to apply for your learner or provisional driver licence early.</p>`},
+    {id:'sn-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You may be eligible to get your learner licence early if both of the following apply:</p>
+      <ul><li>you are not yet 16 years old</li><li>you have evidence proving that not having a licence will create serious problems for you or your family because you have special responsibilities. For example, you are the main money earner or caregiver.</li></ul>
+      <p>You may be eligible to get your provisional licence early if all of the following apply:</p>
+      <ul><li>you are under 17 years old</li><li>you already have a class C learner licence</li><li>you have completed your mandatory hours and your <a href="#/logbook-rules" data-page="logbook-rules">Learner Logbook</a> has been approved</li><li>you have passed the <a href="#/hazard-perception" data-page="hazard-perception">Hazard Perception Test</a></li><li>you have evidence proving that not having a provisional licence will create serious problems for you or your family because you have special responsibilities. For example, you are the main money earner or caregiver.</li></ul></div></div>`},
+    {id:'sn-how', h:'How to get your learner licence early', html:`<p>If you are eligible, you can download and submit a completed <a href="${U.gettingLearner}">Special Need – Learner or Provisional Licence Application (Age Rule) form (F4028).</a></p>
+      <div class="acc"><details open><summary>Email</summary><div class="accbody"><p>Email your completed form to your nearest TMR customer service centre.</p></div></details>
+      <details open><summary>In person</summary><div class="accbody"><p>Take your completed form to a TMR customer service centre.</p></div></details>
+      <details open><summary>By post</summary><div class="accbody"><p>Post your completed form to your nearest TMR customer service centre.</p></div></details></div>`},
+    {id:'sn-long', h:'How long it takes', html:`<p>Taking a photo will take 30min</p><p>Post for your licence will take 2 weeks</p>`},
+    {id:'sn-cost', h:'How much it costs', html:`<p>$50</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Get your learner licence', page:'learner'}]},
+
+/* ====== children of the Rules and exemptions topic ====== */
+'logbook-exemption': { kind:'content', title:'Learner logbook exemption',
+  tag:'Service summary', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Learner logbook exemption'}],
+  lead:'If you cannot complete the required hours of supervised driving, you may be able to apply for an exemption from the learner logbook requirements.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
+  inshort:`<p>If something outside your control stops you completing 100 hours of supervised driving, you can apply to be exempted from the learner logbook requirements.</p>
+    <p><a class="btn" href="${U.exempt}">Apply for a learner logbook exemption</a></p>`,
+  sections:[
+    {id:'le-know', h:'What you should know', html:`<p>Learner drivers under 25 must record at least 100 hours of supervised driving before they can book a practical driving test. See the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements</a> for what counts.</p>
+      <p>An exemption removes the logbook requirement. It does not remove any other requirement &mdash; you still need to hold your learner licence for the minimum period, pass the <a href="#/hazard-perception" data-page="hazard-perception">hazard perception test</a> and pass a practical driving test.</p>
+      <p>Each application is assessed individually. Exemptions are not granted simply because logging hours is inconvenient.</p>`},
+    {id:'le-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You may be eligible if any of these apply:</p><ul><li>you have a medical condition or disability that makes supervised driving impractical</li><li>you live in a remote area with no access to an eligible supervisor</li><li>you have driving experience from another state or country that has not been recognised</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you are 25 years or older &mdash; you do not need to log 100 hours, so go straight to <a href="#/book-test" data-page="book-test">booking a practical driving test</a></li></ul></div></div>`},
+    {id:'le-how', h:'How to apply for a logbook exemption', html:`<p>Choose how to apply and follow the steps</p>
+      <div class="acc"><details open><summary>Online</summary><div class="accbody"><p><a href="${U.exempt}">Apply for a learner logbook exemption</a> online. You will need to attach evidence supporting your application.</p></div></details>
+      <details><summary>In person</summary><div class="accbody"><p>Take your completed application and supporting evidence to a TMR customer service centre.</p></div></details></div>`},
+    {id:'le-long', h:'How long it takes', html:`<p>Most applications are assessed within 10 business days.</p><p>Applications missing evidence will take longer.</p>`},
+    {id:'le-cost', h:'How much it costs', html:`<p>Applying for a logbook exemption is free.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Learner logbook rules and requirements', page:'logbook-rules'},
+              {x:'Get your provisional licence (P1 and P2)', page:'provisional'},
+              {x:'Special need for a Class C learner or provisional licence', page:'special-need'}]},
+
+'logbook-rules': { kind:'content', title:'Learner logbook rules and requirements',
+  tag:'Guidance', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Learner logbook rules and requirements'}],
+  lead:'How many hours of supervised driving you need, what counts, and how to record them in your learner logbook.',
+  otp:['How many hours you need','What counts as supervised driving','Recording your hours','Getting your logbook approved','If you cannot complete your hours'],
+  inshort:`<p>Learner drivers under 25 must record at least 100 hours of supervised driving, including 10 hours at night, before they can book a practical driving test.</p>`,
+  sections:[
+    {id:'lr-hours', h:'How many hours you need', html:`<p>If you are under 25, you must record at least 100 hours of supervised driving. At least 10 of those hours must be at night, between sunset and sunrise.</p>
+      <p>If you are 25 or older you do not need to log hours, and can go straight to <a href="#/book-test" data-page="book-test">booking a practical driving test</a>.</p>
+      <p>Hours are a minimum, not a target. Many learners need more practice than this before they are ready to drive on their own.</p>`},
+    {id:'lr-counts', h:'What counts as supervised driving', html:`<p>Driving counts towards your hours when you hold a current Queensland learner licence and are supervised by an eligible driver sitting beside you.</p>
+      <ul><li>Your supervisor must hold a current open licence for the class of vehicle you are driving.</li><li>Your supervisor must not be over the legal alcohol limit that applies to them.</li><li>Time spent as a passenger, or driving without a supervisor, does not count.</li></ul>
+      <p>One hour of professional lesson with an accredited driving instructor counts as three hours in your logbook, up to a maximum of 10 lessons.</p>`},
+    {id:'lr-record', h:'Recording your hours', html:`<p>Record each drive as you go, not from memory afterwards. For every entry you need the date, the start and finish time, the conditions, and your supervisor's licence number.</p>
+      <p>The learner logbook app records entries on your phone and is the easiest way to keep them accurate. A paper logbook is also accepted.</p>
+      <p>Your supervisor must confirm each entry. Entries that are incomplete or cannot be verified may be removed when your logbook is assessed.</p>`},
+    {id:'lr-approved', h:'Getting your logbook approved', html:`<p>Once you have your hours, <a href="#/submit-logbook" data-page="submit-logbook">submit your completed learner logbook</a>. It must be approved before you can book a practical driving test.</p>
+      <p>Keep your logbook until you hold your provisional licence, in case you are asked for it.</p>`},
+    {id:'lr-cannot', h:'If you cannot complete your hours', html:`<p>If something outside your control prevents you completing 100 hours, you may be able to <a href="#/logbook-exemption" data-page="logbook-exemption">apply for a learner logbook exemption</a>.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Learner logbook exemption', page:'logbook-exemption'},
+              {x:'Rules for learner drivers', page:'rules-learner'},
+              {x:'Get your provisional licence (P1 and P2)', page:'provisional'}]},
+
+'rules-learner': { kind:'content', title:'Rules for learner drivers',
+  tag:'Guidance', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Rules for learner drivers'}],
+  lead:'The rules you must follow while you are driving on a Queensland learner licence.',
+  otp:['Supervision','Displaying L plates','Speed limits','Mobile phones','Alcohol and drugs','Demerit points'],
+  inshort:`<p>On a learner licence you must always be supervised, display L plates, stay under the signed speed limit, and keep a zero blood alcohol concentration.</p>`,
+  sections:[
+    {id:'rl-sup', h:'Supervision', html:`<p>You must never drive alone. An eligible supervisor must sit beside you in the front passenger seat at all times.</p>
+      <p>Your supervisor must hold a current open licence for the class of vehicle, and must be under the alcohol limit that applies to them. See the <a href="#/supervising-guide" data-page="supervising-guide">guide to supervising a learner driver</a>.</p>`},
+    {id:'rl-plates', h:'Displaying L plates', html:`<p>You must display L plates on the front and rear of the vehicle whenever you are driving. They must be clearly visible and must not block your view or the number plate.</p>`},
+    {id:'rl-speed', h:'Speed limits', html:`<p>You must drive at or under the signed speed limit. There is no separate lower limit for learner drivers in Queensland, but you are still building judgement, so drive to the conditions rather than to the sign.</p>`},
+    {id:'rl-phones', h:'Mobile phones', html:`<p>You must not use a mobile phone at all while driving, including hands-free, a phone in a cradle, or loudspeaker.</p>
+      <p>Your supervisor must not use a hand-held phone while you are driving either.</p>`},
+    {id:'rl-alcohol', h:'Alcohol and drugs', html:`<p>You must have a blood alcohol concentration of zero whenever you drive. Relevant drugs must not be present in your saliva or blood.</p>`},
+    {id:'rl-demerits', h:'Demerit points', html:`<p>Demerit points you accrue on a learner licence carry across to your provisional licence. Accumulating 4 or more points in a 12-month period can lead to a suspension or a good driving behaviour period.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Get your learner licence', page:'learner'},
+              {x:'Learner logbook rules and requirements', page:'logbook-rules'},
+              {x:'Information for supervisors', page:'supervisors'}]},
+
+'rules-p1': { kind:'content', title:'Rules for drivers on a P1 provisional licence',
+  tag:'Guidance', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Rules for drivers on a P1 provisional licence'}],
+  lead:'The rules you must follow while you are driving on a P1 provisional licence.',
+  otp:['Displaying P plates','Passenger restrictions','Mobile phones','Alcohol and drugs','High powered vehicles','Demerit points'],
+  inshort:`<p>On a P1 licence you must display red P plates, keep a zero blood alcohol concentration, and must not use a mobile phone. If you are under 25, late-night passenger restrictions also apply.</p>`,
+  sections:[
+    {id:'p1-plates', h:'Displaying P plates', html:`<p>You must display red P plates on the front and rear of the vehicle whenever you are driving.</p>`},
+    {id:'p1-pass', h:'Passenger restrictions', html:`<p>If you are under 25, between 11pm and 5am you may carry only one passenger under 21 who is not an immediate family member.</p>
+      <p>There is no limit on immediate family members, and no limit outside those hours.</p>`},
+    {id:'p1-phones', h:'Mobile phones', html:`<p>You must not use a mobile phone at all while driving, including hands-free. Passengers under 21 must not use a phone on loudspeaker.</p>`},
+    {id:'p1-alcohol', h:'Alcohol and drugs', html:`<p>You must have a blood alcohol concentration of zero whenever you drive. Relevant drugs must not be present in your saliva or blood.</p>`},
+    {id:'p1-hpv', h:'High powered vehicles', html:`<p>If you are under 25, you must not drive a high powered vehicle. See <a href="#/get-provisional" data-page="get-provisional">get your provisional licence</a> for what counts as high powered and the exemptions that can apply.</p>`},
+    {id:'p1-demerits', h:'Demerit points', html:`<p>Accumulating 4 or more demerit points in a 12-month period on a provisional licence can lead to a suspension or a good driving behaviour period.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Rules for drivers on a P2 licence', page:'rules-p2'},
+              {x:'Get your provisional licence (P1 and P2)', page:'provisional'},
+              {x:'Get your open licence', noop:true}]},
+
+'rules-p2': { kind:'content', title:'Rules for drivers on a P2 licence',
+  tag:'Guidance', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Rules for drivers on a P2 licence'}],
+  lead:'The rules you must follow while you are driving on a P2 provisional licence.',
+  otp:['Displaying P plates','Mobile phones','Alcohol and drugs','High powered vehicles','Demerit points'],
+  inshort:`<p>On a P2 licence you must display green P plates and keep a zero blood alcohol concentration. The late-night passenger restriction no longer applies.</p>`,
+  sections:[
+    {id:'p2-plates', h:'Displaying P plates', html:`<p>You must display green P plates on the front and rear of the vehicle whenever you are driving.</p>`},
+    {id:'p2-phones', h:'Mobile phones', html:`<p>You may use a phone hands-free in a cradle or by voice. You must not hold a phone at any time while driving, including when stopped at lights.</p>`},
+    {id:'p2-alcohol', h:'Alcohol and drugs', html:`<p>You must have a blood alcohol concentration of zero whenever you drive. Relevant drugs must not be present in your saliva or blood.</p>`},
+    {id:'p2-hpv', h:'High powered vehicles', html:`<p>If you are under 25, the high powered vehicle restriction still applies on a P2 licence.</p>`},
+    {id:'p2-demerits', h:'Demerit points', html:`<p>Accumulating 4 or more demerit points in a 12-month period on a provisional licence can lead to a suspension or a good driving behaviour period.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Rules for drivers on a P1 provisional licence', page:'rules-p1'},
+              {x:'Rules for drivers on an open licence', page:'rules-open'},
+              {x:'Get your open licence', noop:true}]},
+
+'rules-open': { kind:'content', title:'Rules for drivers on an open licence',
+  tag:'Guidance', partOfTopic:{x:'Rules for your licence', page:'rules'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Rules for drivers on an open licence'}],
+  lead:'The rules that apply once you hold a Queensland open licence.',
+  otp:['Alcohol limits','Mobile phones','Demerit points','Keeping your licence current'],
+  inshort:`<p>On an open licence the general alcohol limit applies, you may use a phone hands-free, and you can accumulate more demerit points before a suspension applies.</p>`,
+  sections:[
+    {id:'ro-alcohol', h:'Alcohol limits', html:`<p>The general blood alcohol limit of under 0.05 applies. A zero limit still applies if you are driving a truck, bus, taxi, rideshare or a vehicle carrying dangerous goods.</p>`},
+    {id:'ro-phones', h:'Mobile phones', html:`<p>You may use a phone hands-free in a cradle or by voice. You must not hold a phone at any time while driving.</p>`},
+    {id:'ro-demerits', h:'Demerit points', html:`<p>Accumulating 12 or more demerit points in a 3-year period can lead to a suspension or a good driving behaviour period.</p>`},
+    {id:'ro-current', h:'Keeping your licence current', html:`<p>Renew your licence before it expires. Driving on an expired licence is an offence, and a licence expired for more than 5 years cannot simply be renewed.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Rules for drivers on a P2 licence', page:'rules-p2'},
+              {x:'Check demerit points', noop:true},
+              {x:'Renewing licence', noop:true}]},
+
+/* ====== children of the For supervisors topic ====== */
+'prepl-supervisor': { kind:'content', title:'PrepL learner supervisor course',
+  tag:'Service summary', partOfTopic:{x:'For supervisors', page:'supervisors'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'For supervisors', page:'supervisors'}, {x:'PrepL learner supervisor course'}],
+  lead:'A free online course that prepares you to supervise a learner driver and teach them safely.',
+  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
+  inshort:`<p>PrepL Supervisor is a free online course covering how to plan practice sessions, give feedback, and build a learner's experience safely.</p>
+    <p><a class="btn" href="${U.prepl}">Enrol in PrepL Supervisor</a></p>`,
+  sections:[
+    {id:'ps-know', h:'What you should know', html:`<p>Supervising a learner is different from driving yourself. The course covers how to stage practice from quiet streets to complex traffic, how to give instructions that are easy to follow, and what to do when something goes wrong.</p>
+      <p>The course is optional. Completing it does not change the hours a learner needs, and it does not qualify you as a paid driving instructor.</p>
+      <p>For the rules you must follow while supervising, see the <a href="#/supervising-guide" data-page="supervising-guide">guide to supervising a learner driver</a>.</p>`},
+    {id:'ps-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can enrol if any of these apply:</p><ul><li>you hold a current Queensland open licence</li><li>you are supervising, or about to supervise, a learner driver</li></ul></div></div>`},
+    {id:'ps-how', h:'How to enrol in PrepL Supervisor', html:`<div class="acc"><details open><summary>Online</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL Supervisor</a> using your existing qld.gov.au account, or create one as part of enrolling.</p></div></details></div>`},
+    {id:'ps-long', h:'How long it takes', html:`<p>The course takes about 2 hours. You can leave and come back at any point.</p>`},
+    {id:'ps-cost', h:'How much it costs', html:`<p>PrepL Supervisor is free.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'Guide to supervising a learner driver', page:'supervising-guide'},
+              {x:'Learner logbook rules and requirements', page:'logbook-rules'},
+              {x:'Rules for learner drivers', page:'rules-learner'}]},
+
+'supervising-guide': { kind:'content', title:'Guide to supervising a learner driver',
+  tag:'Guidance', partOfTopic:{x:'For supervisors', page:'supervisors'},
+  crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'For supervisors', page:'supervisors'}, {x:'Guide to supervising a learner driver'}],
+  lead:'Who can supervise a learner, what you are responsible for, and how to make practice sessions useful.',
+  otp:['Who can supervise a learner','What you are responsible for','Planning practice sessions','Signing the logbook','Looking after yourself'],
+  inshort:`<p>To supervise a learner you must hold a current open licence for that class of vehicle, sit in the front passenger seat, and stay under the alcohol limit that applies to you.</p>`,
+  sections:[
+    {id:'sg-who', h:'Who can supervise a learner', html:`<p>You can supervise a learner driver if you hold a current Queensland open licence, or an equivalent interstate or overseas licence, for the class of vehicle being driven.</p>
+      <p>A provisional licence is not enough. A licence that is suspended, expired or cancelled is not enough either.</p>`},
+    {id:'sg-resp', h:'What you are responsible for', html:`<p>While you are supervising you are legally in charge of the vehicle. You must sit in the front passenger seat, stay under the alcohol limit that applies to you, and be in a fit state to take over.</p>
+      <p>You must not use a hand-held mobile phone while the learner is driving.</p>
+      <p>The learner must follow the <a href="#/rules-learner" data-page="rules-learner">rules for learner drivers</a>, and it is your job to make sure they do.</p>`},
+    {id:'sg-plan', h:'Planning practice sessions', html:`<p>Start in quiet, predictable places and add difficulty one element at a time &mdash; traffic, then speed, then weather, then night. A learner who is overloaded stops learning.</p>
+      <p>Short, frequent sessions work better than occasional long ones. Agree what the drive is for before you set off, and keep instructions to one at a time, early enough to act on.</p>
+      <p>Save the feedback for the end of the drive, or for a safe stop. Commentary while they are deciding makes decisions harder.</p>`},
+    {id:'sg-sign', h:'Signing the logbook', html:`<p>Confirm each entry at the end of the drive, while the detail is fresh. You will need to provide your licence number.</p>
+      <p>Only sign for drives you actually supervised. See the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements</a> for what counts towards the 100 hours.</p>`},
+    {id:'sg-self', h:'Looking after yourself', html:`<p>Supervising is tiring, and being tense makes the learner tense. If a drive is going badly, end it early and swap seats &mdash; nothing is lost by stopping.</p>
+      <p>If you would rather not supervise certain conditions, such as night driving or highways, a professional lesson can cover those instead.</p>`}
+  ],
+  ruleBeforeInterested:true,
+  interested:[{x:'PrepL learner supervisor course', page:'prepl-supervisor'},
+              {x:'Rules for learner drivers', page:'rules-learner'},
+              {x:'Learner logbook rules and requirements', page:'logbook-rules'}]}
+
+};
+
+
+
+/* ---------------- helpers ---------------- */
+const ICONS = s => String(s).split('{AR}').join(I.arrowRight).split('{YES}').join(I.yes).split('{NO}').join(I.no);
+const A = l => l.page !== undefined ? `<a href="#/${l.page}" data-page="${l.page}">${l.x}</a>`
+            : l.href ? `<a href="${l.href}">${l.x}</a>`
+            : `<a href="#" data-noop>${l.x}</a>`;
+function crumbs(items){
+  const last = items[items.length-1], rest = items.slice(0,-1);
+  return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${
+    rest.map(c=>`<li>${A(c)}</li>`).join('')}<li aria-current="page">${last.x}</li></ol></nav>`;
+}
+function helpboxHTML(h){
+  return `<aside class="helpbox"><h2>${h.t}</h2>
+    <p>Find answers to frequently asked questions about services, including:</p>
+    <ul>${h.items.map(i=>`<li><a href="#" data-noop><span>${i}</span>${I.arrowRight}</a></li>`).join('')}</ul>
+    <div class="find"><a href="${U.help}">Find more in the help centre ${I.circleArrow}</a></div></aside>`;
+}
+const interestedHTML = list => !list ? '' :
+  `<div class="interested"><h2>You may be interested in</h2><ul>${list.map(l=>`<li>${A(l)}</li>`).join('')}</ul></div>`;
+const managedHTML = top =>
+  `<p class="managed"><b>Managed by:</b> <a href="#" data-noop>[Department]</a>${
+    top ? `<button type="button" class="top" data-top style="float:right">Back to top ${I.arrowUp}</button>` : ''}</p>`;
+
+const HELPFUL = `<div class="helpful"><div class="container">
+  <b>Was this page helpful?</b>
+  <label><input type="radio" name="helpful">Yes</label>
+  <label><input type="radio" name="helpful">No</label>
+</div></div>`;
+
+const FLINKS = `<div class="flinkswrap"><h3 class="sr-only">Site links</h3><ul class="flinks">
+  <li><a href="https://www.qld.gov.au/help">Help</a></li>
+  <li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+  <li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
+  <li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
+  <li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+  <li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+  <li><a href="https://smartjobs.qld.gov.au">Jobs in Queensland Government</a></li>
+  <li><a href="https://www.qld.gov.au/languages">Other languages</a></li>
+</ul></div>`;
+const ACK = `We pay our respects to the Aboriginal and Torres Strait Islander ancestors of this land, their spirits and their legacy. The foundations laid by these ancestors&mdash;our First Nations peoples&mdash;give strength, inspiration and courage to current and future generations towards creating a better Queensland.`;
+
+/* footer A — used on every page except the subject page */
+const FOOTER_A = `<footer class="footer"><div class="container">
+  <h2 class="fgov">Queensland Government</h2>
+  <div class="fgrid">
+    <div class="fcontact"><h3>Contact us</h3>
+      <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+      <p class="phone">${I.phone}<span><b>Phone:</b> <a href="tel:137468">13 QGOV (13 74 68)</a></span></p>
+      <a class="fbtn" href="https://www.qld.gov.au/contact-us">Contact us</a></div>
+    ${FLINKS}
+    <div class="followwrap"><h3>Follow us</h3><ul class="social">
+      <li><a href="#" onclick="return false">${I.facebook}<span class="lbl">Facebook</span></a></li>
+      <li><a href="#" onclick="return false">${I.linkedin}<span class="lbl">LinkedIn</span></a></li>
+      <li><a href="#" onclick="return false">${I.instagram}<span class="lbl">Instagram</span></a></li>
+    </ul></div>
+    <div class="ackwrap"><h3>Acknowledgement of Country</h3><p>${ACK}</p>
+      <p class="copy">&copy; The State of Queensland 1995 - 2026</p></div>
+  </div></div></footer>`;
+
+/* footer B — the subject page mockup: website feedback, social handles, cultural acknowledgement */
+const FOOTER_B = `<footer class="footer"><div class="container">
+  <h2 class="fgov">Queensland Government</h2>
+  <div class="fgrid">
+    <div class="fcontact"><h3>Contact us</h3>
+      <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+      <p class="phone">${I.phone}<span><b>Phone:</b> 13 QGOV (<a href="tel:137468">13 74 68</a>)</span></p>
+      <ul class="fsocial">
+        <li><a href="#" onclick="return false">${I.facebook}/QueenslandGovernment</a></li>
+        <li><a href="#" onclick="return false">${I.xmark}@QldGov</a></li>
+      </ul>
+      <a class="fbtn" href="https://www.qld.gov.au/contact-us">Contact us</a></div>
+    ${FLINKS}
+    <div class="feedwrap"><h3>Website feedback</h3>
+      <p>Help us improve the content on our website or tell us what is working well.</p>
+      <a class="fbtn" href="#" onclick="return false">Leave your feedback</a></div>
+    <div class="ackwrap"><h3>Cultural Acknowledgement</h3><p>${ACK}</p>
+      <p class="copy">&copy; The State of Queensland 1995 - 2024</p></div>
+  </div></div></footer>`;
+
+/* ---------------- page renderers ---------------- */
+function renderSubject(p){
+  return `<div class="hero"><div class="container"><div class="col wide">
+      ${crumbs(p.crumbs)}<h1 tabindex="-1">${p.title}</h1>
+    </div></div></div>
+    <div class="body"><div class="container"><div class="col wide">
+      <div class="cards">${p.cards.map(c=>`<div class="card">
+        <h2>${c.page!==undefined ? `<a href="#/${c.page}" data-page="${c.page}">${c.t}</a>` : `<a href="#" data-noop>${c.t}</a>`}</h2>
+        <p>${c.d}</p></div>`).join('')}</div>
+      <p class="managed"><b>Managed by:</b> <a href="#" data-noop>[department name]</a></p>
+    </div></div></div>
+    ${FOOTER_B}`;
+}
+
+function renderSbs(p){
+  const steps = p.steps.map((s,i)=>`<section class="stepblock">
+      <p class="step-label">Step ${i+1} of ${p.steps.length}</p>
+      <h2><a href="#/${s.page}" data-page="${s.page}">${s.t}</a></h2>
+      <p>${s.d}</p></section>`).join('');
+  const next = p.next ? `<section class="nextstage"><h2>${p.next.h}</h2><p>${p.next.p}</p>
+      ${p.next.page!==undefined
+        ? `<a href="#/${p.next.page}" data-page="${p.next.page}">${p.next.x} ${I.circleArrow}</a>`
+        : `<a href="#" data-noop>${p.next.x} ${I.circleArrow}</a>`}</section>` : '';
+  return `<div class="body"><div class="container"><div class="col">
+      ${crumbs(p.crumbs)}
+      <div><span class="tag">Step-by-step</span></div>
+      <h1 tabindex="-1">${p.title}</h1>
+      <p class="partof">Part of ${A(p.partOf)}</p>
+      <p class="lead">${p.lead}</p>
+      <hr class="rule">
+      ${p.callout ? `<div class="callout"><p>${p.callout}</p></div>` : ''}
+      ${steps}${next}
+      ${p.helpbox ? helpboxHTML(p.helpbox) : ''}
+      ${interestedHTML(p.interested)}
+      ${managedHTML(true)}
+    </div></div></div>${HELPFUL}${FOOTER_A}`;
+}
+
+function renderTopic(p){
+  const groups = p.groups.map(g=>`<section class="svcgroup"><h2>${g.h}</h2><p>${g.sub}</p>
+      <ul class="svclist">${g.links.map(l=>{
+        const inner = `<span>${l.x}</span>${I.arrowRight}`;
+        return `<li>${l.page!==undefined ? `<a href="#/${l.page}" data-page="${l.page}">${inner}</a>`
+          : l.href ? `<a href="${l.href}">${inner}</a>` : `<a href="#" data-noop>${inner}</a>`}</li>`;
+      }).join('')}</ul></section>`).join('');
+  return `<div class="hero"><div class="container"><div class="col">
+      ${crumbs(p.crumbs)}<h1 tabindex="-1">${p.title}</h1><p class="lead">${p.lead}</p>
+    </div></div></div>
+    <div class="body"><div class="container"><div class="col">
+      ${groups}<hr class="rule">
+      ${interestedHTML(p.interested)}
+      ${managedHTML(true)}
+    </div></div></div>${HELPFUL}${FOOTER_A}`;
+}
+
+function renderContent(p){
+  const g = p.guide ? PAGES[p.guide] : null;
+  const otp = `<nav class="onthispage" aria-labelledby="otp-${p.slug}"><h2 id="otp-${p.slug}">On this page</h2><ul>${
+    p.otp.map((t,i)=>`<li><a href="#${p.sections[i] ? p.sections[i].id : ''}" data-jump="${p.sections[i] ? p.sections[i].id : ''}">${t}</a></li>`).join('')}</ul></nav>`;
+  const secs = p.sections.map(s=>`<h2 class="sec" id="${s.id}">${s.h}</h2>${s.html}`).join('');
+  const stepnav = g ? `<nav class="stepnav" aria-label="Steps in this step-by-step">
+      <h2>In this guide</h2>
+      <p class="guideline"><a href="#/${p.guide}" data-page="${p.guide}">${g.title}</a> step-by-step</p>
+      <ol>${g.steps.map((s,n)=>n+1===p.step
+        ? `<li aria-current="step"><span class="num" aria-hidden="true">${n+1}</span><b>${s.t}</b></li>`
+        : `<li><span class="num" aria-hidden="true">${n+1}</span><a href="#/${s.page}" data-page="${s.page}">${s.t}</a></li>`).join('')}</ol>
+      <div class="navbtns"><button type="button" class="btn" data-page="${g.steps[p.step % g.steps.length].page}">Next${I.arrowRight}</button></div>
+    </nav>` : '';
+  const interested = p.interested ? interestedHTML(p.interested)
+    : `<div class="interested"><h2>You may be interested in</h2><ul>${
+        [0,1,2].map(()=>`<li><a href="#" data-noop>Label ${I.external}</a></li>`).join('')}</ul></div>`;
+  const partof = p.partOfTopic ? `<p class="partof">Part of the ${A(p.partOfTopic)} topic</p>`
+    : g ? `<p class="partof">Part of the <a href="#/${p.guide}" data-page="${p.guide}">${g.title}</a> step-by-step</p>` : '';
+  return `<div class="body"><div class="container"><div class="col">
+      ${crumbs(p.crumbs)}
+      <div><span class="tag">${p.tag || ('Step ' + p.step + ' of ' + g.steps.length)}</span></div>
+      <h1 tabindex="-1">${p.title}</h1>
+      ${partof}
+      <p class="lead">${p.lead}</p>
+      ${p.readtime ? `<p class="readtime">${I.doc}<span>${p.readtime} minute read</span></p>` : ''}
+      <hr class="rule">
+      ${otp}
+      <div class="inshort"><h2>In short</h2>${p.inshort}</div>
+      <div class="content">${secs}</div>
+      ${p.helpbox ? helpboxHTML(p.helpbox) : ''}
+      ${stepnav}
+      ${p.ruleBeforeInterested ? '<hr class="rule">' : ''}
+      ${interested}
+      ${managedHTML(true)}
+    </div></div></div>${HELPFUL}${FOOTER_A}`;
+}
+
+/* ---------------- build + route ---------------- */
+const mainEl = document.getElementById('main');
+const TITLES = {};
+Object.entries(PAGES).forEach(([slug,p])=>{
+  p.slug = slug || 'home';
+  const html = p.kind==='subject' ? renderSubject(p)
+             : p.kind==='sbs'     ? renderSbs(p)
+             : p.kind==='topic'   ? renderTopic(p)
+                                  : renderContent(p);
+  const m = document.createElement('main');
+  m.className='page'; m.dataset.slug=slug; m.hidden=true; m.innerHTML = ICONS(html);
+  mainEl.appendChild(m);
+  TITLES[slug] = p.title;
+});
+
+let current=null;
+function show(slug){
+  if (!(slug in TITLES)) slug='';
+  document.querySelectorAll('main.page').forEach(m=>m.hidden = (m.dataset.slug!==slug));
+  current=slug;
+  document.title = `${TITLES[slug]} | Queensland Government`;
+}
+const slugFromHash = () => (location.hash.startsWith('#/') ? decodeURIComponent(location.hash.slice(2)) : '');
+let histOK=true;
+try { history.scrollRestoration='manual'; if(!history.state||history.state.slug===undefined) history.replaceState({slug:slugFromHash(),y:0},''); } catch(e){ histOK=false; }
+function go(slug){
+  if (slug===current){ window.scrollTo(0,0); return; }
+  if (histOK){ try{ history.replaceState({slug:current,y:window.scrollY},''); history.pushState({slug,y:0},'','#/'+slug); }catch(e){ histOK=false; } }
+  show(slug); window.scrollTo(0,0);
+  const h1=document.querySelector(`main.page[data-slug="${slug}"] h1`); if(h1) h1.focus({preventScroll:true});
+}
+window.addEventListener('popstate', e=>{
+  const st=e.state||{}; show(st.slug!==undefined?st.slug:slugFromHash()); window.scrollTo(0, st.y||0);
+});
+document.addEventListener('click', e=>{
+  if (e.target.closest('[data-noop]')) { e.preventDefault(); return; }
+  const pg = e.target.closest('[data-page]');
+  if (pg){ e.preventDefault(); go(pg.dataset.page); return; }
+  const jp = e.target.closest('[data-jump]');
+  if (jp){ e.preventDefault(); const t=document.getElementById(jp.dataset.jump);
+    if(t){ t.scrollIntoView({behavior:'smooth',block:'start'}); t.setAttribute('tabindex','-1'); t.focus({preventScroll:true}); } return; }
+  if (e.target.closest('[data-top]')) { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }
+});
+show(slugFromHash());
+document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
+
+</script>
+</body>
+</html>
