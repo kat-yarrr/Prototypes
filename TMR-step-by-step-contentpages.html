@@ -380,6 +380,7 @@ const U = {
   digital:'https://www.qld.gov.au/digital-licence/getting-the-digital-licence-app',
   gettingLearner:'https://www.qld.gov.au/transport/licensing/getting/learner/getting-a-learner-licence',
   keys:'https://www.publications.qld.gov.au/dataset/your-keys-to-driving-in-queensland',
+  f4028:'https://www.publications.qld.gov.au/dataset/transport-f4028',
   logbook:'https://www.qld.gov.au/transport/licensing/getting/learner-logbook',
   exempt:'https://www.service.transport.qld.gov.au/requestlogbookexemption/public/Welcome.xhtml',
   steps:'https://www.qld.gov.au/transport/licensing/getting/steps',
@@ -629,8 +630,7 @@ const PAGES = {
   crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Rules for your licence', page:'rules'}, {x:'Special need for a Class C learner or provisional licence'}],
   lead:'In very rare situations, you may be able to get your learner licence before you are 16, if you have a special need to drive.',
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>In very rare situations, you may be able to get a licence early if you can demonstrate that you have a special need to drive. This includes getting your learner licence before you're 16 or your provisional licence before you've had your learner licence for 12 months.</p>
-    <p><a class="btn" href="${U.gettingLearner}">Apply to get a learner licence early</a></p>`,
+  inshort:`<p>In very rare situations, you may be able to get a licence early if you can demonstrate that you have a special need to drive. This includes getting your learner licence before you're 16 or your provisional licence before you've had your learner licence for 12 months.</p>`,
   sections:[
     {id:'sn-know', h:'What you should know', html:`<p>As a young driver in Queensland aged 16 to 24, you are 60 per cent more likely to have a serious crash than drivers aged 25 to 59. This is why these exemptions are rarely granted.</p>
       <p>In very rare situations, you may be able to get a licence early if you can demonstrate that you have a special need to drive. This includes getting your learner licence before you're 16 or your provisional licence before you've had your learner licence for 12 months.</p>
@@ -639,7 +639,7 @@ const PAGES = {
       <ul><li>you are not yet 16 years old</li><li>you have evidence proving that not having a licence will create serious problems for you or your family because you have special responsibilities. For example, you are the main money earner or caregiver.</li></ul>
       <p>You may be eligible to get your provisional licence early if all of the following apply:</p>
       <ul><li>you are under 17 years old</li><li>you already have a class C learner licence</li><li>you have completed your mandatory hours and your <a href="#/logbook-rules" data-page="logbook-rules">Learner Logbook</a> has been approved</li><li>you have passed the <a href="#/hazard-perception" data-page="hazard-perception">Hazard Perception Test</a></li><li>you have evidence proving that not having a provisional licence will create serious problems for you or your family because you have special responsibilities. For example, you are the main money earner or caregiver.</li></ul></div></div>`},
-    {id:'sn-how', h:'How to get your learner licence early', html:`<p>If you are eligible, you can download and submit a completed <a href="${U.gettingLearner}">Special Need – Learner or Provisional Licence Application (Age Rule) form (F4028).</a></p>
+    {id:'sn-how', h:'How to get your learner licence early', html:`<p>If you are eligible, you can download and submit a completed <a href="${U.f4028}">Special Need – Learner or Provisional Licence Application (Age Rule) form (F4028).</a></p>
       <div class="acc"><details open><summary>Email</summary><div class="accbody"><p>Email your completed form to your nearest TMR customer service centre.</p></div></details>
       <details open><summary>In person</summary><div class="accbody"><p>Take your completed form to a TMR customer service centre.</p></div></details>
       <details open><summary>By post</summary><div class="accbody"><p>Post your completed form to your nearest TMR customer service centre.</p></div></details></div>`},
