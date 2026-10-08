@@ -574,13 +574,18 @@ const PAGES = {
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
   inshort:`<p>If you are under 25 years you need to submit your completed learner logbook showing 100 hours of driving and that you have passed your hazard perception test before you can book your drivers test.</p>
-    <p>If you are over 25 years or over you do not need to log 100 hours and can go straight to booking your drivers test.</p>
-    <p><a class="btn" href="${U.logbook}">Submit your learner logbook</a></p>`,
+    <p>If you are over 25 years or over you do not need to log 100 hours and can go straight to booking your drivers test.</p>`,
   sections:[
     {id:'sl-know', h:'What you should know', html:`<p>If you are under 25 years you need to submit your completed learner logbook showing 100 hours of driving and that you have passed your hazard perception test before you can book your drivers test.</p><p>If you are over 25 years or over you do not need to log 100 hours and can go straight to booking your drivers test.</p>`},
     {id:'sl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are under 25 years old</li></ul></div></div>
       <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you are 25 years or older<br>instead book your <a href="#/book-test" data-page="book-test">practical driving test</a></li></ul></div></div>`},
-    {id:'sl-how', h:'How to submit your learners logbook', html:`<div class="acc"><details><summary>Online</summary><div class="accbody"><p>Submit your completed learner logbook online.</p></div></details></div>`},
+    {id:'sl-how', h:'How to submit your learners logbook', html:`<p>You submit your logbook through the learner logbook app. There is no paper form and nothing to post.</p>
+      <div class="acc"><details open><summary>In the learner logbook app</summary><div class="accbody">
+        <p>Open the app and check that every entry is complete and confirmed by your supervisor. Entries that are missing a time, a date or a supervisor's licence number cannot be counted.</p>
+        <p>When your total reaches 100 hours, including 10 at night, the app will let you submit. Select <b>Submit logbook</b> and confirm your details.</p>
+        <p>You will get a confirmation in the app once it has been received, and a second one when it has been assessed. Keep the app installed until you hold your provisional licence.</p>
+        <p>If you recorded some of your hours in a paper logbook, take it to a <a href="${U.centres}">TMR service centre</a> instead.</p>
+      </div></details></div>`},
     {id:'sl-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
     {id:'sl-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
   ],
@@ -591,7 +596,7 @@ const PAGES = {
   crumbs:[...CRUMB_BASE, {x:'Licencing', page:''}, {x:'Get your provisional licence (P1 and P2)', page:'provisional'}, {x:'Book a practical driving test'}],
   lead:K,
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
-  inshort:`<p>${K}</p><p><a class="btn" href="${U.practical}">Book a practical driving test</a></p>`,
+  inshort:`<p>${K}</p>`,
   sections:[
     {id:'bt-know', h:'What you should know', html:`<p>${K}</p><p>See rules under <a href="#/take-test" data-page="take-test">take a practical driving test</a></p>`},
     {id:'bt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have your learner licence</li><li>you have completed 100 hours of supervised driving (under 25)</li><li>you have passed a hazard perception test</li><li>you have an eligible vehicle for the drivers test</li></ul></div></div>
