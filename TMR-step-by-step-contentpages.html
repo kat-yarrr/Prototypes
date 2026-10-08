@@ -370,16 +370,22 @@ const I = {
 const U = {
   home:'https://www.qld.gov.au',
   tmr:'https://www.qld.gov.au/transport',
-  prepl:'https://www.qld.gov.au/transport/licensing/getting/learner/prepl',
-  preplCourse:'https://www.qld.gov.au/transport/licensing/getting/learner/prepl/prepl/prepl-online-learning-and-assessment',
-  tests:'https://www.qld.gov.au/transport/contacts/centres',
+  prepl:'https://prepl.transport.qld.gov.au/',
+  preplCourse:'https://prepl.transport.qld.gov.au/',
+  preplSupervisor:'https://www.service.transport.qld.gov.au/enrolinpreplsupervisor/public/Welcome.xhtml?dswid=4387',
+  tests:'https://www.qld.gov.au/transport/licensing/getting/tests',
+  centres:'https://www.qld.gov.au/transport/contacts/centres',
+  practiceTest:'https://www.service.transport.qld.gov.au/practiceroadrulestest/public/Welcome.xhtml?dswid=-5322',
   learner:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/learner',
   gettingLearner:'https://www.qld.gov.au/transport/licensing/getting/learner/getting-a-learner-licence',
-  logbook:'https://apps.apple.com/au/app/qld-learner-logbook/id1094522699',
+  keys:'https://www.publications.qld.gov.au/dataset/your-keys-to-driving-in-queensland',
+  logbook:'https://www.qld.gov.au/transport/licensing/getting/learner-logbook',
   exempt:'https://www.service.transport.qld.gov.au/requestlogbookexemption/public/Welcome.xhtml',
   steps:'https://www.qld.gov.au/transport/licensing/getting/steps',
   progression:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/driver-licence-progression',
   practical:'https://www.qld.gov.au/transport/licensing/getting/practical-tests',
+  appleApp:'https://apps.apple.com/au/app/qld-learner-logbook/id1094522699',
+  googleApp:'https://play.google.com/store/apps/details?id=au.gov.qld.tmr.logbook.logbook&amp;hl=en_AU&amp;pli=1',
   help:'https://www.qld.gov.au/help'
 };
 
@@ -472,17 +478,17 @@ const PAGES = {
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs','Practice for the test'],
   inshort:`<p>You can learn the road rules online on PrepL, or by downloading a copy of "your keys to driving in Queensland".</p>
     <ul class="arrowlist"><li><a href="${U.prepl}"><span>Enrol in PrepL</span>${'{AR}'}</a></li>
-    <li><a href="${U.gettingLearner}"><span>Download "your keys to driving in Queensland" (PDF, 24mb)</span>${'{AR}'}</a></li></ul>`,
+    <li><a href="${U.keys}"><span>Download "your keys to driving in Queensland" (PDF, 24mb)</span>${'{AR}'}</a></li></ul>`,
   sections:[
     {id:'lrr-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. This can either be one online using the PrepL online learner driver course or by downloading a copy of the "Your keys to driving in Queensland" PDF.</p>
-      <h3>Practice for the test</h3><p>Before you take the test, practice your knowledge with the <a href="${U.tests}">road rules practice test</a>.</p>`},
+      <h3>Practice for the test</h3><p>Before you take the test, practice your knowledge with the <a href="${U.practiceTest}">road rules practice test</a>.</p>`},
     {id:'lrr-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are at least 15 years and 11 months</li></ul></div></div>`},
     {id:'lrr-how', h:'How to learn the road rules', html:`<p>Choose how to learn the road rules and follow the steps</p>
       <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL</a> to practice the road rules test online.</p></div></details>
-      <details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody"><p>Download a copy of the <a href="${U.gettingLearner}">Your keys to driving in Queensland PDF</a></p></div></details></div>`},
+      <details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody"><p>Download a copy of the <a href="${U.keys}">Your keys to driving in Queensland PDF</a></p></div></details></div>`},
     {id:'lrr-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
     {id:'lrr-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`},
-    {id:'lrr-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the <a href="${U.tests}">road rules practice test.</a></p>`}
+    {id:'lrr-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the <a href="${U.practiceTest}">road rules practice test.</a></p>`}
   ],
   helpbox:{t:'Help with Report a crime to police', items:['Help item 1','Help item 2']}},
 
@@ -492,15 +498,15 @@ const PAGES = {
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
   inshort:`<p>You can take the road rules test online or in person.</p>
     <ul class="arrowlist"><li><a href="${U.preplCourse}"><span>Log into PrepL to take the test online</span>${'{AR}'}</a></li>
-    <li><a href="${U.tests}"><span>Find a TMR service centre to take the test in person</span>${'{AR}'}</a></li></ul>`,
+    <li><a href="${U.centres}"><span>Find a TMR service centre to take the test in person</span>${'{AR}'}</a></li></ul>`,
   sections:[
     {id:'prt-know', h:'What you should know', html:`<p>You can take the test online through PrepL or in person at a TMR service centre. You can attempt the test once per day.</p>
       <p>See <a href="#prt-cost" data-jump="prt-cost">how much it costs</a> for pricing information.</p>
-      <div class="callout"><h2>Practice for the test</h2><p>Before you take the test, practice your knowledge with the <a href="${U.tests}">road rules practice test</a>.</p></div>`},
+      <div class="callout"><h2>Practice for the test</h2><p>Before you take the test, practice your knowledge with the <a href="${U.practiceTest}">road rules practice test</a>.</p></div>`},
     {id:'prt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are 16 year old</li><li>you have <a href="#/learn-road-rules" data-page="learn-road-rules">learnt the road rules</a></li></ul></div></div>`},
     {id:'prt-how', h:'How to take a road rules test', html:`<p>Choose how to take a road rules test</p>
       <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL</a> to take the road rules test online.</p></div></details>
-      <details open><summary>In person at a TMR service centre</summary><div class="accbody"><p>You can take the test without an appointment at a TMR service centre.</p><p><a href="${U.tests}">Find a TMR service centre</a>.</p></div></details></div>`},
+      <details open><summary>In person at a TMR service centre</summary><div class="accbody"><p>You can take the test without an appointment at a TMR service centre.</p><p><a href="${U.centres}">Find a TMR service centre</a>.</p></div></details></div>`},
     {id:'prt-long', h:'How long it takes', html:`<p>The road rules test takes about 30min to complete.</p><p>If attending in person please allow 30min waiting time.</p>`},
     {id:'prt-cost', h:'How much it costs', html:`<p>PrepL (online)</p><ul><li>Pay a one-off fee of $XX when you enrol.</li></ul><p>In person at a TMR service centre</p><ul><li>Pay $XX for each test attempt.</li></ul>`}
   ],
@@ -513,7 +519,7 @@ const PAGES = {
   inshort:`<p>Once you have <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">passed the road rules test</a>, you will need to get your photo taken to get a learner licence. In special circumstances you can apply to get it early.</p>`,
   sections:[
     {id:'gll-know', h:'What you should know', html:`<p>Before you can get your licence you need to have <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">passed the road rules test</a>.</p>
-      <p>To get your licence you'll need to provide evidence of your identity and a photo taken at a <a href="${U.tests}">TMR service centre</a> that provides licencing services.</p>
+      <p>To get your licence you'll need to provide evidence of your identity and a photo taken at a <a href="${U.centres}">TMR service centre</a> that provides licencing services.</p>
       <p>Once approved, you can start driving with a supervisor straight away using your driver licence receipt or the <a href="${U.learner}">Digital Licence app</a>, while your card is posted to you.</p>
       <h3>Special circumstances</h3>
       <p>In very rare situations, you may be able to get your learner licence before you are 16, if you have a special need to drive.</p>
@@ -521,8 +527,8 @@ const PAGES = {
     {id:'gll-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you have passed the road rules test</li></ul></div></div>
       <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you have not yet passed the road rules test,<br>instead go to <a href="#/pass-road-rules-test" data-page="pass-road-rules-test">step 2 road rules test</a></li></ul></div></div>`},
     {id:'gll-how', h:'How to get your learner licence', html:`<p>Choose how to get your learner licence</p>
-      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p><a href="${U.tests}">Visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence which will be sent to you by post.</p></div></details>
-      <details open><summary>Digital licence app</summary><div class="accbody"><p>First <a href="${U.tests}">visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence. You will be given your licence number which you can use to set up your learner licence on the <a href="${U.learner}">Digital licence app</a>.</p></div></details></div>`},
+      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p><a href="${U.centres}">Visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence which will be sent to you by post.</p></div></details>
+      <details open><summary>Digital licence app</summary><div class="accbody"><p>First <a href="${U.centres}">visit a TMR service centre</a> in person to get your photo taken and apply for a learner licence. You will be given your licence number which you can use to set up your learner licence on the <a href="${U.learner}">Digital licence app</a>.</p></div></details></div>`},
     {id:'gll-long', h:'How long it takes', html:`<p>Taking a photo will take 30min</p><p>Post for your licence will take 2 weeks</p>`},
     {id:'gll-cost', h:'How much it costs', html:`<p>$50</p>`}
   ],
@@ -537,7 +543,7 @@ const PAGES = {
   sections:[
     {id:'gs-find', h:'Finding a driving instructor or supervisor', html:`<p>Supervisors must have an legible open licence. You must have at leastt x hours with a licenced supervisor from a driving school - <a href="${U.practical}">find a driving school</a>.</p>`},
     {id:'gs-practice', h:'Practicing driving', html:`<p>If you are under 25 you will need to log 100 hours of supervised driving. Use the logbook app to document the hours driven.</p>`},
-    {id:'gs-logbook', h:'Learner logbook', html:`<p>The learner logbook app is available for download on both the <a href="${U.logbook}">Apple app store</a> and <a href="${U.logbook}">Google play store.</a></p><p>You must follow the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements.</a></p>`},
+    {id:'gs-logbook', h:'Learner logbook', html:`<p>The learner logbook app is available for download on both the <a href="${U.appleApp}">Apple app store</a> and <a href="${U.googleApp}">Google play store.</a></p><p>You must follow the <a href="#/logbook-rules" data-page="logbook-rules">learner logbook rules and requirements.</a></p>`},
     {id:'gs-special', h:'Special circumstances', html:`<p><a href="#/logbook-exemption" data-page="logbook-exemption">Apply for a learner logbook exemption</a></p>`}
   ],
   interested:[{x:'Information for supervisors', page:'supervisors'},{x:'Rules and exemptions for your licence', page:'rules'},{x:'Get your learner licence', page:'learner'}]},
@@ -775,13 +781,13 @@ const PAGES = {
   lead:'A free online course that prepares you to supervise a learner driver and teach them safely.',
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
   inshort:`<p>PrepL Supervisor is a free online course covering how to plan practice sessions, give feedback, and build a learner's experience safely.</p>
-    <p><a class="btn" href="${U.prepl}">Enrol in PrepL Supervisor</a></p>`,
+    <p><a class="btn" href="${U.preplSupervisor}">Enrol in PrepL Supervisor</a></p>`,
   sections:[
     {id:'ps-know', h:'What you should know', html:`<p>Supervising a learner is different from driving yourself. The course covers how to stage practice from quiet streets to complex traffic, how to give instructions that are easy to follow, and what to do when something goes wrong.</p>
       <p>The course is optional. Completing it does not change the hours a learner needs, and it does not qualify you as a paid driving instructor.</p>
       <p>For the rules you must follow while supervising, see the <a href="#/supervising-guide" data-page="supervising-guide">guide to supervising a learner driver</a>.</p>`},
     {id:'ps-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can enrol if any of these apply:</p><ul><li>you hold a current Queensland open licence</li><li>you are supervising, or about to supervise, a learner driver</li></ul></div></div>`},
-    {id:'ps-how', h:'How to enrol in PrepL Supervisor', html:`<div class="acc"><details open><summary>Online</summary><div class="accbody"><p><a href="${U.prepl}">Enrol in PrepL Supervisor</a> using your existing qld.gov.au account, or create one as part of enrolling.</p></div></details></div>`},
+    {id:'ps-how', h:'How to enrol in PrepL Supervisor', html:`<div class="acc"><details open><summary>Online</summary><div class="accbody"><p><a href="${U.preplSupervisor}">Enrol in PrepL Supervisor</a> using your existing qld.gov.au account, or create one as part of enrolling.</p></div></details></div>`},
     {id:'ps-long', h:'How long it takes', html:`<p>The course takes about 2 hours. You can leave and come back at any point.</p>`},
     {id:'ps-cost', h:'How much it costs', html:`<p>PrepL Supervisor is free.</p>`}
   ],
