@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,6 +220,17 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .acc-btn svg{transition:transform .2s ease}
 .acc-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .acc-panel{padding:14px 16px 6px}
+
+/* ---- In this guide (child pages) ---- */
+.inguide{background:var(--light-blue);border-radius:8px;padding:24px 28px 26px;margin:40px 0 0}
+.inguide h2{font-size:22px;color:var(--navy);margin:0 0 10px;line-height:1.3}
+.inguide .guideline{font-size:15px;margin:0 0 20px}
+.inguide .grp{margin:0 0 18px}
+.inguide .grp:last-child{margin-bottom:0}
+.inguide .grp h3{font-size:14px;font-weight:700;color:#1a1a1a;margin:0 0 9px;line-height:1.4}
+.inguide ul{list-style:none;padding:0;margin:0}
+.inguide li{display:flex;align-items:flex-start;gap:10px;margin:0 0 8px;font-size:14px}
+.inguide .num{flex:none;width:20px;height:20px;margin-top:1px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
 </style>
 </head>
 <body>
@@ -367,6 +377,8 @@ const LOREM = 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vul
 const STEPS = [
   {t:'When a crime occurs',
    s:'Your safety and the safety of others come first. Support services can help with safety, information and emotional support.',
+   indexLinks:[{x:'Find 24/7 crisis services', page:'find-24-7-crisis-services'},
+          {x:'Victims Advocate Service', page:'victims-advocate-service'}],
    note:{h:'Get immediate help', p:'Is the crime happening now? Is the suspect still at the scene? Is anyone seriously injured or in immediate danger? Call Triple Zero (000) and ask for police if you are in a dangerous or life-threatening situation.'},
    panel:() => `<p>${P('find-24-7-crisis-services','Find 24/7 crisis services')}</p>
      <p>${P('victims-advocate-service','Victims Advocate Service')} – The Victims Advocate Service provides practical help for victims at every stage of their recovery and criminal justice journey. The service is available for victims of crime, family members, witnesses and others seeking support or information.</p>
@@ -747,6 +759,26 @@ function readTime(p){
   const txt = (p.lead+' '+p.inshort+' '+p.sections.map(s=>s.h+' '+s.html).join(' ')).replace(/<[^>]+>/g,' ');
   return Math.max(1, Math.ceil(txt.split(/\s+/).filter(Boolean).length/200));
 }
+
+/* "In this guide" — every step in the guide and every link under it,
+   numbered continuously across the whole guide. */
+function inGuideHTML(slug){
+  let n = 0;
+  const groups = STEPS.map((st,i) => {
+    const links = st.indexLinks || st.links || [];
+    return `<div class="grp"><h3>Step ${i+1} ${st.t}</h3><ul>${
+      links.map(l => {
+        n++;
+        const cur = l.page !== undefined && l.page === slug;
+        return `<li${cur ? ' aria-current="page"' : ''}><span class="num" aria-hidden="true">${n}</span>${linkHTML(l)}</li>`;
+      }).join('')}</ul></div>`;
+  }).join('');
+  return `<nav class="inguide" aria-label="In this guide">
+    <h2>In this guide</h2>
+    <p class="guideline">${P('','Navigating the criminal justice system')} step-by-step</p>
+    ${groups}</nav>`;
+}
+
 function renderContent(slug, p){
   const crumbs = p.child ? [...BASE_CRUMBS, GUIDE] : BASE_CRUMBS;
   const partOfLink = p.partOf.page!==undefined ? P(p.partOf.page,p.partOf.x) : L(p.partOf.href,p.partOf.x);
@@ -769,6 +801,7 @@ function renderContent(slug, p){
     <nav class="onthispage" aria-labelledby="otp-${slug}"><h2 id="otp-${slug}">On this page</h2><ul>${otp}</ul></nav>
     <div class="inshort"><h2>In short</h2>${p.inshort}</div>
     <div class="content">${secs}</div>
+    ${p.child ? inGuideHTML(slug) : ''}
     ${helpbox}
     ${related}
     ${pageFootHTML()}
