@@ -521,19 +521,25 @@ const PAGES = {
 'keys': { kind:'content', title:'&ldquo;Your keys to driving in Queensland&rdquo;', tag:'Guidance',
   crumbs:[...CRUMB, {x:'Licensing', noop:true}, {x:'Get your learner licence', page:'learner'}, {x:'"Your keys to driving in Queensland"'}],
   partOfGuide:{x:'Get your learner licence', page:'learner'},
-  lead:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
-  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>You can learn the road rules online on PrepL, or by downloading a copy of "your keys to driving in Queensland".</p>
+  lead:'&ldquo;Your keys to driving in Queensland&rdquo; is the Queensland Government handbook for learner drivers. It sets out the road rules and licensing requirements you are tested on, and you can download it free.',
+  otp:['What you should know','What the handbook covers','Who can use this service','How to get a copy','How long it takes','How much it costs'],
+  inshort:`<p>The handbook is where the written road rules test questions come from. Download it and read it before you take the test.</p>
     <ul class="arrowlist"><li><a href="${U.keys}"><span>Download a copy of "Your keys to driving in Queensland"</span>{AR}</a></li></ul>`,
   sections:[
-    {id:'ky-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. This can either be one online using the ${PL('prepl','PrepL online learner driver course')} or by downloading a copy of the "Your keys to driving in Queensland" PDF.</p>
+    {id:'ky-know', h:'What you should know', html:`<p>The handbook is the source of the questions in the ${PL('written-test','written road rules test')}. Reading it is the main way to prepare if you are not doing the course online.</p>
+      <p>You can learn the road rules either by reading the handbook and sitting the written test at a service centre, or by working through the ${PL('prepl','PrepL online learner driver course')}, which has the test built in.</p>
       <h3>Practice for the test</h3>
       <p>Before you take the test, practice your knowledge with the ${LL(U.practiceTest,'road rules practice test.')}</p>`},
-    {id:'ky-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are at least 15 years and 11 months</li></ul></div></div>`},
-    {id:'ky-how', h:'How to learn the road rules', html:`<p>Choose how to learn the road rules and follow the steps</p>
-      <div class="acc"><details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody"><p>Download a copy of the ${LL(U.keys,'Your keys to driving in Queensland PDF')}</p></div></details></div>`},
-    {id:'ky-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
-    {id:'ky-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`},
+    {id:'ky-covers', h:'What the handbook covers', html:`<p>The handbook covers:</p>
+      <ul><li>Queensland road rules</li><li>driver licensing requirements</li><li>sample test questions</li></ul>
+      <p>It is published by the Department of Transport and Main Roads and updated from time to time, so check that you are reading the current edition.</p>`},
+    {id:'ky-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>Anyone can read the handbook. It is most useful if:</p><ul><li>you are getting ready to take the written road rules test</li><li>you want to refresh your knowledge of the Queensland road rules</li></ul></div></div>`},
+    {id:'ky-how', h:'How to get a copy', html:`<p>Download the handbook from Queensland Government Publications.</p>
+      <div class="acc"><details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody">
+        <p>Download a copy of the ${LL(U.keys,'Your keys to driving in Queensland PDF')}</p>
+        <p>You can download the complete handbook, or just the part you need, such as the road rules section.</p></div></details></div>`},
+    {id:'ky-long', h:'How long it takes', html:`<p>The handbook is long. Give yourself enough time to read it properly rather than working through it in one sitting.</p>`},
+    {id:'ky-cost', h:'How much it costs', html:`<p>Downloading the handbook is free.</p>`},
     {id:'ky-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the ${LL(U.practiceTest,'road rules practice test.')}</p>`}
   ],
   index:INDEX_7, self:'keys',
@@ -542,19 +548,29 @@ const PAGES = {
 'written-test': { kind:'content', title:'Take the written road rules test', tag:'Guidance',
   crumbs:[...CRUMB, {x:'Licensing', noop:true}, {x:'Get your learner licence', page:'learner'}, {x:'Take the written road rules test'}],
   partOfGuide:{x:'Get your learner licence', page:'learner'},
-  lead:'From the age of 16, you can take the Queensland road rules knowledge test.  You will need to pass this test before you can apply for your learner licence.',
-  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>You can take the test in person at a TMR service centre</p>
+  lead:'The written road rules test is the paper test you sit in person at a TMR service centre. You must pass it, or the test inside PrepL, before you can apply for your learner licence.',
+  otp:['What you should know','What the test involves','Who can use this service','How to take the written road rules test','How long it takes','How much it costs'],
+  inshort:`<p>You can take the test in person at a TMR service centre. You do not need to finish a course first, but you do need to know the road rules.</p>
     <ul class="arrowlist"><li><a href="${U.centres}"><span>Find a TMR service centre</span>{AR}</a></li></ul>`,
   sections:[
-    {id:'wt-know', h:'What you should know', html:`<p>${W}</p>
+    {id:'wt-know', h:'What you should know', html:`<p>You sit the written test at a transport and motoring customer service centre that offers licensing services. The questions come from ${PL('keys','&ldquo;Your keys to driving in Queensland&rdquo;')}.</p>
+      <p>If you would rather learn and be tested online, the ${PL('prepl','PrepL online learner driver course')} has the road rules test built into it, and you do not need to sit this test as well.</p>
+      <p>Once you pass, your result lasts 5 years. You can then ${PL('get-learner-licence','get your learner licence')} when you turn 16.</p>
       <h3>Practice for the test</h3>
       <p>Before you take the test, practice your knowledge with the ${LL(U.practiceTest,'road rules practice test.')}</p>`},
-    {id:'wt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>${W}</p></div></div>`},
-    {id:'wt-how', h:'How to take the written road rules test', html:`<p>Choose how to learn the road rules and follow the steps</p>
-      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p>${LL(U.centres,'Find a TMR service centre')}</p></div></details></div>`},
-    {id:'wt-long', h:'How long it takes', html:`<p>${W}</p>`},
-    {id:'wt-cost', h:'How much it costs', html:`<p>${W}</p>`}
+    {id:'wt-what', h:'What the test involves', html:`<p>The test has 30 multiple choice questions in 2 parts. To pass you must answer correctly:</p>
+      <ul><li>at least 9 of the 10 questions on giving way</li><li>at least 18 of the 20 questions on road rules and driver licence requirements</li></ul>
+      <p>You can sit the test once a day. If you do not pass, you can come back the next day and pay the fee again.</p>`},
+    {id:'wt-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can take the written road rules test if:</p><ul><li>you are at least 16</li><li>you have learnt the Queensland road rules</li></ul></div></div>`},
+    {id:'wt-how', h:'How to take the written road rules test', html:`<p>You do not need to book. Go to a service centre during opening hours.</p>
+      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody">
+        <p>Take with you:</p>
+        <ul><li>your evidence of identity</li><li>the test fee</li><li>the licence fee, if you are applying for your learner licence on the same visit</li></ul>
+        <p>You do not need an application form at a TMR service centre. You still need form F3000 at a police station or most QGAP offices.</p>
+        <p>${LL(U.centres,'Find a TMR service centre')}</p></div></details></div>`},
+    {id:'wt-long', h:'How long it takes', html:`<p>Allow time to wait at the service centre as well as to sit the test. You find out whether you passed before you leave.</p>`},
+    {id:'wt-cost', h:'How much it costs', html:`<p>You pay the test fee every time you take the test, including each time you resit it.</p>
+      <p>If you are applying for your learner licence on the same visit, you also pay the licence fee.</p>`}
   ],
   index:INDEX_7, self:'written-test',
   interested:INTERESTED_3},
@@ -562,18 +578,27 @@ const PAGES = {
 'get-learner-licence': { kind:'content', title:'Get your learner licence', tag:'Guidance',
   crumbs:[...CRUMB, {x:'Licensing', noop:true}, {x:'Get your learner licence', page:'learner'}, {x:'Get a learner licence'}],
   partOfGuide:{x:'Get your learner licence', page:'learner'},
-  lead:'Once you have passed the written road rules test you can get your learner licence',
-  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>You can get your licence at a TMR service centre</p>
+  lead:'Once you have passed PrepL or the written road rules test and you are 16, you can apply for your learner licence at a TMR service centre.',
+  otp:['What you should know','Who can use this service','How to get your learner licence','When you can start driving','How long it takes','How much it costs'],
+  inshort:`<p>You can get your licence at a TMR service centre. Take your evidence of identity with you.</p>
     <ul class="arrowlist"><li><a href="${U.centres}"><span>Find a TMR service centre</span>{AR}</a></li></ul>`,
   sections:[
-    {id:'gl-know', h:'What you should know', html:`<p>${W}</p>`},
-    {id:'gl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>Use this service if:</p><ul><li>you have passed the written road rules test</li></ul></div></div>
-      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you haven't passed the written road rules test</li></ul></div></div>`},
-    {id:'gl-how', h:'How to get your learner licence', html:`<p>Choose how to learn the road rules and follow the steps</p>
-      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody"><p>${LL(U.centres,'Find a TMR service centre')}</p></div></details></div>`},
-    {id:'gl-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
-    {id:'gl-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`}
+    {id:'gl-know', h:'What you should know', html:`<p>You apply in person, because your identity has to be checked. Your test result lasts 5 years, so there is no rush to apply the moment you pass.</p>
+      <p>A learner licence lasts 3 years. If you are under 25 you will need 100 hours of supervised driving recorded in a logbook before you can sit the practical driving test.</p>
+      <h3>Special circumstances</h3>
+      <p>In very rare situations you may be able to get your learner licence before you are 16, if you have a special need to drive. See ${PL('special-need','apply to get a learner licence early')}.</p>`},
+    {id:'gl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>Use this service if:</p><ul><li>you have passed PrepL or the written road rules test</li><li>you are at least 16</li></ul></div></div>
+      <div class="box box-no">{NO}<div><p>Don't use this service if:</p><ul><li>you haven't passed PrepL or the written road rules test,<br>instead go to ${PL('written-test','step 2 pass a road rules test')}</li></ul></div></div>`},
+    {id:'gl-how', h:'How to get your learner licence', html:`<p>Go to a service centre that offers licensing services.</p>
+      <div class="acc"><details open><summary>In person at a TMR service centre</summary><div class="accbody">
+        <p>Take with you:</p>
+        <ul><li>your evidence of identity</li><li>the licence fee</li><li>a medical certificate, if you have been asked for one</li></ul>
+        <p>You do not need an application form at a TMR service centre. You still need form F3000 at a police station or a participating QGAP office.</p>
+        <p>${LL(U.centres,'Find a TMR service centre')}</p></div></details></div>`},
+    {id:'gl-drive', h:'When you can start driving', html:`<p>You do not have to wait for the card to arrive. You can start driving with a supervisor straight away using either:</p>
+      <ul><li>the licence receipt you are given, which authorises you to drive until the card arrives in the mail</li><li>the ${LL(U.digital,'Digital Licence app')}, where your learner licence appears as soon as you download it</li></ul>`},
+    {id:'gl-long', h:'How long it takes', html:`<p>Allow time to wait at the service centre. Your card is posted to you afterwards.</p>`},
+    {id:'gl-cost', h:'How much it costs', html:`<p>You pay the licence fee when you apply.</p>`}
   ],
   index:INDEX_7, self:'get-learner-licence',
   interested:INTERESTED_3},
