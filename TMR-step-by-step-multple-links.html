@@ -480,19 +480,39 @@ const PAGES = {
 'prepl': { kind:'content', title:'PrepL online learner driver course', tag:'Guidance',
   crumbs:[...CRUMB, {x:'Licensing', noop:true}, {x:'Get your learner licence', page:'learner'}, {x:'PrepL online learner driver course'}],
   partOfGuide:{x:'Get your learner licence', page:'learner'},
-  lead:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
-  otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>You can learn the road rules online on PrepL, or by downloading a copy of "your keys to driving in Queensland".</p>
-    <ul class="arrowlist"><li><a href="${U.prepl}"><span>Enrol in PrepL</span>{AR}</a></li></ul>`,
+  lead:'PrepL is the Queensland Government online course for learner drivers. It teaches you the road rules and tests you on them in the one place, so you can work through it at home from the age of 15 years and 11 months.',
+  otp:['What you should know','What PrepL covers','How PrepL helps at each step','Who can use this service','How to enrol in PrepL','How long it takes','How much it costs'],
+  inshort:`<p>PrepL teaches you the road rules and includes the road rules test. You pay once and have 12 months to finish it.</p>
+    <ul class="arrowlist"><li><a href="${U.prepl}"><span>Enrol in PrepL</span>{AR}</a></li>
+    <li><a href="${U.prepl}"><span>Log in to PrepL</span>{AR}</a></li></ul>`,
   sections:[
-    {id:'pl-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. This can either be one online using the PrepL online learner driver course or by ${PL('keys','downloading a copy of the "Your keys to driving in Queensland" PDF.')}</p>
+    {id:'pl-know', h:'What you should know', html:`<p>PrepL is an online learning and assessment course. You work through it on your own device, at your own pace, and the road rules test sits inside the course rather than being booked separately.</p>
+      <p>You can take PrepL instead of the written road rules test. You can also still ${PL('written-test','take the written road rules test in person')} at a TMR service centre, or learn from ${PL('keys','&ldquo;Your keys to driving in Queensland&rdquo;')} and take the written test.</p>
       <h3>Practice for the test</h3>
       <p>Before you take the test, practice your knowledge with the ${LL(U.practiceTest,'road rules practice test.')}</p>`},
-    {id:'pl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are at least 15 years and 11 months</li></ul></div></div>`},
-    {id:'pl-how', h:'How to learn the road rules', html:`<p>Choose how to learn the road rules and follow the steps</p>
-      <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody"><p>${LL(U.prepl,'Enrol in PrepL')} to practice the road rules test online.</p></div></details></div>`},
-    {id:'pl-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
-    {id:'pl-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`},
+    {id:'pl-covers', h:'What PrepL covers', html:`<p>The course uses interactive activities, videos and scenarios, grouped into 3 sections:</p>
+      <ul><li>your driving attitude</li><li>signs and rules</li><li>sharing the road with others</li></ul>
+      <p>Assessment is built into the course and unlocks as you finish each stage of learning. The final test comes at the end.</p>`},
+    {id:'pl-steps', h:'How PrepL helps at each step', html:`<p>PrepL covers the first 2 steps of getting your learner licence, and prepares you for the third.</p>
+      <h3>Step 1 Learn the road rules</h3>
+      <p>The learning sections teach you the road rules and what is expected of you as a driver. You can start from 15 years and 11 months, before you are old enough to apply for a licence.</p>
+      <h3>Step 2 Pass a road rules test</h3>
+      <p>The final test in PrepL is the road rules test. Passing it means you do not need to sit the written test at a service centre.</p>
+      <h3>Step 3 Get your learner licence</h3>
+      <p>Once you have passed, you still need to prove your identity before a learner licence is issued. You can do this at any point while you are enrolled. See ${PL('get-learner-licence','get your learner licence')}.</p>`},
+    {id:'pl-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can enrol in PrepL if both of these apply:</p><ul><li>you are at least 15 years and 11 months</li><li>you have a Queensland residential address</li></ul></div></div>`},
+    {id:'pl-how', h:'How to enrol in PrepL', html:`<p>Enrol online, then log back in each time you want to keep going.</p>
+      <div class="acc"><details open><summary>Online with PrepL</summary><div class="accbody">
+        <ol><li>Answer the screening questions to check that you need the course.</li>
+        <li>Create an account using an email address you own, not a school or shared address, and verify it within 24 hours.</li>
+        <li>Enrol using your customer reference number. If you do not have one, you will be given one when you enrol.</li>
+        <li>Pay the fee by credit or debit card.</li>
+        <li>Start the course. You can also pay at a TMR service centre first, then enrol online.</li></ol>
+        <p>${LL(U.prepl,'Enrol in PrepL')} or ${LL(U.prepl,'log in to PrepL')} if you have already enrolled.</p></div></details></div>`},
+    {id:'pl-long', h:'How long it takes', html:`<p>The course takes about 4 to 6 hours. You do not have to do it in one sitting.</p>
+      <p>You have 12 months from the day you pay to finish it.</p>`},
+    {id:'pl-cost', h:'How much it costs', html:`<p>PrepL costs the same as the written road rules test. You pay once and the fee is not refundable.</p>
+      <p>One payment covers unlimited access for 12 months. If you do not pass the final test you can try again after 24 hours at no extra cost, and you keep access to the rest of the course.</p>`},
     {id:'pl-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the ${LL(U.practiceTest,'road rules practice test.')}</p>`}
   ],
   index:INDEX_7, self:'prepl',
