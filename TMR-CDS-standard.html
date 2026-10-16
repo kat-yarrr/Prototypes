@@ -418,6 +418,7 @@ const U = {
   pRestrict:'https://www.qld.gov.au/transport/licensing/driver-licensing/applying/provisional/restrictions',
   onlineServices:'https://www.qld.gov.au/transport/online-services',
   transferOverseas:'https://www.qld.gov.au/transport/licensing/driver-licensing/overseas/transfer',
+  identity:'https://www.qld.gov.au/transport/licensing/proof-of-identity-transport-services/individuals',
   help:'https://www.qld.gov.au/help'
 };
 
@@ -463,7 +464,7 @@ const INTERESTED_3 = [
 /* the "How to guide" promotional panel, shown on the pages the guide links to */
 const HOWTO_PANEL = {name:'Get your learner licence',
   p:'Follow our simple how to guide to help walk you through the process of getting your learner licence.',
-  x:'How to guide for getting your learner licence', page:'how-to', img:IMG_PROV};
+  x:'How to guide: Get your learner licence', page:'how-to', img:IMG_PROV};
 const PAGES = {
 
 /* ====== Lvl 4 topic page ====== */
@@ -474,8 +475,8 @@ const PAGES = {
   howto:HOWTO_PANEL,
   groups:[
     {h:'Services', d:'Applications, transactions and registrations', items:[
-      {x:'PrepL online learner driver course', page:'prepl'},
-      {x:'&ldquo;Your keys to driving in Queensland&rdquo; PDF course', page:'keys'},
+      {x:'Online learner driver course (PrepL)', page:'prepl'},
+      {x:'Road rules handbook (PDF)', page:'keys'},
       {x:'Take the written road rules test in person', page:'road-rules-test'},
       {x:'Special need for a Class C learner or provisional licence', page:'special-need'}]},
     {h:'Guidance', d:'Information, rules and guides', items:[
@@ -497,26 +498,26 @@ const PAGES = {
   lead:'The first step to becoming a fully licenced car driver in Queensland is to get your learner licence. You can apply for a learner licence from age 16. Follow the steps on this page and check what you need to do.',
   steps:[
     {t:'Learn the road rules',
-     d:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
-     body:`<p><b>There are 2 options to choose from:</b></p>
-       <ul><li>${PL('prepl','Enrol in the PrepL online learner driver course')} (from 15 years and 11 months)</li></ul>
-       <p>or</p>
-       <ul><li>${PL('keys','Download a copy of "Your keys to driving in Queensland"')}</li></ul>`},
+     d:'From a minimum age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
+     body:`<p><b>You can use either or both of these.</b> The handbook is free, so it is worth downloading whichever way you study.</p>
+       <ul><li>${PL('prepl','Online learner driver course (PrepL)')} &mdash; Teaches the rules through videos and scenarios, and includes the road rules test at the end. Total cost is $28.70.</li>
+       <li>${PL('keys','Road rules handbook (PDF)')} &mdash; A free PDF from Transport and Main Roads, setting out every Queensland road rule.</li></ul>`},
     {t:'Pass a road rules test',
-     d:'From the age of 16, you can take the Queensland road rules knowledge test.  You will need to pass this test before you can apply for your learner licence.',
-     body:`<p><b>There are 2 options to choose from:</b></p>
-       <ul><li>${PL('prepl','Take the test in PrepL')}</li></ul>
-       <p>or</p>
-       <ul><li>${PL('road-rules-test','Take the written road rules test in person')}</li></ul>`,
-     callout:{h:'Practice the road rules test',
-              p:`Before you take the test, practice with our free ${PL('practise-test','practice road rules test')}`}},
+     d:'From a minimum age of 16, you can take the Queensland road rules knowledge test.  You will need to pass this test before you can apply for your learner licence.',
+     body:`<p><b>Pass one of these. Either one gets you to step 3.</b></p>
+       <ul><li>${PL('prepl','Take the test online')} &mdash; at the end of the Online learner driver course (PrepL), price is included in the course fee.</li>
+       <li>${PL('road-rules-test','Take the test in person')} &mdash; $28.70 for each attempt. No booking needed.</li></ul>`,
+     tip:`<b>Tip:</b> Before you take the test, practice with our free ${PL('practise-test','practice road rules test')}`},
     {t:'Get your learner licence',
-     d:'Once you have passed the road rules knowledge test, you can apply for your learner licence online or in person.',
-     body:`<p>${PL('get-learner-licence','Get your learner licence')} &mdash; Once your learner licence is approved, you can start driving with a supervisor straight away using your driver licence receipt or the ${LL(U.digital,'Digital Licence app')}, while your card is posted to you.</p>
-       <div class="callout"><h2>Evidence of identity</h2><p>You will need to provide evidence of your identity and photo taken at a ${LL(U.centres,'TMR service centre')} that provides licensing services.</p></div>
+     d:'Once you have passed the road rules knowledge test, you will need to apply for your learner licence.',
+     body:`<p><b>This step is done in person</b> at a ${LL(U.centres,'Transport and main roads service centre')} that provides licensing services.</p>
+       <p>To apply for your learner licence you will need to:</p>
+       <ul><li>show your completed road rules test</li>
+       <li>provide evidence of your identity &mdash; ${LL(U.identity,'Identity documents you need')}</li>
+       <li>get a photo taken</li></ul>
+       <p>Once your learner licence is approved, you can start driving with a supervisor straight away using your driver licence receipt or the ${LL(U.digital,'Digital Licence app')}, while your card is posted to you.</p>
        <h3>Special circumstances</h3>
-       <p>In very rare situations, you may be able to get your learner licence before you are 16 if you have a special need to drive.</p>
-       ${list([PL('special-need','Apply to get a learner licence early')])}`}
+       <p>In very rare situations, you may be able to get your learner licence before you are 16 if you have a special need to drive &mdash; ${PL('special-need','Apply to get a learner licence early.')}</p>`}
   ],
   next:{name:'Get your provisional licence (P1 and P2)',
         p:'Once you have completed all steps in the get your learner licence, you can continue onto the next stage of your licencing journey.',
@@ -526,8 +527,8 @@ const PAGES = {
 
 /* ====== Lvl 5 — services and guidance under the topic ====== */
 
-'prepl': { kind:'content', title:'PrepL online learner driver course', tag:'Service summary',
-  crumbs:[...CRUMB, {x:'PrepL online learner driver course'}],
+'prepl': { kind:'content', title:'Online learner driver course (PrepL)', tag:'Service summary',
+  crumbs:[...CRUMB, {x:'Online learner driver course (PrepL)'}],
   partOfTopic:TOPIC, howto:HOWTO_PANEL,
   lead:'PrepL is a self paced online course for drivers. It teaches Queensland road rules and safe driving through interactive activities, videos and scenarios. If you complete the PrepL assessment, you do not need to take the written road rules test.',
   otp:['What you should know','Who can use PrepL','What you need','How to enrol in PrepL','How long it takes','How much it costs'],
@@ -573,21 +574,21 @@ const PAGES = {
   ],
   interested:INTERESTED_3},
 
-'keys': { kind:'content', title:'&ldquo;Your keys to driving in Queensland&rdquo;', tag:'Guidance',
-  crumbs:[...CRUMB, {x:'"Your keys to driving in Queensland"'}],
+'keys': { kind:'content', title:'Road rules handbook (PDF)', tag:'Guidance',
+  crumbs:[...CRUMB, {x:'Road rules handbook (PDF)'}],
   partOfTopic:TOPIC, howto:HOWTO_PANEL,
   lead:'From the age of 15 years and 11 months you can prepare for the road rules test and for driving on your Queensland learner licence.',
   otp:['What you should know','Who can use this service','How to [job to be done]','How long it takes','How much it costs'],
-  inshort:`<p>You can learn the road rules online on PrepL, or by downloading a copy of "your keys to driving in Queensland".</p>
-    <ul class="arrowlist"><li><a href="${U.keys}"><span>Download a copy of "Your keys to driving in Queensland"</span>{AR}</a></li></ul>`,
+  inshort:`<p>The road rules handbook is a free PDF from Transport and Main Roads. It is published as &ldquo;Your keys to driving in Queensland&rdquo;, which is the title you will see on the cover.</p>
+    <ul class="arrowlist"><li><a href="${U.keys}"><span>Download the road rules handbook (PDF)</span>{AR}</a></li></ul>`,
   sections:[
-    {id:'ky-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. This can either be one online using the ${PL('prepl','PrepL online learner driver course')} or by downloading a copy of the "Your keys to driving in Queensland" PDF.</p>
+    {id:'ky-know', h:'What you should know', html:`<p>You can prepare for the road rules test and for driving on your Queensland learner licence. You can do this by reading the handbook, by taking the ${PL('prepl','online learner driver course (PrepL)')}, or by doing both.</p>
       <h3>Practice for the test</h3>
       <p>Before you take the test, practice your knowledge with the ${PL('practise-test','road rules practice test.')}</p>`},
     {id:'ky-who', h:'Who can use this service', html:`<div class="box box-yes">{YES}<div><p>You can learn the road rules if any of these apply:</p><ul><li>you are at least 15 years and 11 months</li></ul></div></div>`},
     {id:'ky-how', h:'How to learn the road rules', html:`<p>Choose how to learn the road rules and follow the steps</p>
-      <div class="acc"><details open><summary>Your keys to driving in Queensland PDF</summary><div class="accbody">
-        <p>Download a copy of the ${LL(U.keys,'Your keys to driving in Queensland PDF')}</p></div></details></div>`},
+      <div class="acc"><details open><summary>Download the handbook</summary><div class="accbody">
+        <p>${LL(U.keys,'Download the road rules handbook (PDF)')} from Queensland Government Publications. It is listed under its published title, &ldquo;Your keys to driving in Queensland&rdquo;.</p></div></details></div>`},
     {id:'ky-long', h:'How long it takes', html:`<p>Please dedicate at least 2 hours of study.</p>`},
     {id:'ky-cost', h:'How much it costs', html:`<p>Learning the road rules is free.</p>`},
     {id:'ky-practice', h:'Practice for the test', html:`<p>Before you move to the next step, practice your knowledge with the ${PL('practise-test','road rules practice test.')}</p>`}
@@ -603,7 +604,7 @@ const PAGES = {
     <p>You must take the test in person at a transport and motoring customer service centre that performs licensing services.</p>
     <p><a class="btn" href="${U.centres}">Find a service centre</a></p>`,
   sections:[
-    {id:'wt-know', h:'What you should know', html:`<p>The test questions are from the ${PL('keys','Your Keys to Driving in Queensland')} guide. The guide covers:</p>
+    {id:'wt-know', h:'What you should know', html:`<p>The test questions are from the ${PL('keys','road rules handbook')}. It covers:</p>
       <ul><li>Queensland road rules</li><li>traffic signs</li><li>safe driving practices</li><li>driver licensing requirements</li><li>sample test questions.</li></ul>
       <p>If you would like to check your knowledge, you can ${PL('practise-test','Practise the road rules test')}.</p>
       <p>The written road rules test has 30 multiple choice questions split into 2 sections. To pass you must correctly answer at least:</p>
@@ -622,7 +623,7 @@ const PAGES = {
       <li>you want to take the motorcycle knowledge test<br><i>Instead, ${LL(U.tests,'take the written motorcycle knowledge test')}.</i></li>
       <li>you want to take the heavy vehicle knowledge test<br><i>Instead, ${LL(U.tests,'take the heavy vehicle knowledge test')}.</i></li></ul></div></div>`},
     {id:'wt-how', h:'How to take the written road rules test', html:`<div class="acc">
-      <details><summary>Step 1: Practise the test</summary><div class="accbody"><p>Read ${PL('keys','&ldquo;Your keys to driving in Queensland&rdquo;')}, then check your knowledge with the free ${PL('practise-test','practice road rules test')}.</p></div></details>
+      <details><summary>Step 1: Practise the test</summary><div class="accbody"><p>Read the ${PL('keys','road rules handbook')}, then check your knowledge with the free ${PL('practise-test','practice road rules test')}.</p></div></details>
       <details><summary>Step 2: Gather your documents</summary><div class="accbody"><p>Bring your evidence of identity, and a medical certificate if you have been asked for one.</p><p>You do not need an application form at a TMR service centre. You still need form F3000 at a police station or most QGAP offices.</p></div></details>
       <details><summary>Step 3: Visit a service centre and pay the fee</summary><div class="accbody"><p>You do not need to book. ${LL(U.centres,'Find a service centre')} that provides licensing services and go during opening hours.</p><p>Pay the test fee when you arrive.</p></div></details>
       <details><summary>Step 4: Take the test</summary><div class="accbody"><p>The test has 30 multiple choice questions in 2 sections. There is no time limit.</p></div></details>
@@ -644,7 +645,7 @@ const PAGES = {
     <p>Your progress will not be saved. You'll need to complete the practice test in one go.</p>
     <p><a class="btn" href="${U.practiceTest}">Take practice test</a></p>`,
   sections:[
-    {id:'pt-know', h:'What you should know', html:`<p>Before you start, make sure you've read and understood the ${PL('keys','Your Keys to Driving in Queensland')} handbook.</p>
+    {id:'pt-know', h:'What you should know', html:`<p>Before you start, make sure you've read and understood the ${PL('keys','road rules handbook')}.</p>
       <p>The practice test has:</p>
       <ul><li>questions that are similar to the real test</li><li>randomly generated questions each time</li><li>10 give way questions</li><li>20 road rule questions.</li></ul>
       <p>This practice test does not contribute towards getting a licence.</p>`}
@@ -711,7 +712,7 @@ const PAGES = {
     <ul class="arrowlist"><li><a href="${U.rules}"><span>Read the full rules on qld.gov.au</span>{AR}</a></li></ul>`,
   sections:[
     {id:'rl-know', h:'What you should know', html:`<p>These rules apply from the day you ${PL('get-learner-licence','get your learner licence')} until you move onto a provisional licence. Breaking them can cost you demerit points and delay your progression.</p>
-      <p>You must follow all Queensland road rules as well. ${PL('keys','&ldquo;Your keys to driving in Queensland&rdquo;')} sets them out in full.</p>`},
+      <p>You must follow all Queensland road rules as well. The ${PL('keys','road rules handbook')} sets them out in full.</p>`},
     {id:'rl-sup', h:'Your supervisor', html:`<div class="box box-yes">{YES}<div><p>Your supervisor must:</p>
       <ul><li>sit beside you in the front passenger seat</li><li>hold a valid open licence for the class of vehicle you are driving</li><li>have held that licence for at least 1 year</li></ul></div></div>`},
     {id:'rl-plates', h:'L plates', html:`<p>You must display L plates at the front and rear of the vehicle. On a motorcycle, the rear only.</p>
@@ -844,7 +845,7 @@ function renderGuide(p){
       <h2>${s.t}</h2>
       <p>${s.d}</p>
       <div class="stepbody">${s.body}</div>
-      ${s.callout ? `<div class="callout"><h2>${s.callout.h}</h2><p>${s.callout.p}</p></div>` : ''}
+      ${s.tip ? `<div class="callout"><p>${s.tip}</p></div>` : ''}
     </section>`).join('');
   return `<div class="body"><div class="container"><div class="col">
       ${crumbs(p.crumbs)}
