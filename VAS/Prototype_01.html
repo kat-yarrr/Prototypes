@@ -11,6 +11,7 @@
 :root{
   --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
   --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
+  --hero:#e6f6ff;
   --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
   --qe:#0b2a57; --yellow:#ffe500;
   --green-bg:#eef8f0; --green:#2e7d32; --red-bg:#fcecec; --red:#c62828;
@@ -73,6 +74,7 @@ svg{flex:none}
 
 /* Page shell */
 .page{padding:28px 0 0}
+.page.topic{padding-top:0}
 .col{max-width:736px}
 .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;padding:0;margin:0 0 20px;font-size:14px;row-gap:4px}
 .crumbs li{display:inline-flex;align-items:center}
@@ -264,6 +266,16 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .callout h2{font-size:14px}
 .callout p{margin:0 0 8px}.callout p:last-child{margin:0}
 
+
+/* Topic page hero band */
+.hero{background:var(--hero);padding:64px 0 74px}
+.hero .crumbs ol{margin:0 0 30px}
+.hero h1{font-size:42px;margin:0 0 22px}
+.hero .col{max-width:858px}
+.hero .lead{font-size:25px;line-height:1.45;margin:0}
+.topicbody{padding-top:52px}
+@media (max-width:991px){.hero{padding:30px 0 38px}.hero h1{font-size:34px}.hero .lead{font-size:21px;max-width:none}.topicbody{padding-top:36px}}
+@media (max-width:575px){.hero h1{font-size:30px}.hero .lead{font-size:18px}}
 </style>
 </head>
 <body>
@@ -834,11 +846,12 @@ function renderImported(s){
   const p = IMPORTED[s.page];
   const groups = p.groups.map(g => `<section class="svcgroup"><h2>${g.h}</h2><p>${g.d}</p>
     <ul class="svclist">${g.items.map(i => `<li><a href="${i.href}"><span>${i.x}</span>${I.arrowRight}</a></li>`).join('')}</ul></section>`).join('');
-  return `<div class="container"><div class="col">
+  return `<div class="hero"><div class="container"><div class="col">
     ${crumbsHTML(p.crumbs.slice(0,-1), p.crumbs[p.crumbs.length-1].x)}
     <h1 tabindex="-1">${p.title}</h1>
     <p class="lead">${p.lead}</p>
-    <hr class="rule">
+  </div></div></div>
+  <div class="container"><div class="col topicbody">
     ${groups}
     ${p.helpbox ? helpboxHTML(p.helpbox) : ''}
     ${inGuideHTML(s.n)}
@@ -850,14 +863,14 @@ function renderImported(s){
 /* ---------- Build ---------- */
 const mainEl = document.getElementById('main');
 const TITLES = {'': GUIDE};
-function addPage(slug, html){
+function addPage(slug, html, cls){
   const m = document.createElement('main');
-  m.className = 'page'; m.dataset.slug = slug; m.hidden = true; m.innerHTML = html;
+  m.className = 'page' + (cls ? ' ' + cls : ''); m.dataset.slug = slug; m.hidden = true; m.innerHTML = html;
   mainEl.appendChild(m);
 }
 addPage('', renderLanding());
 STAGES.forEach(s => {
-  addPage(s.page, s.imported ? renderImported(s) : renderStage(s));
+  addPage(s.page, s.imported ? renderImported(s) : renderStage(s), s.imported ? 'topic' : '');
   TITLES[s.page] = s.imported ? IMPORTED[s.page].title : s.t;
 });
 document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
