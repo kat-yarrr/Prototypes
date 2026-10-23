@@ -278,6 +278,7 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .topicbody{padding-top:52px}
 @media (max-width:991px){.hero{padding:30px 0 38px}.hero h1{font-size:34px}.hero .lead{font-size:21px;max-width:none}.topicbody{padding-top:36px}}
 @media (max-width:575px){.hero h1{font-size:30px}.hero .lead{font-size:18px}}
+
 </style>
 </head>
 <body>
@@ -431,11 +432,11 @@ const STAGES = [
   d:"After a crime, you can report what happened to police. It's up to you whether you report."},
  {n:3, t:'After the crime', page:'after-the-crime',
   d:'After a crime is reported, police may investigate what happened and whether charges can be laid. Every situation is different, but information, support and protection is available to help you stay informed and safe throughout the justice process.'},
- {n:4, t:'Financial assistance', page:'financial-assistance', imported:true,
+ {n:4, t:'Financial assistance', page:'guide-applying', guide:true,
   d:'If you have experienced a violent crime, including domestic and family violence, financial assistance may be available to help you recover.'},
  {n:5, t:'Before court', page:'before-court',
   d:'If a person is charged with a crime, there are different pathways the matter may take, including court or restorative justice. Information, support and resources are available to help you understand what to expect and prepare for the next steps.'},
- {n:6, t:'Attending court', page:'attending-court', imported:true,
+ {n:6, t:'Attending court', page:'attend-court-hearing', guide:true,
   d:'Apply for bail, plead guilty online or check upcoming court case dates.'},
  {n:7, t:'After court', page:'after-court',
   d:'After court, there may still be decisions or updates that affect you, including appeals, parole or offender updates. Support is still available after the court process ends.'},
@@ -863,6 +864,252 @@ function renderImported(s){
   </div></div>`;
 }
 
+/* ---------- Pages rebuilt from qld.gov.au, with the guide navigation added ---------- */
+const GUIDES = {};
+
+GUIDES['guide-applying'] = {
+  title:'Guide for victims applying for financial assistance',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Victims of crime', href:U.voc}, {x:'Financial assistance for victims', href:U.financial},
+          {x:'Guide for victims applying for financial assistance'}],
+  partOf:{x:'Financial assistance for victims', href:U.financial},
+  lead:'Understand what criteria victims must meet to apply for financial assistance as a victim of violent crime in Queensland.',
+  otp:[{t:'What you should know', id:'what-you-should-know'},
+       {t:'Types of victims', id:'types-of-victims'},
+       {t:'Reporting requirements', id:'reporting-requirements'},
+       {t:'Time limit requirements', id:'time-limit-requirements'},
+       {t:'Types of injuries', id:'types-of-injuries'},
+       {t:'Types of payments', id:'types-of-payments'},
+       {t:'Offender debt recovery scheme', id:'offender-debt-recovery-scheme'},
+       {t:'Watch Victim Assist video resources', id:'watch-victim-assist-video-resources'},
+       {t:'You may be interested in', id:'you-may-be-interested-in'}],
+  sections:[
+    {id:'what-you-should-know', h:'What you should know', html:`
+      <p>When you or someone on your behalf makes an application for financial assistance as a victim of crime, you will be assessed to establish your eligibility under the Victims of Crime Assistance Act 2009.</p>`},
+    {id:'types-of-victims', h:'Types of victims', html:`
+      <ul class="jumps"><li><a href="#primary" data-jump="primary">Primary victims</a></li>
+        <li><a href="#special" data-jump="special">Special primary victims</a></li>
+        <li><a href="#related" data-jump="related">Related victims</a></li>
+        <li><a href="#parent" data-jump="parent">Parent secondary victims</a></li>
+        <li><a href="#witness" data-jump="witness">Witnesses</a></li></ul>
+      <h3 id="primary">Primary victims</h3>
+      <p>A primary victim is a person who was directly injured by an act of violence in Queensland.</p>
+      <h3 id="special">Special primary victims</h3>
+      <p>A special primary victim is a person who:</p>
+      <ul><li>was a child when the violence happened</li>
+        <li>has impaired capacity</li>
+        <li>was threatened or intimidated by the offender or someone else.</li></ul>
+      <p>Victims of the following offences are also special primary victims:</p>
+      <ul><li>sexual offences</li>
+        <li>offences committed by a person in a position of power, influence, or trust</li>
+        <li>domestic violence that happened after 1 July 2017.</li></ul>
+      <p>Before applying for financial assistance, a special primary victim must report the act of violence to:</p>
+      <ul><li>a doctor, counsellor, psychologist, psychiatrist or domestic violence service, or</li>
+        <li>police.</li></ul>
+      <h3 id="related">Related victims</h3>
+      <p>A related victim is the close family member of a person who dies due to an act of violence. A close family member is defined as:</p>
+      <ul><li>a deceased person&rsquo;s partner, parents, children, siblings and financial dependents</li>
+        <li>this includes by law, Aboriginal or Torres Strait Islander custom.</li></ul>
+      <h3 id="parent">Parent secondary victims</h3>
+      <p>A parent secondary victim is a parent who was injured by learning about an act of violence that was committed against their child (who was under 18).</p>
+      <p>A parent can be:</p>
+      <ul><li>birth parent</li><li>adopted parent</li><li>step-parent</li>
+        <li>approved carer (other than a temporary carer)</li>
+        <li>a person who is the parent under Aboriginal or Torres Strait Islander custom</li>
+        <li>a person who has a parenting order under the Family Law Act 1975 (Cwlth)</li>
+        <li>a person who otherwise has the right and responsibility to make decisions about the child&rsquo;s daily care.</li></ul>
+      <p>A parent does not include:</p>
+      <ul><li>a person standing in the place of a parent of a child on a temporary basis, or a person granted a temporary order in relation to a child</li>
+        <li>the chief executive (child protection).</li></ul>
+      <h3 id="witness">Witnesses</h3>
+      <p>A witness is a person who was injured by seeing or hearing acts of violence being committed against someone else.</p>`},
+    {id:'reporting-requirements', h:'Reporting requirements', html:`
+      <ul class="jumps"><li><a href="#all" data-jump="all">All victims</a></li>
+        <li><a href="#special-primary" data-jump="special-primary">Special primary victims</a></li>
+        <li><a href="#after-2009" data-jump="after-2009">Violence that happened after 2009</a></li>
+        <li><a href="#before-2009" data-jump="before-2009">Violence that happened before 2009</a></li></ul>
+      <p>We can give financial assistance to eligible victims of an act of violence, but the violence must be reported before you apply.</p>
+      <h3 id="all">All victims</h3>
+      <p>All victims&mdash;except special primary victims&mdash;must report the violence to police. You can report violence to the Queensland Police Service yourself or someone else may be able to report it for you.</p>
+      <h3 id="special-primary">Special primary victims</h3>
+      <p>Special primary victim can report the violence to:</p>
+      <ul><li>a doctor, counsellor, psychologist, psychiatrist or domestic violence service</li><li>police.</li></ul>
+      <h3 id="after-2009">Violence that happened after 2009</h3>
+      <p>For acts of violence that happened after 1 December 2009, the offender doesn&rsquo;t need to be convicted for you to be eligible for financial assistance.</p>
+      <h3 id="before-2009">Violence that happened before 2009</h3>
+      <p>For acts of violence that happened before 1 December 2009, a person is only eligible for financial assistance if:</p>
+      <ul><li>the offender was convicted or plead guilty in a District or Supreme Court</li>
+        <li>the police state that the offender could not be located</li>
+        <li>the offender went through the Mental Health Review Tribunal.</li></ul>`},
+    {id:'time-limit-requirements', h:'Time limit requirements', html:`
+      <p>You need to apply for financial assistance within 3 years of the act of violence or if you were under 18 when the violence happened, you have until you are 21.</p>
+      <p>Extra time can only be given in special circumstances. An extension of time may be considered if something directly affected your ability to apply within the required timeframe, such as:</p>
+      <ul><li>the physical or psychological effects of the violence</li>
+        <li>impaired capacity</li>
+        <li>your age at the time of the violence</li>
+        <li>the offender being in a position of power, influence or trust</li>
+        <li>other significant factors relevant to your situation</li></ul>
+      <p>If you apply outside the timeframe, you will need to:</p>
+      <ul><li>explain why you could not apply within time, and</li>
+        <li>provide supporting information to confirm this.
+          <ul><li>Supporting information from a doctor, psychologist, counsellor, or domestic and family violence support service that explains:
+            <ul><li>why you could not apply within time</li>
+              <li>how it prevented you from applying earlier.</li></ul></li></ul></li></ul>`},
+    {id:'types-of-injuries', h:'Types of injuries', html:`
+      <ul class="jumps"><li><a href="#physical" data-jump="physical">Physical injury</a></li>
+        <li><a href="#psychological" data-jump="psychological">Psychological injury</a></li>
+        <li><a href="#aggravation" data-jump="aggravation">Aggravation of pre-existing conditions</a></li>
+        <li><a href="#adverse" data-jump="adverse">Adverse impacts</a></li></ul>
+      <h3 id="physical">Physical injury</h3>
+      <p>An injury to your body directly caused by an act of violence.</p>
+      <p>Examples: Bruises, wounds, muscle or bone injuries, damage to teeth, brain injuries, damage to senses, pregnancy (resulting from rape), or a disease you contracted from the offender during the violence.</p>
+      <h3 id="psychological">Psychological injury</h3>
+      <p>A psychological injury, illness, disorder, or impairment that was directly cause by an act of violence.</p>
+      <p>Examples: depressive disorders, anxiety disorders, acute stress disorders, or post-traumatic stress disorders.</p>
+      <p>Limitations: Substance abuse resulting from violence is not usually considered.</p>
+      <h3 id="aggravation">Aggravation of pre-existing conditions</h3>
+      <p>A medical condition, psychological illness, or disability that was made worse by the act of violence.</p>
+      <p>The health practitioner that usually treats your pre-existing condition will need to complete a ${L('https://www.publications.qld.gov.au/dataset/d5e08dd6-4276-4dcd-8cf8-a3c88713bae1/resource/b68a85df-4677-4fad-97fd-d1ff243188e8','comprehensive clinical report')}. This report will tell us how your condition has changed and what (if any) additional treatment or medical support you need.</p>
+      <h3 id="adverse">Adverse impacts</h3>
+      <p>Adverse impacts are only considered if you have been a victim of a sexual offence that occurred after 19 December 1997 or a victim of domestic violence that occurred after 1 July 2017</p>
+      <p>Examples: A sense of violation, reduced self-worth or perception, lost or reduced physical immunity, lost or reduced physical capacity (including the capacity to have children), increased fear or insecurity, adverse reactions from others, a negative impact on sexual relationships or a negative impact on feelings.</p>`},
+    {id:'types-of-payments', h:'Types of payments', html:`
+      <p>Each type of victim is eligible for different types of payments. Victims under the age of 18 and victims who have an appointed trustee, payment will go to the Queensland Public Trustee.</p>
+      <h3>Primary Victims (including Special Primary Victims)</h3>
+      <p>Special Assistance Payment: This payment is between $3,000 and $15,000 depending on the type of violence.</p>
+      <p>Recovery expenses: All recovery expenses.</p>
+      <h3>Related Victims</h3>
+      <p>Distress payment: This payment is up to $15,000.</p>
+      <p>Dependency payment: This payment is up to $20,000 depending on the dependency of the victim.</p>
+      <p>Funeral payment: This payment is up to $15,000 for the funeral of the family member or an unborn child.</p>
+      <p>Recovery expenses: Counselling, medical, travel, report, other recovery expenses.</p>
+      <h3>Parent Secondary</h3>
+      <p>Recovery expenses: Counselling, medical, travel, report, other recovery expenses and loss of earnings.</p>
+      <h3>Witnesses</h3>
+      <h4>Less serious</h4>
+      <p>Recovery expenses: Only medical, counselling, reports and travelling to medical or counselling.</p>
+      <h4>More serious</h4>
+      <p>Recovery expenses: All witness less serious expenses and loss of earnings, reports and other recovery expenses.</p>`},
+    {id:'offender-debt-recovery-scheme', h:'Offender debt recovery scheme', html:`
+      <p>In some cases, Queensland law allows the government to recover a portion of the victim&rsquo;s payment from the offender.</p>
+      <p>This means we can ask the offender to pay the state back for part of the assistance granted to the victim if the offender is convicted of committing the violence against the victim.</p>
+      <p>The rules about what can be recovered are set out in the ${L('https://www.legislation.qld.gov.au/view/html/inforce/current/act-2009-035#ch.3-pt.16','Victims of Crime Assistance Act 2009')}.</p>
+      <h3>Safety issues</h3>
+      <p>We acknowledge that some victims may have safety concerns about the government recovering money from the offender. Your ongoing safety is our priority and there are steps we can take to protect you.</p>
+      <p>If this is a concern for you and you want to know more about our safety measures, email ${L('mailto:VictimAssist@justice.qld.gov.au?subject=Offender%20debt%20recovery%20concern','VictimAssist@justice.qld.gov.au')} and include:</p>
+      <ul><li>your application reference number</li>
+        <li>information about your safety concerns, such as
+          <ul><li>the offender knows where I live and I am afraid they will cause me further harm if this process occurs</li>
+            <li>the offender has committed domestic violence in the past and I am afraid they will cause further harm to me or others if this process occurs.</li></ul></li></ul>`},
+    {id:'watch-victim-assist-video-resources', h:'Watch Victim Assist video resources', html:`
+      <p>Watch Victim Assist Queensland's video guides on how to apply for financial assistance and the application process.</p>
+      <ul><li>${L('https://www.youtube.com/watch?v=c2VhzOi0m4g&t=2s','Applying for financial assistance')}</li>
+        <li>${L('https://youtu.be/0wGrZAA1uj4?si=AmjDpIXbNM28M4nD','Financial assistance application process')}</li>
+        <li>${L('https://youtu.be/v8oik6d4jiY?si=eKgCZHQhndPGLqD2','Supporting you')}</li></ul>`}
+  ],
+  interested:[{x:'Apply for financial assistance for victims', href:U.financial+'/apply'},
+              {x:'Resources for victims and service providers', href:'https://www.qld.gov.au/justice/for-organisations/victim-support-agencies/resources'}],
+  managed:{x:'Department of Youth Justice and Victim Support', href:'https://www.qld.gov.au/justice/help-centre/contact/youth-justice-and-victim-support'}
+};
+
+GUIDES['attend-court-hearing'] = {
+  title:'Guide to attending a court hearing',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Court and mediation', href:U.courtmed}, {x:'Attending court', href:U.attending},
+          {x:'Guide to attending a court hearing'}],
+  partOf:{x:'Attending court', href:U.attending},
+  lead:'Understand the different types of courts in Queensland, and what to expect if you need to attend a court hearing.',
+  otp:[{t:'In short', id:'in-short'},
+       {t:'Courts in Queensland', id:'courts-in-queensland'},
+       {t:'Courtroom rules', id:'what-you-should-know'},
+       {t:'Going to court as a witness or victim', id:'going-to-court-as-a-witness-or-victim'},
+       {t:'Going to court as a defendant or litigant', id:'going-to-court-as-a-defendant-or-litigant'},
+       {t:'Going to court as a juror', id:'going-to-court-as-a-juror'},
+       {t:'Watching court from the public gallery', id:'watching-court-from-the-public-gallery'},
+       {t:'You may be interested in', id:'you-may-be-interested-in'}],
+  sections:[
+    {id:'in-short', h:'In short', html:`
+      <p>There are 3 types of courts in Queensland that have rules you must follow.</p>
+      <p>This guide will help you understand what to expect if you need to attend a court hearing and what your responsibilities are, so you don&rsquo;t break the law.</p>`},
+    {id:'courts-in-queensland', h:'Courts in Queensland', html:`
+      <p>There are 3 levels of court in Queensland:</p>
+      <ul><li>Magistrates Court</li><li>District Court</li><li>Supreme Court.</li></ul>
+      <p>The type of court that a matter is heard in depends on the seriousness of the crime.</p>
+      <p>There are also special courts to meet the needs of specific categories of offenders&mdash;such as children. And courts to establish specific facts&mdash;such as the Coroners Court&mdash; which may investigate a death.</p>`},
+    {id:'what-you-should-know', h:'Courtroom rules', html:`
+      <p>There are certain rules you must follow when going to court.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/going-to-court/prepare-for-court/courtroom-conduct','courtroom rules')} on the Queensland Courts website.</p>`},
+    {id:'going-to-court-as-a-witness-or-victim', h:'Going to court as a witness or victim', html:`
+      <ul class="jumps"><li><a href="#receiving-a-summons-or-subpoena-notice" data-jump="receiving-a-summons-or-subpoena-notice">Receiving a summons or subpoena notice</a></li>
+        <li><a href="#called-to-give-evidence-witness-victim" data-jump="called-to-give-evidence-witness-victim">Called to give evidence</a></li></ul>
+      <p>You may be asked to attend court as a witness if you saw or heard something relevant to a case or were involved in the events in some way. The information you provide may help the court come to a fair decision. Victims of violent crime are very important witnesses.</p>
+      <p>You may also be asked to go to court as an expert witness&mdash;such as a doctor or engineer&mdash;to provide advice about the evidence presented.</p>
+      <p>You can be asked to appear as a witness for the prosecution or the defence. In either case you may be asked questions about what you know by both the defence and prosecution lawyers. This is to ensure the facts presented about the crime are correct.</p>
+      <p>If you have documents relevant to the case, you may be asked to bring these with you.</p>
+      <h3 id="receiving-a-summons-or-subpoena-notice">Receiving a summons or subpoena notice</h3>
+      <p>You may be legally ordered to go to court as a witness, particularly if you are a witness for the prosecution.</p>
+      <p>This is called a &lsquo;summons&rsquo; if you are needed as a witness in a Magistrates Court, or a &lsquo;subpoena&rsquo; if you are called as a witness in a District or Supreme Court.</p>
+      <p>If you receive a summonsed or subpoenaed notice it will tell you when you need to go to court. If you do not attend court you may be found guilty of contempt of court and a warrant may be issued for your arrest.</p>
+      <h3 id="called-to-give-evidence-witness-victim">Called to give evidence</h3>
+      <p>You will be called to give evidence by a court official, called a court services officer in a Magistrates Court or a bailiff in a District and Supreme Court. They will ask you to go into the witness box and take an oath or affirmation. It is a crime to lie in court.</p>
+      <p>The lawyers for the defence and prosecution will ask you questions about what you know. If you don't understand a question or you didn&rsquo;t hear it properly, you can ask to have the question repeated.</p>
+      <p>When you finish giving evidence you will be released from your oath, you can stand down and leave the witness box.</p>`},
+    {id:'going-to-court-as-a-defendant-or-litigant', h:'Going to court as a defendant or litigant', html:`
+      <ul class="jumps"><li><a href="#receiving-a-notice-to-appear" data-jump="receiving-a-notice-to-appear">Receiving a notice to appear</a></li>
+        <li><a href="#representing-yourself-in-court" data-jump="representing-yourself-in-court">Representing yourself in court</a></li>
+        <li><a href="#called-to-give-evidence-defendant-litigant" data-jump="called-to-give-evidence-defendant-litigant">Called to give evidence</a></li></ul>
+      <p>If you are charged with a criminal offence, you are known as the &lsquo;defendant&rsquo; or &lsquo;accused&rsquo;. In a civil matter you may be known as the &lsquo;litigant&rsquo;.</p>
+      <p>You are considered innocent until proven guilty beyond reasonable doubt.</p>
+      <h3 id="receiving-a-notice-to-appear">Receiving a notice to appear</h3>
+      <p>Your lawyer can tell you when to go to court or you may receive a notice or summons to appear which details what you are charged with, and when and where you need to go to court.</p>
+      <p>If you do not attend court you may be found guilty of contempt of court and a warrant may be issued for your arrest.</p>
+      <p>If you are in custody, you will be notified by corrective services officers or the police to appear in court.</p>
+      <h3 id="representing-yourself-in-court">Representing yourself in court</h3>
+      <p>You don&rsquo;t have to have a lawyer when you go to court&mdash;you can represent yourself in any of Queensland&rsquo;s courts.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/going-to-court/prepare-for-court/representing-yourself','representing yourself')} on the Queensland Courts website.</p>
+      <h3 id="called-to-give-evidence-defendant-litigant">Called to give evidence</h3>
+      <p>You do not have to give evidence in court, however it may help your case. Your lawyer is the best person to advise you whether to give evidence.</p>
+      <p>If you choose to give evidence, the prosecution lawyer and your own lawyer will ask you questions. It is a crime to lie in court.</p>`},
+    {id:'going-to-court-as-a-juror', h:'Going to court as a juror', html:`
+      <p>You may be asked to be on a jury at a court hearing.</p>
+      <p>In most cases, jurors appear in the Supreme and District courts. A jury is made up of 12 people from the community, chosen at random. Together members of the jury decide on the guilty or not guilty verdict.</p>
+      <p>Prospective jurors should discuss their juror notice and summons with their employer and keep them updated during their jury service. Employers need to be aware of their obligations to make their employees available for jury service.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/jury-service','Jury service')} on the Queensland Courts website.</p>`},
+    {id:'watching-court-from-the-public-gallery', h:'Watching court from the public gallery', html:`
+      <p>The public and media can normally watch court matters from the public gallery at the back of the courtroom.</p>
+      <p>Family members of anyone involved in the case may also watch from the public gallery.</p>
+      <p>Witnesses can only watch a trial once they have given their evidence.</p>
+      <p>When you watch from the public gallery you are there as an observer&mdash;you should be quiet, watch and listen. You cannot take photos, record or transmit court proceedings in any way.</p>
+      <p>In special cases&mdash;for example, to protect a vulnerable witness&mdash;the judge may order a closed court, in which case you will not be allowed into the public gallery.</p>
+      <p>Cases heard in the Childrens Court (Magistrates Court) are held in a closed courtroom to protect the accused child&rsquo;s identity, although the child&rsquo;s immediate family are allowed in court to support them.</p>
+      <p>Cases heard in the Childrens Court of Queensland (District Court) and juvenile matters in the Supreme Court Trial Division and Court of Appeal are heard in open court, unless the presiding judge orders the court to be closed. No information identifying a juvenile defendant can be published in print or online media, or via social media.</p>`}
+  ],
+  interested:[{x:'Check upcoming court cases', href:U.attending+'/check-upcoming-cases'},
+              {x:'Support services for attending court', href:U.attending+'/support-services'}],
+  managed:{x:'Department of Justice', href:'https://www.qld.gov.au/justice/help-centre/contact/justice'}
+};
+
+/* A page that lives elsewhere in the IA, rebuilt as published, with the guide navigation added. */
+function renderGuide(s){
+  const p = GUIDES[s.page];
+  const otp = `<nav class="onthispage" aria-labelledby="otp-${s.page}"><h2 id="otp-${s.page}">On this page</h2><ul>${
+    p.otp.map(o => `<li><a href="#${o.id}" data-jump="${o.id}">${o.t}</a></li>`).join('')}</ul></nav>`;
+  const secs = p.sections.map(x => `<h2 class="sec" id="${x.id}">${x.h}</h2>${x.html}`).join('');
+  return `<div class="container"><div class="col">
+    ${crumbsHTML(p.crumbs.slice(0,-1), p.crumbs[p.crumbs.length-1].x)}
+    <h1 tabindex="-1">${p.title}</h1>
+    <p class="partof">Part of the ${L(p.partOf.href, p.partOf.x)} topic</p>
+    <p class="lead">${p.lead}</p>
+    <hr class="rule">
+    ${otp}
+    <div class="content">${secs}</div>
+    ${inGuideHTML(s.n)}
+    <div class="interested" id="you-may-be-interested-in"><h2>You may be interested in</h2><ul>${
+      p.interested.map(i => `<li>${A(i)}</li>`).join('')}</ul></div>
+    <div class="pagefoot"><div><b>Managed by:</b> ${L(p.managed.href, p.managed.x)}</div><button type="button" class="top" data-top>Back to top ${I.arrowUp}</button></div>
+  </div></div>`;
+}
+
 /* ---------- Build ---------- */
 const mainEl = document.getElementById('main');
 const TITLES = {'': GUIDE};
@@ -873,8 +1120,8 @@ function addPage(slug, html, cls){
 }
 addPage('', renderLanding());
 STAGES.forEach(s => {
-  addPage(s.page, s.imported ? renderImported(s) : renderStage(s), s.imported ? 'topic' : '');
-  TITLES[s.page] = s.imported ? IMPORTED[s.page].title : s.t;
+  addPage(s.page, s.guide ? renderGuide(s) : renderStage(s));
+  TITLES[s.page] = s.guide ? GUIDES[s.page].title : s.t;
 });
 document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
 
