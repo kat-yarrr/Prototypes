@@ -11,8 +11,8 @@
 :root{
   --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
   --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
+  --marker:#005eb8; --timeline-line:#e0e0e0;
   --hero:#e6f6ff;
-  --timeline:#bedfff;
   --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
   --qe:#0b2a57; --yellow:#ffe500;
   --green-bg:#eef8f0; --green:#2e7d32; --red-bg:#fcecec; --red:#c62828;
@@ -268,26 +268,6 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .callout p{margin:0 0 8px}.callout p:last-child{margin:0}
 
 
-/* Related information */
-.related{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
-.related h2{font-size:22px;color:var(--navy);margin:0 0 16px;line-height:1.3}
-.related .cards{display:flex;gap:20px;flex-wrap:wrap}
-.related .card{flex:1 1 260px;min-width:0;border:1px solid var(--line);border-radius:8px;padding:20px 22px}
-.related .card h3{font-size:18px;margin:0 0 10px;line-height:1.3;font-weight:700}
-.related .card h3 a{color:var(--link)}
-.related .card p{margin:0;font-size:15px;color:#4f4f4f}
-@media (max-width:575px){.related .cards{flex-direction:column}}
-
-/* Stage timeline on the landing page */
-.timeline{position:relative;margin:30px 0 0}
-.timeline::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:4px;border-radius:2px;background:var(--timeline)}
-.timeline .step{position:relative;padding:0 0 34px 50px;border-bottom:0}
-.timeline .step:last-child{padding-bottom:10px}
-.timeline .step::before{content:"";position:absolute;left:0;top:1px;width:28px;height:28px;box-sizing:border-box;border:4px solid var(--timeline);border-radius:50%;background:#fff}
-.timeline .step h2{margin:0 0 14px}
-.timeline .step > p{margin:0}
-@media (max-width:575px){.timeline .step{padding-left:42px}}
-
 /* Topic page hero band */
 .hero{background:var(--hero);padding:64px 0 74px}
 .hero .crumbs ol{margin:0 0 30px}
@@ -297,6 +277,15 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .topicbody{padding-top:52px}
 @media (max-width:991px){.hero{padding:30px 0 38px}.hero h1{font-size:34px}.hero .lead{font-size:21px;max-width:none}.topicbody{padding-top:36px}}
 @media (max-width:575px){.hero h1{font-size:30px}.hero .lead{font-size:18px}}
+
+/* Stage timeline on the landing page */
+.timeline{position:relative;margin:30px 0 0}
+.timeline::before{content:"";position:absolute;left:13px;top:1px;bottom:0;width:2px;background:var(--timeline-line)}
+.timeline .step{position:relative;padding:0 0 34px 50px;border-bottom:0}
+.timeline .step::before{content:"";position:absolute;left:0;top:1px;width:28px;height:28px;box-sizing:border-box;border:4px solid var(--marker);border-radius:50%;background:#fff}
+.timeline .step h2{margin:0 0 12px}
+.timeline .step > p{margin:0}
+@media (max-width:575px){.timeline .step{padding-left:42px}}
 </style>
 </head>
 <body>
@@ -396,7 +385,6 @@ const I = {
 };
 
 
-
 /* ---------- URLs ---------- */
 const U = {
   home:'https://www.qld.gov.au',
@@ -442,7 +430,7 @@ const VAS_BLOCK = `<p>The Victims Advocate Service provides information, support
   <p>The service can help you understand your options, access information about the justice process, and connect you with the right support services</p>
   ${VAS_PHONE}`;
 
-/* ---------- The six stages, in the order shown on the parent page ---------- */
+/* ---------- The eight stages, in the order shown on the parent page ---------- */
 const STAGES = [
  {n:1, t:'When a crime occurs', page:'when-a-crime-occurs',
   d:"If you're the victim of a crime, or you witness one, there are services and support to help you. Whether you need immediate help, information about what to do next, ways to stay safe, or practical support, help is available over the phone, online or in person."},
@@ -450,25 +438,17 @@ const STAGES = [
   d:"After a crime, you can report what happened to police. It's up to you whether you report."},
  {n:3, t:'After the crime', page:'after-the-crime',
   d:'After a crime is reported, police may investigate what happened and whether charges can be laid. Every situation is different, but information, support and protection is available to help you stay informed and safe throughout the justice process.'},
- {n:4, t:'Before court', page:'before-court',
+ {n:4, t:'Financial assistance', page:'financial-assistance', imported:true,
+  d:'If you have experienced a violent crime, including domestic and family violence, financial assistance may be available to help you recover.'},
+ {n:5, t:'Before court', page:'before-court',
   d:'If a person is charged with a crime, there are different pathways the matter may take, including court or restorative justice. Information, support and resources are available to help you understand what to expect and prepare for the next steps.'},
- {n:5, t:'After court', page:'after-court',
+ {n:6, t:'Attending court', page:'attending-court', imported:true,
+  d:'Apply for bail, plead guilty online or check upcoming court case dates.'},
+ {n:7, t:'After court', page:'after-court',
   d:'After court, there may still be decisions or updates that affect you, including appeals, parole or offender updates. Support is still available after the court process ends.'},
- {n:6, t:'Recovery and support', page:'recovery-and-support',
+ {n:8, t:'Recovery and support', page:'recovery-and-support',
   d:'Recovery is different for everyone. You may need support immediately after a crime or much later. Looking after your own wellbeing, and knowing how to support someone affected by crime, can be an important part of recovery. Support services are available at all stages and can help with practical and emotional support.'}
 ];
-
-/* Pages that sit elsewhere in the IA. They are destinations, not stages. */
-const IMPORTED_SLUGS = ['financial-assistance', 'attending-court'];
-
-/* Related information — the same two cards on the parent and on every stage page. */
-const RELATED = [
- {t:'Financial assistance', page:'financial-assistance',
-  d:'If you have experienced a violent crime, including domestic and family violence, financial assistance may be available to help you recover.'},
- {t:'Attending court', page:'attending-court',
-  d:'Apply for bail, plead guilty online or check upcoming court case dates.'}
-];
-
 const INTERESTED_3 = [{x:'Find support services for victims', href:U.findsupport},
                       {x:'Financial assistance for victims', href:U.financial},
                       {x:'Understanding your rights as a victim', href:U.rights}];
@@ -482,7 +462,7 @@ PAGES['when-a-crime-occurs'] = {
   otp:[{t:'Get immediate help', id:'wc-help'},
        {t:'Get support after a crime', id:'wc-support'},
        {t:'Understand your rights as a victim', id:'wc-rights'},
-       {t:'Make yourself safe after a crime', id:'wc-safe'},
+       {t:'Make yourself safe after the crime', id:'wc-safe'},
        {t:'Stay safe online', id:'wc-online'}],
   sections:[
     {id:'wc-help', h:'Get immediate help', html:`
@@ -810,13 +790,7 @@ const helpboxHTML = h => `<aside class="helpbox"><h2>${h.t}</h2>
   <div class="find"><a href="${U.help}">Find more in the help centre ${I.circleArrow}</a></div></aside>`;
 const managedHTML = () => `<div class="pagefoot"><div><b>Managed by:</b> ${TBC('[Department]')}</div><button type="button" class="top" data-top>Back to top ${I.arrowUp}</button></div>`;
 
-/* Related information — two cards to the pages that sit outside the guide. */
-const relatedHTML = () => `<div class="related"><h2>Related information</h2>
-  <div class="cards">${RELATED.map(r => `<div class="card">
-    <h3>${PL(r.page, r.t)}</h3>
-    <p>${r.d}</p></div>`).join('')}</div></div>`;
-
-/* In this guide — all six stages, current one marked, with a Next button. */
+/* In this guide — all eight stages, current one marked, with a Next button. */
 function inGuideHTML(n){
   const items = STAGES.map(s => n === s.n
     ? `<li aria-current="step"><span class="num" aria-hidden="true">${s.n}</span><b>${s.t}</b></li>`
@@ -849,7 +823,6 @@ function renderLanding(){
       <p>Call Triple Zero (000) and ask for police if you are in a dangerous or life-threatening situation.</p>
       <p>${TBC('Find 24/7 crisis services')}</p></div>
     ${stages}
-    ${relatedHTML()}
     ${managedHTML()}
   </div></div>`;
 }
@@ -871,15 +844,14 @@ function renderStage(s){
     <div class="inshort"><h2>In short</h2>${d.inshort}</div>
     <div class="content">${secs}</div>
     ${inGuideHTML(s.n)}
-    ${relatedHTML()}
     ${interestedHTML(d.interested)}
     ${managedHTML()}
   </div></div>`;
 }
 
-/* A page that lives elsewhere in the IA, exactly as published. */
-function renderImported(slug){
-  const p = IMPORTED[slug];
+/* A page that lives elsewhere in the IA, exactly as published, with the guide navigation added. */
+function renderImported(s){
+  const p = IMPORTED[s.page];
   const groups = p.groups.map(g => `<section class="svcgroup"><h2>${g.h}</h2><p>${g.d}</p>
     <ul class="svclist">${g.items.map(i => `<li><a href="${i.href}"><span>${i.x}</span>${I.arrowRight}</a></li>`).join('')}</ul></section>`).join('');
   return `<div class="hero"><div class="container"><div class="col">
@@ -890,6 +862,7 @@ function renderImported(slug){
   <div class="container"><div class="col topicbody">
     ${groups}
     ${p.helpbox ? helpboxHTML(p.helpbox) : ''}
+    ${inGuideHTML(s.n)}
     ${interestedHTML(p.interested)}
     ${managedHTML()}
   </div></div>`;
@@ -904,8 +877,10 @@ function addPage(slug, html, cls){
   mainEl.appendChild(m);
 }
 addPage('', renderLanding());
-STAGES.forEach(s => { addPage(s.page, renderStage(s)); TITLES[s.page] = s.t; });
-IMPORTED_SLUGS.forEach(slug => { addPage(slug, renderImported(slug), 'topic'); TITLES[slug] = IMPORTED[slug].title; });
+STAGES.forEach(s => {
+  addPage(s.page, s.imported ? renderImported(s) : renderStage(s), s.imported ? 'topic' : '');
+  TITLES[s.page] = s.imported ? IMPORTED[s.page].title : s.t;
+});
 document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
 
 /* ---------- Routing ---------- */
