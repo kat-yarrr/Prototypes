@@ -12,6 +12,7 @@
   --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
   --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
   --marker:#005eb8; --timeline-line:#e0e0e0;
+  --underline:#3f7ab4; --underline-hover:#005eb8;
   --hero:#e6f6ff;
   --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
   --qe:#0b2a57; --yellow:#ffe500;
@@ -21,8 +22,8 @@
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
 body{margin:0;font-family:"Noto Sans",Arial,Helvetica,sans-serif;color:var(--text);font-size:16px;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
-a{color:var(--link);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
+a{color:var(--link);text-decoration:underline;text-decoration-color:var(--underline);text-decoration-thickness:0.5px;text-underline-offset:0.3em}
+a:hover{text-decoration-color:var(--underline-hover);text-decoration-thickness:2px}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .container{max-width:1232px;margin:0 auto;padding:0 52px}
@@ -141,7 +142,8 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:28px 0}
 .interested li a{display:inline-flex;align-items:center;gap:8px}
 .pagefoot{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:40px 0 0;padding-bottom:28px;gap:12px}
 .pagefoot b{font-weight:600}
-.pagefoot .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.pagefoot .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-decoration-color:var(--underline);text-decoration-thickness:0.5px;text-underline-offset:0.3em}
+.pagefoot .top:hover{text-decoration-color:var(--underline-hover);text-decoration-thickness:2px}
 @media (max-width:575px){.pagefoot{flex-direction:column;align-items:flex-start}}
 .helpful{background:var(--helpful)}
 .helpful .container{display:flex;align-items:center;gap:22px;min-height:72px;font-size:14px;flex-wrap:wrap}
