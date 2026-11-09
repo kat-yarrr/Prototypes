@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desirability | Queensland Government</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --qg-background:#eff4f9;
+    --qg-surface:#ffffff;
+    --qg-border:#7a7a7a;
+    --qg-heading:#04284c;
+    --card-radius:12px;
+    --card-padding:16px;
+    --grid-gap:10px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    padding:48px 16px;
+    background:var(--qg-background);
+    color:var(--qg-heading);
+    font-family:"Noto Sans","Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:20px;
+  }
+
+  .visually-hidden{
+    position:absolute;
+    width:1px;height:1px;
+    margin:-1px;padding:0;border:0;
+    clip-path:inset(50%);
+    overflow:hidden;
+    white-space:nowrap;
+  }
+
+  .word-list{
+    max-width:1376px;
+    margin:0 auto;
+    padding:0;
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:var(--grid-gap);
+    align-items:stretch;
+  }
+
+  .word-list li{
+    display:flex;
+  }
+
+  .word{
+    flex:1 1 auto;
+    display:flex;
+    align-items:flex-start;
+    background:var(--qg-surface);
+    border:1px solid var(--qg-border);
+    border-radius:var(--card-radius);
+    padding:var(--card-padding);
+    font-weight:600;
+    font-size:16px;
+    line-height:20px;
+    color:var(--qg-heading);
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+
+  @media (min-width:640px){
+    body{padding:48px 24px}
+    .word-list{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  }
+
+  @media (min-width:1024px){
+    body{padding:48px 32px}
+    .word-list{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  }
+
+  @media print{
+    body{background:#fff;padding:12mm}
+    .word-list{grid-template-columns:repeat(4,1fr)}
+    .word{border-color:#000}
+  }
+</style>
+</head>
+<body>
+
+<h1 class="visually-hidden">Desirability word list</h1>
+
+<ul class="word-list">
+  <li><span class="word">Appealing</span></li>
+  <li><span class="word">Confusing</span></li>
+  <li><span class="word">Enthusiastic</span></li>
+  <li><span class="word">Approachable</span></li>
+  <li><span class="word">Connected</span></li>
+  <li><span class="word">Easy to use</span></li>
+  <li><span class="word">Unattractive</span></li>
+  <li><span class="word">Sterile</span></li>
+  <li><span class="word">Poor quality</span></li>
+  <li><span class="word">Not secure</span></li>
+  <li><span class="word">Inconsistent</span></li>
+  <li><span class="word">Low maintenance</span></li>
+  <li><span class="word">Overwhelming</span></li>
+  <li><span class="word">Secure</span></li>
+  <li><span class="word">Time-saving</span></li>
+  <li><span class="word">Unrefined</span></li>
+  <li><span class="word">Efficient</span></li>
+  <li><span class="word">Familiar</span></li>
+  <li><span class="word">Frustrating</span></li>
+  <li><span class="word">Inspiring</span></li>
+  <li><span class="word">Boring</span></li>
+  <li><span class="word">Fun</span></li>
+  <li><span class="word">Effortless</span></li>
+  <li><span class="word">Dated</span></li>
+  <li><span class="word">High quality</span></li>
+  <li><span class="word">Impersonal</span></li>
+  <li><span class="word">Old</span></li>
+  <li><span class="word">Rigid</span></li>
+  <li><span class="word">Time-consuming</span></li>
+  <li><span class="word">Unpredictable</span></li>
+  <li><span class="word">Busy</span></li>
+  <li><span class="word">Fast</span></li>
+  <li><span class="word">Empowering</span></li>
+  <li><span class="word">Difficult</span></li>
+  <li><span class="word">Helpful</span></li>
+  <li><span class="word">Intimidating</span></li>
+  <li><span class="word">Not valuable</span></li>
+  <li><span class="word">Professional</span></li>
+  <li><span class="word">Relevant</span></li>
+  <li><span class="word">Unconventional</span></li>
+  <li><span class="word">Clear</span></li>
+  <li><span class="word">Fragile</span></li>
+  <li><span class="word">Engaging</span></li>
+  <li><span class="word">Distracting</span></li>
+  <li><span class="word">Innovative</span></li>
+  <li><span class="word">Motivating</span></li>
+  <li><span class="word">Patronising</span></li>
+  <li><span class="word">Slow</span></li>
+  <li><span class="word">Trustworthy</span></li>
+  <li><span class="word">Useful</span></li>
+</ul>
+
+</body>
+</html>
