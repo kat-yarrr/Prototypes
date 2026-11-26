@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victim support through crime and the courts | Queensland Government</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1462bd; --blue-dark:#0e4f9c; --link:#09549f; --navy:#10205c;
+  --text:#333; --muted:#595959; --line:#d9d9d9; --grey-bg:#f4f4f4;
+  --qg-blue:#005eb8; --qg-sky:#84d3ff;
+  --underline:#3f7ab4; --underline-hover:#005eb8;
+  --hero:#e6f6ff;
+  --light-blue:#e8f4fc; --light-blue-line:#c6dff0; --sky:#8dcdf5;
+  --qe:#0b2a57; --yellow:#ffe500;
+  --green-bg:#eef8f0; --green:#2e7d32; --red-bg:#fcecec; --red:#c62828;
+  --helpful:#e3e5e8; --focus:#0a73e0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;font-family:"Noto Sans",Arial,Helvetica,sans-serif;color:var(--text);font-size:16px;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:underline;text-decoration-color:var(--underline);text-decoration-thickness:0.5px;text-underline-offset:0.3em}
+a:hover{text-decoration-color:var(--underline-hover);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.container{max-width:1376px;margin:0 auto;padding:0 32px}
+@media (max-width:575px){.container{padding:0 16px}}
+svg{flex:none}
+
+/* Quick exit */
+.qe{background:var(--qe);color:#fff;position:sticky;top:0;z-index:50;font-size:14px;line-height:1.45}
+.qe .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.qe p{margin:0}
+.qe a{color:#fff}
+.qe button{background:var(--yellow);color:#111;border:0;border-radius:4px;padding:10px 22px;font:600 14px/1.2 "Noto Sans",Arial,sans-serif;cursor:pointer;white-space:nowrap}
+.qe button:hover{background:#fff176}
+
+/* Desktop header */
+.preheader{background:var(--qg-blue);color:#fff;font-size:14px;line-height:1.45}
+.preheader .container{display:flex;justify-content:space-between;align-items:center;min-height:36px}
+.preheader a{color:#fff;text-decoration:none;display:inline-flex;align-items:center}
+.preheader a:hover{text-decoration:underline}
+.preheader .prelinks{display:flex;gap:16px}
+.masthead{background:#fff}
+.masthead .container{display:flex;justify-content:space-between;align-items:center}
+.logo{display:inline-flex;align-items:center;gap:14px;color:var(--qg-blue);text-decoration:none;padding:32px 0;height:120px;box-sizing:border-box}
+.logo .qglogo{height:56px;width:auto;display:block}
+.search{display:flex;width:384px}
+.search input{flex:1;min-width:0;height:52px;border:2px solid #848484;border-right:0;border-radius:4px 0 0 4px;padding:0 12px 0 40px;font:inherit;font-size:16px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23353535' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E") no-repeat 14px center}
+.search button{width:105px;height:52px;background:var(--qg-blue);color:#fff;border:0;border-radius:0 4px 4px 0;padding:0;font:400 16px "Noto Sans",Arial,sans-serif;cursor:pointer}
+.search button:hover{background:#004a93}
+.navband{background:#f5f5f5;border-bottom:8px solid var(--qg-sky)}
+.navband .container{display:flex;align-items:stretch;gap:0;min-height:52px}
+.navband a,.navband button{color:#353535;background:none;border:0;font:inherit;font-size:16px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:10px 12px}
+.navband a{color:var(--qg-blue);border-bottom:8px solid #f5f5f5;margin-bottom:-8px}
+
+/* Mobile header */
+.mhead{display:none;background:var(--qg-blue);color:#fff;border-bottom:4px solid var(--qg-sky)}
+.mhead .container{display:flex;justify-content:space-between;align-items:center;min-height:72px;padding-right:0}
+.mhead .logo{color:#fff;gap:0;padding:0;height:auto}
+.mhead .logo .qglogo{height:40px}
+.mhead .icons{display:flex;align-self:stretch}
+.mhead .icons button{background:none;border:0;border-left:1px solid #418fed;color:#fff;font:400 14px "Noto Sans",Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;width:72px;cursor:pointer}
+.mhead .icons button svg{width:24px;height:24px}
+@media (max-width:575px){
+  .mhead .container{min-height:52px}
+  .mhead .logo .qglogo{height:28px}
+  .mhead .icons button{width:52px;font-size:12px;gap:2px}
+  .mhead .icons button svg{width:20px;height:20px}
+}
+@media (max-width:991px){.preheader,.masthead,.navband{display:none}.mhead{display:block}}
+
+/* Page shell */
+.page{padding:28px 0 0}
+.page.topic{padding-top:0}
+.col{max-width:736px}
+.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;padding:0;margin:0 0 20px;font-size:14px;row-gap:4px}
+.crumbs li{display:inline-flex;align-items:center}
+.crumbs li:not(:last-child)::after{content:"";width:7px;height:7px;border-right:1.5px solid #6b6b6b;border-top:1.5px solid #6b6b6b;transform:rotate(45deg);display:inline-block;margin:0 12px 0 8px}
+.crumbs li[aria-current]{color:#555}
+.backlink{display:none;align-items:center;gap:6px;font-size:14px;margin:0 0 18px}
+@media (max-width:991px){.crumbs{display:none}.backlink{display:inline-flex}.page{padding-top:18px}}
+.tag{display:inline-block;border:1px solid #8a8a8a;border-radius:999px;padding:0 10px;font-size:12px;color:#3d3d3d;line-height:20px;margin:0 0 12px}
+h1{color:var(--navy);font-size:40px;line-height:1.2;font-weight:700;margin:0 0 16px;letter-spacing:-.01em}
+h1:focus{outline:none}
+@media (max-width:575px){h1{font-size:30px}}
+.partof{font-size:14px;margin:0 0 16px}
+.lead{font-size:20px;line-height:1.5;margin:0 0 24px;color:#333}
+@media (max-width:575px){.lead{font-size:18px}}
+.readtime{display:flex;gap:8px;align-items:center;font-size:14px;margin:0 0 28px}
+.readtime svg{color:var(--link)}
+hr.rule{border:0;border-top:1px solid var(--line);margin:64px 0}
+@media (max-width:991px){hr.rule{margin:40px 0}}
+[id]{scroll-margin-top:90px}
+
+/* Callout (grey) */
+.callout{background:var(--grey-bg);border-left:4px solid var(--sky);padding:20px 24px;margin:32px 0 0}
+.callout h2{font-size:14px;font-weight:700;margin:0 0 8px;color:#222;line-height:1.4}
+.callout p{margin:0;font-size:14px}
+
+/* Step-by-step */
+.steplist{list-style:none;padding:0;margin:40px 0 0;position:relative}
+.steplist::before{content:"";position:absolute;left:20px;top:0;bottom:0;
+  width:1px;background:var(--line)}
+.step{display:flex;gap:20px;align-items:flex-start;padding:0 0 40px}
+.step > .num{flex:none;position:relative;z-index:1;
+  width:40px;height:40px;margin-top:-4px;border-radius:50%;
+  background:var(--blue);color:#fff;font-size:18px;font-weight:700;
+  display:flex;align-items:center;justify-content:center}
+.step .stepbody{min-width:0}
+.step .step-label{font-size:14px;line-height:20px;font-weight:400;color:var(--muted);margin:0 0 8px}
+.step h2{font-size:24px;color:var(--navy);margin:0 0 12px;line-height:32px;font-weight:600}
+.step h2 a{color:var(--link)}
+.step p{margin:0;font-size:16px;line-height:24px}
+@media (max-width:575px){
+  .steplist::before{left:16px}
+  .step{gap:14px;padding:0 0 32px}
+  .step > .num{width:32px;height:32px;margin-top:0;font-size:15px}
+}
+.more{background:none;border:0;padding:4px 0;color:var(--link);font:400 14px "Noto Sans",Arial,sans-serif;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.more:hover span{text-decoration:underline}
+.more svg{transition:transform .2s ease}
+.more[aria-expanded="true"] svg{transform:rotate(90deg)}
+.core{list-style:none;padding:0;margin:0 0 20px}
+.core li{margin:0 0 20px;font-size:15px}
+.content .expect{margin:0 0 28px;max-width:62ch}
+.content h2.sec.expect-h{margin-top:0}
+.core .desc, .panel .desc, .step .desc{display:block;font-size:14px;line-height:1.5;color:#4f4f4f;margin-top:4px;max-width:62ch}
+.core li:last-child{margin-bottom:0}
+.panel ul{list-style:none;padding:0;margin:16px 0 0}
+.panel li{margin:0 0 14px;font-size:15px}
+.panel li:last-child{margin-bottom:0}
+
+/* Help box */
+.helpbox{background:var(--light-blue);border-radius:8px;padding:24px 24px 20px;margin:40px 0 0}
+.helpbox h2{font-size:22px;color:var(--navy);margin:0 0 8px;line-height:1.3}
+.helpbox p{margin:0 0 12px;font-size:14px}
+.helpbox ul{list-style:none;padding:0;margin:0}
+.helpbox li{border-bottom:1px solid var(--light-blue-line)}
+.helpbox li a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-weight:600;font-size:14px;text-decoration:none}
+.helpbox li a:hover{text-decoration:underline}
+.helpbox .find{display:flex;justify-content:flex-end;margin-top:16px}
+.helpbox .find a{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;text-decoration:none}
+.helpbox .find a:hover{text-decoration:underline}
+
+/* Interested + page footer */
+.interested{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+.interested h2{font-size:22px;color:var(--navy);margin:0 0 16px;line-height:1.3}
+.interested ul{list-style:none;padding:0;margin:0}
+.interested li{margin:0 0 12px;font-size:15px}
+.interested li a{display:inline-flex;align-items:center;gap:8px}
+.pagefoot{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:40px 0 0;padding-bottom:28px;gap:12px}
+.pagefoot b{font-weight:600}
+.pagefoot .top{display:inline-flex;padding:0;align-items:center;gap:8px;background:none;border:0;color:var(--link);font:inherit;cursor:pointer;text-decoration:underline;text-decoration-color:var(--underline);text-decoration-thickness:0.5px;text-underline-offset:0.3em}
+.pagefoot .top:hover{text-decoration-color:var(--underline-hover);text-decoration-thickness:2px}
+@media (max-width:575px){.pagefoot{flex-direction:column;align-items:flex-start}}
+.helpful{background:var(--helpful)}
+.helpful .container{display:flex;align-items:center;gap:22px;min-height:72px;font-size:14px;flex-wrap:wrap}
+.helpful b{font-weight:600}
+.helpful label{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.helpful input{appearance:none;width:24px;height:24px;border:2px solid #333;border-radius:50%;margin:0;background:#fff;cursor:pointer}
+.helpful input:checked{box-shadow:inset 0 0 0 5px #fff;background:#333}
+
+/* Footer */
+.footer{background:var(--blue);color:#fff;border-top:3px solid var(--sky);font-size:13px;line-height:1.55}
+.footer a{color:#fff}
+.footer .container{padding-top:40px;padding-bottom:48px}
+.footer h2{font-size:18px;margin:0 0 22px;font-weight:700}
+.footer h3{font-size:16px;margin:0 0 10px;font-weight:700}
+.footer p{margin:0 0 12px}
+.fgrid{display:grid;grid-template-columns:1.35fr .8fr .75fr 1.3fr;gap:0}
+.fgrid > div{padding:0 28px}
+.fgrid > div:first-child{padding-left:0}
+.fgrid > div:last-child{padding-right:0}
+.fgrid > div + div + div{border-left:1px solid rgba(255,255,255,.45)}
+.flinks{list-style:none;padding:0;margin:0}
+.flinks li{margin:0 0 8px}
+.phone{display:flex;align-items:center;gap:8px;margin:0 0 22px}
+.fbtn{display:inline-block;border:2px solid #fff;border-radius:4px;padding:8px 28px;text-decoration:none;font-size:14px}
+.fbtn:hover{background:rgba(255,255,255,.12)}
+.social{list-style:none;padding:0;margin:0}
+.social li{margin:0 0 8px}
+.social a{display:inline-flex;align-items:center;gap:10px}
+.copy{margin-top:16px}
+@media (max-width:991px){
+  .fgrid{grid-template-columns:1fr}
+  .fgrid > div{padding:0!important;border-left:0!important}
+  .fgrid > .fcontact{display:grid;grid-template-columns:1fr auto;column-gap:24px;padding-bottom:24px!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .fcontact h3{grid-column:1}.fcontact p,.fcontact .phone{grid-column:1}
+  .fcontact .fbtn{grid-column:2;grid-row:1 / span 3;align-self:start}
+  .fcontact .phone{margin-bottom:0}
+  .fgrid > .flinkswrap{padding:22px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important}
+  .flinkswrap h3{display:none}
+  .flinks{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px}
+  .fgrid > .followwrap{padding:20px 0!important;border-bottom:1px solid rgba(255,255,255,.45)!important;display:flex;align-items:center;gap:20px}
+  .followwrap h3{margin:0;font-size:18px}
+  .social{display:flex;gap:18px}
+  .social li{margin:0}
+  .social .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .social svg{width:22px;height:22px}
+  .fgrid > .ackwrap{padding-top:22px!important}
+  .ackwrap h3{font-size:18px}
+  .fgov{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:16px;margin-bottom:20px!important}
+}
+@media (max-width:575px){
+  .fgrid > .fcontact{grid-template-columns:1fr}
+  .fcontact .fbtn{grid-column:1;grid-row:auto;display:block;text-align:center;margin:8px 0 16px}
+  .flinks{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Content templates */
+.onthispage{border-left:3px solid var(--link);padding:4px 0 4px 18px;margin:32px 0}
+.onthispage h2{font-size:14px;font-weight:700;margin:0 0 6px;color:#222}
+.onthispage ul{list-style:none;padding:0;margin:0}
+.onthispage li{font-size:14px;margin:0 0 5px}
+.inshort{background:var(--light-blue);border-radius:8px;padding:24px 28px;margin:32px 0 8px}
+.inshort h2{font-size:28px;color:var(--navy);margin:0 0 12px;line-height:1.25}
+.inshort p{margin:0 0 12px;font-size:15px}
+.inshort p:last-child,.inshort ul:last-child{margin-bottom:0}
+.content h2.sec{font-size:28px;color:var(--navy);margin:40px 0 14px;line-height:1.25}
+.content h3{font-size:19px;color:var(--navy);margin:26px 0 10px;line-height:1.3}
+.content p{margin:0 0 14px;font-size:15px}
+.content ul{padding-left:20px;margin:0 0 14px;font-size:15px}
+.content li{margin:0 0 6px}
+@media (max-width:575px){.content h2.sec,.inshort h2{font-size:24px}}
+.box{display:flex;gap:12px;padding:20px 24px;margin:16px 0}
+.box svg{margin-top:3px}
+.box > div > :last-child{margin-bottom:0}
+.box ul{margin-bottom:8px}
+.box-yes{background:var(--green-bg)}.box-yes svg{color:var(--green)}
+.box-no{background:var(--red-bg)}.box-no svg{color:var(--red)}
+/* Buttons — QGDS button component */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;padding:8px 24px;border:3px solid #005eb8;border-radius:4px;
+  background:#005eb8;color:#fff;font:inherit;font-size:16px;line-height:24px;font-weight:400;
+  text-decoration:none;cursor:pointer}
+.btn:hover{background:#003e96;border-color:#004b93;color:#fff;
+  text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+.btn:focus-visible{background:#003e96;border-color:#004b93;color:#fff;
+  outline:3px solid #002e85;outline-offset:2px;
+  text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+.btn:active{background:#f5f5f5;border-color:#f5f5f5;color:#000053;text-decoration:none}
+.stepnav{background:var(--hero);border-radius:8px;padding:24px 28px;margin:36px 0 0}
+.stepnav h2{font-size:20px;color:var(--navy);margin:0 0 10px;line-height:1.4;font-weight:700}
+.stepnav .guidetitle{font-size:20px;line-height:1.4;font-weight:700;margin:0 0 16px}
+.stepnav .guidetitle a{color:var(--link)}
+.stepof{font-size:14px;margin:-8px 0 16px;color:var(--text)}
+@media (max-width:575px){
+  .stepnav .navbtns{flex-direction:column-reverse;gap:12px}
+  .stepnav .navbtns .btn{width:100%;justify-content:center}
+}
+.content .callout h2{font-size:14px;font-weight:700;color:#222;margin:0 0 8px;line-height:1.4}
+.stepnav ol{list-style:none;padding:0;margin:0 0 22px}
+.stepnav li{display:flex;align-items:center;gap:10px;margin:0 0 9px;font-size:15px}
+.stepnav .num{flex:none;width:21px;height:21px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.stepnav li[aria-current="step"] a{font-weight:700}
+.stepnav .navbtns{display:flex;gap:14px;flex-wrap:wrap}
+.stepnav ol > li{display:block;margin:0 0 15px}
+.stepnav .steprow{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:var(--navy)}
+.stepnav ol > li > ul{list-style:none;padding:0;margin:7px 0 0 31px}
+.stepnav ol > li > ul li{display:block;margin:0 0 5px;font-size:15px}
+.stepnav ol > li > ul li[aria-current="page"] a{font-weight:700;color:var(--navy);text-decoration:none}
+.acc{margin:0 0 14px}
+.acc details{background:var(--grey-bg);border-bottom:1px solid #d9dcde}
+.acc summary{cursor:pointer;list-style:none;padding:14px 18px;font-weight:700;color:var(--link);font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:'\25BE';font-size:12px;color:var(--link)}
+.acc details[open] summary::after{content:'\25B4'}
+.acc .accbody{padding:0 18px 16px;font-size:15px}
+.stepnav ol > li{display:flex;align-items:center;gap:10px;margin:0 0 9px}
+.stepnav ol > li b{font-size:15px;color:var(--navy)}
+.stepnav ol > li{display:flex;align-items:center;gap:10px;margin:0 0 9px}
+.stepnav ol > li[aria-current="page"] a{font-weight:700;color:var(--navy);text-decoration:none}
+.btn-out{background:transparent;color:#005eb8;border-color:#307edb}
+.btn-out:hover,.btn-out:focus-visible{background:transparent;border-color:#004ea7;color:#005eb8}
+.btn-out:active{background:#f5f5f5;border-color:#f5f5f5;color:#000053;text-decoration:none}
+.btn[disabled]{background:#e0e0e0;border-color:transparent;color:#636363;cursor:default}
+.btn[disabled]:hover,.btn[disabled]:focus-visible{background:#e0e0e0;border-color:transparent;color:#636363;text-decoration:none}
+.btn-out[disabled]{background:transparent;border-color:#e0e0e0;color:#636363}
+.btn-out[disabled]:hover,.btn-out[disabled]:focus-visible{background:transparent;border-color:#e0e0e0;color:#636363}
+.acc{border:1px solid var(--line);margin:18px 0}
+.acc-item + .acc-item{border-top:1px solid var(--line)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#f1f3f5;border:0;padding:12px 16px;color:var(--link);font:600 16px "Noto Sans",Arial,sans-serif;text-align:left;cursor:pointer}
+.acc-btn:hover span{text-decoration:underline}
+.acc-btn svg{transition:transform .2s ease}
+.acc-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.acc-panel{padding:14px 16px 6px}
+/* service and guidance lists on the two pages brought in from elsewhere in the IA */
+.svcgroup{margin:0 0 36px}
+.svcgroup h2{font-size:22px;color:var(--navy);margin:0 0 6px;line-height:1.3}
+.svcgroup > p{font-size:15px;margin:0 0 14px;color:#313131}
+.svclist{list-style:none;padding:0;margin:0}
+.svclist li{border-bottom:1px solid var(--line)}
+.svclist a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 2px;font-weight:600;font-size:15px;text-decoration:none}
+.svclist a:hover{text-decoration:underline}
+.callout h2{font-size:14px}
+.callout p{margin:0 0 8px}.callout p:last-child{margin:0}
+
+
+/* Topic page hero band */
+/* Header banner — step-by-step parent/index page */
+main.page[data-slug=""]{padding-top:0}
+.pagehero{background:var(--hero);padding:56px 0 60px}
+.pagehero .col{max-width:820px}
+.pagehero .crumbs{margin:0 0 28px}
+.pagehero .crumbs ol{margin:0}
+.pagehero h1{margin:0 0 24px}
+.pagehero .lead{margin:0}
+.pagehero .backlink{margin:0 0 20px}
+.pagebody{padding-top:24px}
+@media (max-width:991px){.pagehero{padding:28px 0 36px}.pagehero .crumbs{margin:0}.pagebody{padding-top:16px}}
+
+.hero{background:var(--hero);padding:64px 0 74px}
+.hero .crumbs ol{margin:0 0 30px}
+.hero h1{font-size:42px;margin:0 0 22px}
+.hero .col{max-width:858px}
+.hero .lead{font-size:25px;line-height:1.45;margin:0}
+.topicbody{padding-top:52px}
+@media (max-width:991px){.hero{padding:30px 0 38px}.hero h1{font-size:34px}.hero .lead{font-size:21px;max-width:none}.topicbody{padding-top:36px}}
+@media (max-width:575px){.hero h1{font-size:30px}.hero .lead{font-size:18px}}
+
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to main content</a>
+
+<header>
+  <div class="preheader"><div class="container">
+    <a href="https://www.qld.gov.au">qld.gov.au</a>
+    <span class="prelinks"><a href="https://www.qld.gov.au/services">Find services</a><a href="https://www.business.qld.gov.au">Business Queensland</a><a href="https://www.forgov.qld.gov.au">Government employees</a><a href="https://www.qld.gov.au/contact-us">Contact us</a></span>
+  </div></div>
+  <div class="masthead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logo"></span></a>
+    <form class="search" role="search" onsubmit="return false"><label class="sr-only" for="q">Search</label><input id="q" type="search"><button type="submit">Search</button></form>
+  </div></div>
+  <div class="navband"><div class="container">
+    <a href="https://www.qld.gov.au" aria-label="Home"><span data-icon="home"></span></a>
+    <button type="button" aria-expanded="false">Menu <span data-icon="chevDown"></span></button>
+  </div></div>
+  <div class="mhead"><div class="container">
+    <a class="logo" href="#/" data-page="" aria-label="Queensland Government home"><span data-icon="logoRev"></span></a>
+    <div class="icons">
+      <button type="button"><span data-icon="searchLg"></span>Search</button>
+      <button type="button"><span data-icon="menu"></span>Menu</button>
+    </div>
+  </div></div>
+</header>
+
+<div id="main" tabindex="-1"></div>
+
+<div class="helpful"><div class="container">
+  <b>Was this page helpful?</b>
+  <label><input type="radio" name="helpful">Yes</label>
+  <label><input type="radio" name="helpful">No</label>
+</div></div>
+
+<footer class="footer"><div class="container">
+  <h2 class="fgov">Queensland Government</h2>
+  <div class="fgrid">
+    <div class="fcontact">
+      <h3>Contact us</h3>
+      <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+      <p class="phone"><span data-icon="phone"></span><span><b>Phone:</b> <a href="tel:137468">13 QGOV (13 74 68)</a></span></p>
+      <a class="fbtn" href="https://www.qld.gov.au/contact-us">Contact us</a>
+    </div>
+    <div class="flinkswrap">
+      <h3 class="sr-only">Site links</h3>
+      <ul class="flinks">
+        <li><a href="https://www.qld.gov.au/help">Help</a></li>
+        <li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+        <li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
+        <li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
+        <li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+        <li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+        <li><a href="https://smartjobs.qld.gov.au">Jobs in Queensland Government</a></li>
+        <li><a href="https://www.qld.gov.au/languages">Other languages</a></li>
+      </ul>
+    </div>
+    <div class="followwrap">
+      <h3>Follow us</h3>
+      <ul class="social">
+        <li><a href="#" onclick="return false"><span data-icon="facebook"></span><span class="lbl">Facebook</span></a></li>
+        <li><a href="#" onclick="return false"><span data-icon="linkedin"></span><span class="lbl">LinkedIn</span></a></li>
+        <li><a href="#" onclick="return false"><span data-icon="instagram"></span><span class="lbl">Instagram</span></a></li>
+      </ul>
+    </div>
+    <div class="ackwrap">
+      <h3>Acknowledgement of Country</h3>
+      <p>We pay our respects to the Aboriginal and Torres Strait Islander ancestors of this land, their spirits and their legacy. The foundations laid by these ancestors—our First Nations peoples—give strength, inspiration and courage to current and future generations towards creating a better Queensland.</p>
+      <p class="copy">© The State of Queensland 1995 - 2026</p>
+    </div>
+  </div>
+</div></footer>
+
+<script>
+/* ---------- Icons ---------- */
+const I = {
+  chevRight:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  chevLeft:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  chevDown:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>',
+  arrowLeft:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>',
+  arrowRight:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>',
+  arrowUp:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20V4M6 10l6-6 6 6"/></svg>',
+  circleArrow:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12h9M12.5 8l4 4-4 4"/></svg>',
+  home:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>',
+  phone:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+  searchLg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  menu:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  external:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  doc:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h7"/></svg>',
+  yes:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>',
+  no:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>',
+  facebook:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg>',
+  linkedin:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9h4v12H4zM6 3a2.2 2.2 0 1 1 0 4.4A2.2 2.2 0 0 1 6 3zm5 6h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.6 4.3 6V21h-4v-5.6c0-1.5 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H11z"/></svg>',
+  instagram:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+  /* Simplified stand-in for the Queensland Government logo lock-up (not the official crest artwork) */
+  logo:'<img class="qglogo" src="data:image/png;base64,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" alt="Delivering for Queensland | Queensland Government">',
+  logoRev:'<img class="qglogo" src="data:image/png;base64,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" alt="Delivering for Queensland | Queensland Government">'
+};
+
+
+/* ---------- URLs ---------- */
+const U = {
+  home:'https://www.qld.gov.au',
+  justice:'https://www.qld.gov.au/justice',
+  voc:'https://www.qld.gov.au/justice/victims-of-crime',
+  report:'https://www.police.qld.gov.au/policelink-reporting',
+  withdraw:'https://www.police.qld.gov.au/policelink-reporting/crime-status-launch',
+  types:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime',
+  alt:'https://www.police.qld.gov.au/units/victims-of-crime/support-for-victims-of-crime/adult-sexual-assault/alternative-reporting-options',
+  dfvpolice:'https://www.qld.gov.au/initiative/need-to-know/how-can-i-stay-safe/practical-steps-to-stay-safe/reporting-dfv-to-the-police',
+  courts:'https://www.courts.qld.gov.au/the-courts',
+  searchdocs:'https://www.qld.gov.au/justice/court-and-mediation/appeals-actions/search-copy-court-documents',
+  adult:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders',
+  youth:'https://www.qld.gov.au/justice/prison-and-detention/sentences-for-youth-offenders',
+  rjyouth:'https://www.qld.gov.au/justice/prison-and-detention/sentences-for-youth-offenders/restorative-justice-for-youth',
+  rjguide:'https://www.qld.gov.au/justice/court-and-mediation/dispute-resolution/restorative-justice',
+  prepare:'https://www.odpp.qld.gov.au/preparing-for-court',
+  vis:'https://www.odpp.qld.gov.au/victims-and-witnesses/victim-impact-statement',
+  appeals:'https://www.qld.gov.au/justice/court-and-mediation/appeals-actions',
+  parolerules:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders/rules-for-parole-orders',
+  paroledec:'https://www.qld.gov.au/justice/prison-and-detention/sentences-adult-offenders/parole-decision-making',
+  registers:'https://www.qld.gov.au/justice/victims-of-crime/victims-registers',
+  findsupport:'https://www.qld.gov.au/justice/victims-of-crime/find-a-support-service',
+  qhvss:'https://www.health.qld.gov.au/qhvss',
+  abuse:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse',
+  dfv:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse/need-to-know/domestic-and-family-violence',
+  financial:'https://www.qld.gov.au/justice/victims-of-crime/financial-assistance-for-victims',
+  protection:'https://www.qld.gov.au/justice/victims-of-crime/protection',
+  rights:'https://www.qld.gov.au/justice/victims-of-crime/victims-rights',
+  attending:'https://www.qld.gov.au/justice/court-and-mediation/attending-court',
+  courtmed:'https://www.qld.gov.au/justice/court-and-mediation',
+  help:'https://www.qld.gov.au/help',
+  /* Added for the content brief */
+  hospital:'https://www.health.qld.gov.au/services',
+  sexualabuse:'https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse/sexual-abuse-assault/sexual-abuse-assault-getting-help',
+  needtoknow:'https://www.qld.gov.au/initiative/need-to-know',
+  dfvhousing:'https://www.qld.gov.au/housing/emergency-temporary-housing/housing-help-for-people-experiencing-domestic-and-family-violence',
+  policesafety:'https://www.police.qld.gov.au/safety-and-preventing-crime',
+  safetyplan:'https://www.qld.gov.au/initiative/need-to-know/how-can-i-stay-safe/practical-steps-to-stay-safe/making-a-safety-plan',
+  childprotection:'https://www.families.qld.gov.au/our-work/child-safety/parents-families/ongoing-intervention/child-protection-order',
+  witnessing:'https://www.qld.gov.au/justice/crime-and-criminal-history/crime/witnessing-crime',
+  courtsupport:'https://www.qld.gov.au/justice/court-and-mediation/attending-court/support-services',
+  resources:'https://www.qld.gov.au/justice/for-organisations/victim-support-agencies/resources'
+};
+
+const GUIDE = 'Victim support through crime and the courts';
+const L   = (href, text) => `<a href="${href}">${text}</a>`;
+const PL  = (page, text) => `<a href="#/${page}" data-page="${page}">${text}</a>`;
+/* A destination the designs name but do not give a URL for. */
+const TBC = text => `<a href="#" data-noop title="URL to be confirmed">${text}</a>`;
+const SEE = inner => `<p>See ${inner}.</p>`;
+
+/* ---------- The eight steps, in the order shown on the parent page ---------- */
+const STAGES = [
+ {n:1, t:'Experiencing a crime', page:'when-a-crime-occurs',
+  d:'Understand your rights, how to stay safe and where to get immediate help. There are services and support to help you over the phone, online or in person.'},
+ {n:2, t:'Reporting a crime', page:'report-a-crime',
+  d:'Reporting a crime helps police understand what happened and what action to take next. Police can explain the reporting process and options available if you&rsquo;re not ready to report yet.'},
+ {n:3, t:'After reporting a crime', page:'after-the-crime',
+  d:'After you report a crime, police will investigate what happened and decide if they should lay charges. Information about the investigation, bail and protection options can help you feel safer, and more prepared to make decisions about what to do next.'},
+ {n:4, t:'Getting financial assistance', page:'guide-applying', guide:true,
+  d:'There is financial support available for victims of different crimes in Queensland. These crimes include violent crime, property crime, work-related crime and motor vehicle crimes. Some of these crimes are handled by insurers.'},
+ {n:5, t:'Recovery and wellbeing after a crime', page:'recovery-and-support',
+  d:'Looking after your wellbeing is an important part of recovery. Whether the crime happened recently or some time ago, support is available for you and those who support you.'},
+ {n:6, t:'Before going to court', page:'before-court',
+  d:'Every person&rsquo;s experience after a crime is different. Some crimes go through the court process, while others follow a different path. Whatever your situation, information is available to help you understand your options and what may happen next.'},
+ {n:7, t:'Going to court', page:'attend-court-hearing', guide:true,
+  d:'Understand the different types of courts in Queensland and what to expect if you need to attend a court hearing.'},
+ {n:8, t:'After going to court', page:'after-court',
+  d:'After court, there may still be decisions or updates that affect you. This may include appeals, parole decisions or offender updates. Support is still available after the court process ends.'}
+];
+/* ---------- Step pages ---------- */
+const PAGES = {};
+
+PAGES['when-a-crime-occurs'] = {
+  readtime:2,
+  inshort:`<p>Understand your rights, how to stay safe and where to get immediate help. There are services and support to help you over the phone, online or in person.</p>`,
+  otp:[{t:'Get immediate help', id:'wc-help'},
+       {t:'Get support after a crime', id:'wc-support'},
+       {t:'Understand your rights', id:'wc-rights'},
+       {t:'Make yourself safe after a crime', id:'wc-safe'},
+       {t:'Make a safety plan', id:'wc-plan'},
+       {t:'Stay safe online', id:'wc-online'}],
+  sections:[
+    {id:'wc-help', h:'Get immediate help', html:`
+      <p>Call Triple Zero (000) and ask for police if you are in a dangerous or life-threatening situation.</p>
+      <h3>Sexual assault</h3>
+      <p>If you&rsquo;ve experienced sexual assault, rape or sexual violence, get to a safe place as soon as possible. Call Triple Zero (000) or go to the emergency department at ${L(U.hospital,'your local hospital')}.</p>
+      <p>If you&rsquo;re thinking of reporting the crime to the police, it&rsquo;s important that you do not change your clothes, comb your hair, or wash yourself. This may remove evidence.</p>
+      ${SEE(L(U.sexualabuse,'Sexual abuse and assault'))}`},
+    {id:'wc-support', h:'Get support after a crime', html:`
+      <h3>Victims Advocate Service</h3>
+      <p>The Victims Advocate Service provides information, support and referrals for people affected by crime. This includes victims, witnesses, family members and support people.</p>
+      <p>The service can help you understand your options, access information about the justice process, and connect you with the right support services.</p>
+      ${SEE(TBC('the Victims Advocate Service'))}
+      <h3>Domestic and family violence</h3>
+      <p>If you&rsquo;re affected by domestic and family violence, specialist support is available. Learn how to stay safe, understand your options, access support services and report violence.</p>
+      ${SEE(L(U.needtoknow,'Need to know'))}`},
+    {id:'wc-rights', h:'Understand your rights', html:`
+      <p>Knowing your rights can help you understand what information and support you can access after a crime. This includes your right to be treated with respect, receive information about the justice process and access services that support your recovery.</p>
+      ${SEE(L(U.rights,'Understanding your rights as a victim'))}`},
+    {id:'wc-safe', h:'Make yourself safe after the crime', html:`
+      <p>After a crime, your safety and the safety of others come first. Information and support services can help with practical steps to help you stay safe. This includes how to protect your property and reduce the risk of further harm.</p>
+      <p>If you need to leave your home urgently or need emergency accommodation, see ${L(U.dfvhousing,'People experiencing domestic and family violence or sexual violence')}.</p>
+      <p>See ${L(U.policesafety,'Safety and preventing crime')} on the Queensland Police website to find information about how to stay safe.</p>`},
+    {id:'wc-plan', h:'Make a safety plan', html:`
+      <p>A safety plan can help you think about what to do if you feel unsafe after a crime. It can include where and how you can get help if you need it. You can make a plan at any time and update it if circumstances change.</p>
+      ${SEE(L(U.safetyplan,'Making a safety plan'))}`},
+    {id:'wc-online', h:'Stay safe online', html:`
+      <p>If you&rsquo;re concerned someone is monitoring you by reading your emails, checking your phone calls, or following your movements through social media, there are steps you can take to protect your personal information and online security.</p>
+      ${SEE(TBC('Using technology safely'))}`}
+  ],
+  interested:[{x:'Find support services for victims', href:U.findsupport}]
+};
+
+PAGES['report-a-crime'] = {
+  readtime:4,
+  inshort:`<p>Reporting a crime helps police understand what happened and what action to take next. Police can explain the reporting process and options available if you&rsquo;re not ready to report yet.</p>`,
+  otp:[{t:'Report a crime to police', id:'rc-police'},
+       {t:'Decide to report a crime', id:'rc-decide'},
+       {t:'Record what happened', id:'rc-record'},
+       {t:'Get support', id:'rc-support'}],
+  sections:[
+    {id:'rc-police', h:'Report a crime to police', html:`
+      <p>Report an urgent crime by phone to Queensland Police. Call Triple Zero (000).</p>
+      <p>You can report a non-urgent crime or suspicious activity online to Queensland Police at any time.</p>
+      <p>See ${L(U.report,'Report a crime')} on the Queensland Police website. You can ${L(U.withdraw,'Withdraw or update a report')}.</p>
+      <h3>Talk with police</h3>
+      <p>You can talk with police before you decide if you want to make a report. It&rsquo;s your choice. Do what feels right for you.</p>
+      <p>You may feel unsure about reporting a crime because:</p>
+      <ul><li>you&rsquo;re worried you won&rsquo;t be believed</li><li>you&rsquo;re unsure if what happened is a crime</li><li>the person involved is a partner, family member or someone you know.</li></ul>
+      <p>These are normal concerns to have. Police can answer your questions about reporting, investigation and what you can expect.</p>
+      <h3>Victims of sexual assault or domestic and family violence</h3>
+      <p>You can use alternative reporting options (ARO) if you do not want police to start an investigation.</p>
+      ${SEE(L(U.alt,'Alternative reporting options') + ' on the Queensland Police website')}
+      ${SEE(L(U.dfvpolice,'Reporting domestic and family violence to the police'))}`},
+    {id:'rc-decide', h:'Decide to report a crime', html:`
+      <h3>Why report a crime</h3>
+      <p>Reporting can help you and your community.</p>
+      <ul><li>Police can only investigate a crime if someone reports it. Investigating a crime can help prevent it from happening again.</li>
+      <li>You may need a police report to get help from your insurance company.</li>
+      <li>We can connect you to more support services, including financial assistance if you are the victim of a violent crime. Some support is only available if the crime was reported.</li></ul>
+      <h3>What to consider</h3>
+      <p>When considering your options, it may help to know that:</p>
+      <ul><li>reporting as soon as possible helps protect evidence</li><li>police can only investigate and act if a report is made</li><li>police can answer your questions</li><li>reporting a crime to police may be required to apply for financial assistance through Victim Assist Queensland.</li></ul>
+      <h3>Who may be told</h3>
+      <p>The police will treat your information carefully. They will only share it when needed for the investigation or court process, or when required by law. They may share information with people involved in the justice process, such as prosecutors, lawyers and court staff.</p>
+      <p>If you have concerns about your privacy or safety, you can speak with police. You can also talk to support services about your situation.</p>`},
+    {id:'rc-record', h:'Record what happened', html:`
+      <p>If you&rsquo;re not ready to report now, that&rsquo;s okay. If you change your mind, you can still report later.</p>
+      <p>For now, it&rsquo;s helpful to:</p>
+      <ul><li>keep a record of what happened, including the date, time and location</li><li>write down the names or descriptions of people involved and any witnesses</li><li>keep evidence such as photos, messages or documents in a safe place. You&rsquo;ll be ready to give it to police if you decide to report.</li></ul>`},
+    {id:'rc-support', h:'Get support', html:`
+      <p>Deciding whether to report a crime can be difficult. Support services can help you understand your options and explain the reporting process and what may happen next.</p>
+      <p>Contact the ${TBC('Victims Advocate Service')} for information, support and referrals.</p>`}
+  ],
+  interested:[{x:'Crime', href:U.witnessing},
+              {x:'Witnessing a crime', href:U.witnessing}]
+};
+
+PAGES['after-the-crime'] = {
+  readtime:2,
+  inshort:`<p>After you report a crime, police will investigate what happened and decide if they should lay charges. Information about the investigation, bail and protection options can help you feel safer, and more prepared to make decisions about what to do next.</p>`,
+  otp:[{t:'Investigation process', id:'ac-investigation'},
+       {t:'Bail or custody', id:'ac-bail'},
+       {t:'Protection orders', id:'ac-protection'},
+       {t:'Get support', id:'ac-support'}],
+  sections:[
+    {id:'ac-investigation', h:'Investigation process', html:`
+      <p>After you report a crime, police may investigate what happened, collect evidence and ask you to provide a statement.</p>
+      <p>During an investigation, police may:</p>
+      <ul><li>ask for more information</li><li>speak with witnesses</li><li>collect evidence, such as CCTV footage, photographs, digital records or forensic evidence</li><li>interview a suspect</li><li>decide if there is enough evidence to take further action.</li></ul>
+      <p>For more serious or complex matters, police may ask you to go to a station for an interview. You may be able to have a support person with you.</p>
+      ${SEE(TBC('Guide to the criminal investigation process'))}`},
+    {id:'ac-bail', h:'Bail or custody', html:`
+      <p>If a person is charged with a crime, the police or court will decide if they remain in the community on bail or stay in custody on remand while the case goes through court.</p>
+      <p>Bail allows a person charged with an offence to live in the community while their case goes through court. They must follow any conditions set by the court. If they do not, they could be arrested, fined or go to prison.</p>
+      <p>If the person does not get bail, they will stay in custody. This is known as being remanded in custody.</p>
+      ${SEE(TBC('Guide to understanding bail'))}`},
+    {id:'ac-protection', h:'Protection orders', html:`
+      <p>You have a right to feel safe following a crime and throughout the justice process.</p>
+      <p>If you are experiencing unwanted contact, violence, harassment or intimidation from the accused person or someone connected to them, a domestic violence order (DVO) can help protect you.</p>
+      <p>A DVO can include conditions like stopping the respondent from contacting you or going near your home or workplace.</p>
+      <p>A full protection order can take several weeks to process. If you&rsquo;re in immediate danger, you can apply for a temporary protection order.</p>
+      ${SEE(TBC('Applying for a DVO') + ' on the Queensland Courts website')}
+      ${SEE(L(U.childprotection,'Child protection orders') + ' on the Department of Families, Seniors, Disability Services and Child Safety website')}`},
+    {id:'ac-support', h:'Get support', html:`
+      <p>You may have questions about the investigation, what happens next or how to stay safe. Support services can provide information, explain your options, and connect you with practical support throughout the process. Contact the ${TBC('Victims Advocate Service')} for information, support and referrals.</p>`}
+  ],
+  interested:[{x:'Find support services for victims', href:U.findsupport}]
+};
+
+PAGES['before-court'] = {
+  readtime:2,
+  inshort:`<p>Every person&rsquo;s experience after a crime is different. Some crimes go through the court process, while others follow a different path. Whatever your situation, information is available to help you understand your options and what may happen next.</p>`,
+  otp:[{t:'Prepare for court', id:'bc-prepare'},
+       {t:'Access court documents', id:'bc-docs'},
+       {t:'Make a victim impact statement', id:'bc-vis'},
+       {t:'Understand sentences', id:'bc-sentences'},
+       {t:'Understand restorative justice', id:'bc-rj'},
+       {t:'Get support', id:'bc-support'}],
+  sections:[
+    {id:'bc-prepare', h:'Prepare for court', html:`
+      <p>Going to court can feel overwhelming. Understanding the court process, what you may need to do before going to court, and what to expect on the day can help you feel more prepared.</p>
+      ${SEE(L(U.prepare,'Preparing for court') + ' on the Office of the Director of Public Prosecutions website')}`},
+    {id:'bc-docs', h:'Access court documents', html:`
+      <p>You may be able to access court documents, depending on your circumstances and the type of information requested. Accessing court documents may help you understand the details of a matter and prepare you for what may be discussed in court.</p>
+      ${SEE(L(U.searchdocs,'Request to search and copy court documents'))}`},
+    {id:'bc-vis', h:'Make a victim impact statement', html:`
+      <p>If you are a victim of a violent or sexual crime, or a family member of a harmed victim, you have the right to make a victim impact statement.</p>
+      <p>This allows you to describe, in your own words, how the crime has affected you and may be considered by the court during sentencing.</p>
+      <p>Making a victim impact statement is your choice. You don&rsquo;t have to make one if you don&rsquo;t want to. If you decide not to provide a statement, the court will still consider the impact the crime had on you.</p>
+      ${SEE(L(U.searchdocs,'Request to search and copy court documents - qld.gov.au') + ' on the Office of the Director of Public Prosecutions website')}`},
+    {id:'bc-sentences', h:'Understand sentences', html:`
+      <p>If a person is found guilty, the court may impose a sentence. There are different sentences depending on the offence, circumstances and age of the offender. Understanding sentencing options can help you understand what may happen if a person is found guilty.</p>
+      <p>See ${L(U.adult,'Sentences for adult offenders')} and ${L(U.youth,'Sentences for youth offenders')}.</p>`},
+    {id:'bc-rj', h:'Understand restorative justice', html:`
+      <p>Some matters may be resolved through restorative justice, an alternative to traditional justice processes. This is an opportunity for you to share how the crime has affected you and have your voice heard in a supported environment. It can also help offenders understand the impact of their actions.</p>
+      <p>See ${L(U.rjyouth,'Restorative justice processes')} and ${L(U.rjguide,'Guide to restorative justice')}.</p>`},
+    {id:'bc-support', h:'Get support', html:`
+      <h3>Victims Advocate Service</h3>
+      <p>Contact the ${TBC('Victims Advocate Service')} to help you understand your rights and explain the justice process. The service can provide information and support throughout your journey.</p>
+      <h3>Support for you in court</h3>
+      <p>Support is available before, during and after court to help you through this process.</p>
+      ${SEE(L(U.courtsupport,'Support services for attending court'))}`}
+  ],
+  interested:[{x:'Find support services for victims', href:U.findsupport}]
+};
+
+PAGES['after-court'] = {
+  readtime:2,
+  inshort:`<p>After court, there may still be decisions or updates that affect you. This may include appeals, parole decisions or offender updates. Support is still available after the court process ends.</p>`,
+  otp:[{t:'Appeals', id:'at-appeals'},
+       {t:'Parole', id:'at-parole'},
+       {t:"Victim's Register", id:'at-registers'},
+       {t:'Get support', id:'at-support'}],
+  sections:[
+    {id:'at-appeals', h:'Appeals', html:`
+      <p>Sometimes a court decision may be reviewed through an appeal process. This means a court order, sentence or penalty decision may be reconsidered.</p>
+      <p>Understanding appeals can help you know what may happen after a court outcome and why a decision may change. If an appeal affects you, information may be available to help you understand what is happening and what it means for you.</p>
+      ${SEE(L(U.appeals,'Appeals and actions'))}`},
+    {id:'at-parole', h:'Parole', html:`
+      <p>A person sentenced to prison may later be considered for parole and return to the community under certain conditions. Understanding parole can help you know what happens after sentencing and what information may be available to you.</p>
+      <p>In some situations, you can receive updates about parole decisions and conditions. This may affect your safety and wellbeing.</p>
+      <p>See ${L(U.paroledec,'Parole decision making')} and ${L(U.parolerules,'Rules for parole orders')}.</p>`},
+    {id:'at-registers', h:"Victims&rsquo; registers", html:`
+      <p>Victims&rsquo; registers can help you stay informed about important updates. This includes an offender&rsquo;s release, transfer or parole. Access to prompt information can help you make decisions about your safety and plan for any changes that may affect you.</p>
+      <p>You may be able to register to receive information about an offender&rsquo;s sentence, parole or custody status. There are separate registers for adult and youth offenders.</p>
+      <p>See ${L(U.registers,"Victims&rsquo; registers")} and ${L(U.safetyplan,'Making a safety plan')}.</p>`},
+    {id:'at-support', h:'Get support', html:`
+      <p>The end of a court case does not always mark the end of recovery. You may still have questions about court decisions, appeals or parole decisions and can access support when you need it.</p>
+      <p>Contact the ${TBC('Victims Advocate Service')} for information, support and referrals.</p>`}
+  ],
+  interested:[{x:'Find support services for victims', href:U.findsupport},
+              {x:'Understanding your rights as a victim', href:U.rights}]
+};
+
+PAGES['recovery-and-support'] = {
+  readtime:2,
+  inshort:`<p>Looking after your wellbeing is an important part of recovery. Whether the crime happened recently or some time ago, support is available for you and those who support you.</p>`,
+  otp:[{t:'Looking after your wellbeing', id:'rs-yourself'},
+       {t:'Supporting someone after a crime', id:'rs-someone'},
+       {t:'Supporting a child or teenager', id:'rs-child'},
+       {t:'Getting support', id:'rs-support'}],
+  sections:[
+    {id:'rs-yourself', h:'Looking after your wellbeing', html:`
+      <p>Recovery takes time, and everyone responds differently after a crime. Looking after your wellbeing can help as you adjust to what has happened.</p>
+      <h3>Be patient with yourself</h3>
+      <p>There is no right or wrong way to respond after a crime. Your thoughts, feelings and reactions may change over time.</p>
+      <p>Give yourself time and avoid putting pressure on yourself to &lsquo;get back to normal&rsquo; straight away.</p>
+      <h3>Understand your reactions</h3>
+      <p>Everyone reacts differently after a crime, and your feelings and reactions may change over time.</p>
+      <p>You may experience:</p>
+      <ul><li>shock or disbelief</li><li>fear, worry or anxiety</li><li>sadness or depression</li><li>anger, frustration or self-blame</li><li>difficulty concentrating or making decisions</li><li>wanting to avoid reminders of what happened</li><li>tiredness, difficulty sleeping or nightmares</li><li>headaches, stomach aches or changes in appetite</li><li>feeling on edge.</li></ul>
+      <h3>Write things down</h3>
+      <p>Some people find it helpful to write down their thoughts, feelings or questions. Keeping notes can also help you remember information, appointments or things you would like to ask for help with.</p>
+      <h3>Stay connected</h3>
+      <p>Talking with someone you trust can help. This might be a family member, friend, support worker or health professional.</p>
+      <p>You don&rsquo;t have to talk about what happened if you don&rsquo;t want to. Staying connected with people who support you can help reduce feelings of isolation.</p>
+      <h3>Make important decisions when you&rsquo;re ready</h3>
+      <p>A crime can affect many parts of your life. If possible, give yourself time before making major decisions about work, finances, relationships or living arrangements.</p>`},
+    {id:'rs-someone', h:'Supporting someone after a crime', html:`
+      <p>For victims and witnesses, having a support network of friends and loved ones can make all the difference.</p>
+      <h3>Listen and believe</h3>
+      <p>Sometimes, all somebody needs is to be heard and believed. Let them know you&rsquo;re there to talk about it when they need.</p>
+      <p>Acknowledge what happened, but don&rsquo;t push for details. Let them share as much as they feel comfortable with, in their own time.</p>
+      <p>Avoid making comparisons to other situations, even if something similar happened to you or someone you know. Everyone&rsquo;s experience is different.</p>
+      <p>Don&rsquo;t dwell on what they could have done to avoid the crime. This can feel like victim blaming, and it isn&rsquo;t helpful.</p>
+      <h3>Give practical support</h3>
+      <p>It&rsquo;s common to want to jump in to help. But before you do, ask them what they need or want, or wait for them to tell you.</p>
+      <p>They may need a supportive person to come with them to places like the police station, courts, or medical appointments.</p>
+      <p>Tell them about the different support services that can help.</p>
+      <h3>Keep in touch</h3>
+      <p>Someone who experiences a crime might become withdrawn or isolated. Keeping in touch can remind them that support is available when they are ready.</p>
+      <h3>Look after yourself too</h3>
+      <p>You might also be indirectly affected by the crime. Support services are also available to help you.</p>`},
+    {id:'rs-child', h:'Supporting a child or teenager', html:`
+      <p>It&rsquo;s important for young people to feel safe and not blame themselves for what happened. A child or teenager may feel comfortable talking to:</p>
+      <ul><li>parents or family members</li><li>friends</li><li>teachers</li><li>a school counsellor, guidance officer, or nurse</li><li>a youth worker</li><li>police officers</li><li>support services and helplines.</li></ul>
+      <h3>Possible changes in behaviour</h3>
+      <p>Children of any age might have trouble with:</p>
+      <ul><li>concentration</li><li>emotions</li><li>getting along with other</li><li>seeing people and places that remind them of the crime.</li></ul>
+      <p>Younger children might:</p>
+      <ul><li>have nightmares or wet the bed</li><li>act younger than their age</li><li>be clingy</li><li>struggle to trust others</li><li>be afraid of being alone</li><li>get headaches</li><li>have changes in appetite.</li></ul>
+      <p>Older children and teenagers might:</p>
+      <ul><li>feel shame or self-blame</li><li>withdraw or isolate themselves</li><li>feel sadness, anxiety, or anger</li><li>avoid or repeatedly talk about what happened.</li></ul>`},
+    {id:'rs-support', h:'Getting support', html:`
+      <h3>Victims Advocate Service</h3>
+      <p>Whether the crime happened recently or some time ago, practical and emotional support is available when you need it most.</p>
+      <p>Contact the ${TBC('Victims Advocate Service')} for support, information and referrals.</p>
+      <h3>Support services for victims</h3>
+      <p>There are services to help you recover in Queensland. Search through a list of support services available to victims of crime, including domestic violence and sexual assault.</p>
+      <p>See ${L(U.findsupport,'Find support services for victims')} and ${L(U.abuse,'Support for victims of abuse')}.</p>
+      <h3>Queensland Health Victim Support Service</h3>
+      <p>Specialist counselling, support and information is available if the person charged has been assessed as having a mental illness or intellectual disability.</p>
+      ${SEE(L(U.qhvss,'Queensland Health Victim Support Service') + ' on the Queensland Health website')}`}
+  ],
+  interested:[{x:'Financial assistance for victims', href:U.financial},
+              {x:'Resources for victims and service providers', href:U.resources}]
+};
+
+/* ---------- The two pages that live elsewhere in the IA, as published ---------- */
+const FA = U.financial, AC = U.attending;
+const IMPORTED = {
+'financial-assistance': {
+  title:'Financial assistance for victims',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Victims of crime', href:U.voc}, {x:'Financial assistance for victims'}],
+  lead:'Get financial assistance and recovery expenses for victims. Apply to Victim Assist Queensland.',
+  groups:[
+    {h:'Services', d:'Applications, transactions and registrations', items:[
+      {x:'Apply for financial assistance for victims of violent crime', href:FA+'/apply'},
+      {x:'Request counselling recovery expenses', href:FA+'/request-counselling-expenses'},
+      {x:'Request damage to clothing recovery expenses', href:FA+'/request-clothing-expenses'},
+      {x:'Request legal recovery expenses', href:FA+'/request-legal-expenses'},
+      {x:'Request loss of earnings recovery expenses', href:FA+'/request-loss-of-earnings'},
+      {x:'Request medical recovery expenses', href:FA+'/request-medical-expenses'},
+      {x:'Request other recovery expenses', href:FA+'/request-other-expenses'},
+      {x:'Request travel recovery expenses', href:FA+'/request-travel-expenses'},
+      {x:'Request funeral expenses', href:FA+'/request-funeral-expenses'},
+      {x:'Check a financial assistance application status', href:FA+'/check-claim-status'},
+      {x:'Update application details', href:FA+'/update-application-details'}]},
+    {h:'Guidance', d:'Information, rules and guides', items:[
+      {x:'Guide for victims applying for financial assistance', href:FA+'/guide-applying'},
+      {x:'Court-ordered payments to victims of crime', href:FA+'/court-ordered-payments'},
+      {x:'Guide for victims of different crimes', href:FA+'/victims-different-crimes'}]}
+  ],
+  interested:[{x:GUIDE, page:''}]
+},
+'attending-court': {
+  title:'Attending court',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Court and mediation', href:U.courtmed}, {x:'Attending court'}],
+  lead:'Apply for bail, plead guilty online or check upcoming court case dates.',
+  groups:[
+    {h:'Services', d:'Applications, transactions and registrations', items:[
+      {x:'Plead guilty online', href:AC+'/plead-guilty-online'},
+      {x:'Request to book a courtroom', href:AC+'/book-courtroom'},
+      {x:'Check upcoming court cases', href:AC+'/check-upcoming-cases'},
+      {x:'Support services for attending court', href:AC+'/support-services'}]},
+    {h:'Guidance', d:'Information, rules and guides', items:[
+      {x:'Applying for bail', href:AC+'/applying-bail'},
+      {x:'Guide to attending a court hearing', href:AC+'/attend-court-hearing'},
+      {x:'Guide to attending a court hearing with your child', href:AC+'/court-hearing-with-your-child'}]}
+  ],
+  helpbox:{t:'Help with Attending court', items:[{x:'Legal support services directory', href:U.justice+'/help-centre/legal-support-services'}]},
+  interested:[{x:GUIDE, page:''},
+              {x:'Appeals and actions', href:U.appeals},
+              {x:'Queensland courthouse directory', href:U.courtmed+'/queensland-courthouse-directory'}]
+}
+};
+
+/* ---------- Rendering ---------- */
+const A = l => l.page !== undefined ? PL(l.page, l.x) : l.href ? L(l.href, l.x) : TBC(l.x);
+const BASE_CRUMBS = [{x:'Home', href:U.home}, {x:'Category', tbc:true}, {x:'Victims of crime', href:U.voc}];
+
+function crumbsHTML(items, current){
+  return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${
+    items.map(c => `<li>${A(c)}</li>`).join('')}<li aria-current="page">${current}</li></ol></nav>`;
+}
+const interestedHTML = items => !items || !items.length ? '' :
+  `<div class="interested"><h2 id="interested">You may be interested in</h2><ul>${
+    items.map(i => `<li>${A(i)}</li>`).join('')}</ul></div>`;
+const helpboxHTML = h => `<aside class="helpbox"><h2>${h.t}</h2>
+  <p>Find answers to frequently asked questions about services, including:</p>
+  <ul>${h.items.map(i=>`<li><a href="${i.href || '#'}"${i.href ? '' : ' data-noop'}><span>${i.x}</span>${I.arrowRight}</a></li>`).join('')}</ul>
+  <div class="find"><a href="${U.help}">Find more in the help centre ${I.circleArrow}</a></div></aside>`;
+const managedHTML = () => `<div class="pagefoot"><div><b>Managed by:</b> ${TBC('[Department]')}</div><button type="button" class="top" data-top>Back to top ${I.arrowUp}</button></div>`;
+
+/* In this guide — all eight stages, current one marked, with a Next button. */
+function inGuideHTML(n){
+  const items = STAGES.map(s => n === s.n
+    ? `<li aria-current="step"><span class="num" aria-hidden="true">${s.n}</span><b>${s.t}</b></li>`
+    : `<li><span class="num" aria-hidden="true">${s.n}</span>${PL(s.page, s.t)}</li>`).join('');
+  const next = STAGES.find(s => s.n === n + 1);
+  const prev = STAGES.find(s => s.n === n - 1);
+  const prevBtn = prev ? `<button type="button" class="btn btn-out" data-page="${prev.page}">${I.arrowLeft}Previous</button>`
+                       : `<button type="button" class="btn btn-out" disabled>${I.arrowLeft}Previous</button>`;
+  const nextBtn = next ? `<button type="button" class="btn" data-page="${next.page}">Next${I.arrowRight}</button>`
+                       : `<button type="button" class="btn" disabled>Next${I.arrowRight}</button>`;
+  return `<nav class="stepnav" aria-label="Stages in this guide">
+    <h2 class="guidetitle">${PL('', GUIDE)}</h2>
+    <ol>${items}</ol>
+    <div class="navbtns">${prevBtn}${nextBtn}</div></nav>`;
+}
+
+function renderLanding(){
+  const stages = `<ol class="steplist">${STAGES.map(s => `
+    <li class="step">
+      <span class="num" aria-hidden="true">${s.n}</span>
+      <div class="stepbody">
+        <h2>${PL(s.page, s.t)}</h2>
+        <p>${s.d}</p>
+      </div>
+    </li>`).join('')}</ol>`;
+  return `
+  <div class="pagehero">
+    <div class="container"><div class="col">
+      ${crumbsHTML(BASE_CRUMBS, GUIDE)}
+      <a class="backlink" href="${U.voc}">${I.chevLeft}Victims of crime</a>
+      <h1 tabindex="-1">${GUIDE}</h1>
+      <p class="lead">A guide to what may happen after you experience or witness a crime. Every experience is different. Support and information are available at every stage.</p>
+    </div></div>
+  </div>
+  <div class="container"><div class="col pagebody">
+    <div class="callout"><h2>Get immediate help</h2>
+      <p>Call Triple Zero (000) if you need urgent help, are threatened, or have just witnessed a serious accident or crime.</p></div>
+    ${stages}
+    ${managedHTML()}
+  </div></div>`;
+}
+
+function renderStage(s){
+  const d = PAGES[s.page];
+  const otp = `<nav class="onthispage" aria-labelledby="otp-${s.page}"><h2 id="otp-${s.page}">On this page</h2><ul>${
+    d.otp.map(o => `<li><a href="#${o.id}" data-jump="${o.id}">${o.t}</a></li>`).join('')}</ul></nav>`;
+  const secs = d.sections.map(x => `<h2 class="sec" id="${x.id}">${x.h}</h2>${x.html}`).join('');
+  return `<div class="container"><div class="col">
+    ${crumbsHTML([...BASE_CRUMBS, {x:GUIDE, page:''}], s.t)}
+    <a class="backlink" href="#/" data-page="">${I.chevLeft}${GUIDE}</a>
+    <div><span class="tag">Guidance</span></div>
+    <h1 tabindex="-1">${s.t}</h1>
+    <p class="partof">Part of ${PL('', GUIDE)}</p>
+    <p class="stepof">Stage ${s.n} of ${STAGES.length}</p>
+    <p class="lead">${d.lead || s.d}</p>
+    <hr class="rule">
+    ${otp}
+    <div class="inshort"><h2>In short</h2>${d.inshort}</div>
+    <div class="content">${secs}</div>
+    ${inGuideHTML(s.n)}
+    ${interestedHTML(d.interested)}
+    ${managedHTML()}
+  </div></div>`;
+}
+
+/* A page that lives elsewhere in the IA, exactly as published, with the guide navigation added. */
+function renderImported(s){
+  const p = IMPORTED[s.page];
+  const groups = p.groups.map(g => `<section class="svcgroup"><h2>${g.h}</h2><p>${g.d}</p>
+    <ul class="svclist">${g.items.map(i => `<li><a href="${i.href}"><span>${i.x}</span>${I.arrowRight}</a></li>`).join('')}</ul></section>`).join('');
+  return `<div class="hero"><div class="container"><div class="col">
+    ${crumbsHTML(p.crumbs.slice(0,-1), p.crumbs[p.crumbs.length-1].x)}
+    <h1 tabindex="-1">${p.title}</h1>
+    <p class="lead">${p.lead}</p>
+  </div></div></div>
+  <div class="container"><div class="col topicbody">
+    ${groups}
+    ${p.helpbox ? helpboxHTML(p.helpbox) : ''}
+    ${inGuideHTML(s.n)}
+    ${interestedHTML(p.interested)}
+    ${managedHTML()}
+  </div></div>`;
+}
+
+/* ---------- Pages rebuilt from qld.gov.au, with the guide navigation added ---------- */
+const GUIDES = {};
+
+GUIDES['guide-applying'] = {
+  title:'Guide for victims applying for financial assistance',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Victims of crime', href:U.voc}, {x:'Financial assistance for victims', href:U.financial},
+          {x:'Guide for victims applying for financial assistance'}],
+  partOf:{x:'Financial assistance for victims', href:U.financial},
+  lead:'Understand what criteria victims must meet to apply for financial assistance as a victim of violent crime in Queensland.',
+  otp:[{t:'What you should know', id:'what-you-should-know'},
+       {t:'Types of victims', id:'types-of-victims'},
+       {t:'Reporting requirements', id:'reporting-requirements'},
+       {t:'Time limit requirements', id:'time-limit-requirements'},
+       {t:'Types of injuries', id:'types-of-injuries'},
+       {t:'Types of payments', id:'types-of-payments'},
+       {t:'Offender debt recovery scheme', id:'offender-debt-recovery-scheme'},
+       {t:'Watch Victim Assist video resources', id:'watch-victim-assist-video-resources'}],
+  sections:[
+    {id:'what-you-should-know', h:'What you should know', html:`
+      <p>When you or someone on your behalf makes an application for financial assistance as a victim of crime, you will be assessed to establish your eligibility under the Victims of Crime Assistance Act 2009.</p>`},
+    {id:'types-of-victims', h:'Types of victims', html:`
+      <ul class="jumps"><li><a href="#primary" data-jump="primary">Primary victims</a></li>
+        <li><a href="#special" data-jump="special">Special primary victims</a></li>
+        <li><a href="#related" data-jump="related">Related victims</a></li>
+        <li><a href="#parent" data-jump="parent">Parent secondary victims</a></li>
+        <li><a href="#witness" data-jump="witness">Witnesses</a></li></ul>
+      <h3 id="primary">Primary victims</h3>
+      <p>A primary victim is a person who was directly injured by an act of violence in Queensland.</p>
+      <h3 id="special">Special primary victims</h3>
+      <p>A special primary victim is a person who:</p>
+      <ul><li>was a child when the violence happened</li>
+        <li>has impaired capacity</li>
+        <li>was threatened or intimidated by the offender or someone else.</li></ul>
+      <p>Victims of the following offences are also special primary victims:</p>
+      <ul><li>sexual offences</li>
+        <li>offences committed by a person in a position of power, influence, or trust</li>
+        <li>domestic violence that happened after 1 July 2017.</li></ul>
+      <p>Before applying for financial assistance, a special primary victim must report the act of violence to:</p>
+      <ul><li>a doctor, counsellor, psychologist, psychiatrist or domestic violence service, or</li>
+        <li>police.</li></ul>
+      <h3 id="related">Related victims</h3>
+      <p>A related victim is the close family member of a person who dies due to an act of violence. A close family member is defined as:</p>
+      <ul><li>a deceased person&rsquo;s partner, parents, children, siblings and financial dependents</li>
+        <li>this includes by law, Aboriginal or Torres Strait Islander custom.</li></ul>
+      <h3 id="parent">Parent secondary victims</h3>
+      <p>A parent secondary victim is a parent who was injured by learning about an act of violence that was committed against their child (who was under 18).</p>
+      <p>A parent can be:</p>
+      <ul><li>birth parent</li><li>adopted parent</li><li>step-parent</li>
+        <li>approved carer (other than a temporary carer)</li>
+        <li>a person who is the parent under Aboriginal or Torres Strait Islander custom</li>
+        <li>a person who has a parenting order under the Family Law Act 1975 (Cwlth)</li>
+        <li>a person who otherwise has the right and responsibility to make decisions about the child&rsquo;s daily care.</li></ul>
+      <p>A parent does not include:</p>
+      <ul><li>a person standing in the place of a parent of a child on a temporary basis, or a person granted a temporary order in relation to a child</li>
+        <li>the chief executive (child protection).</li></ul>
+      <h3 id="witness">Witnesses</h3>
+      <p>A witness is a person who was injured by seeing or hearing acts of violence being committed against someone else.</p>`},
+    {id:'reporting-requirements', h:'Reporting requirements', html:`
+      <ul class="jumps"><li><a href="#all" data-jump="all">All victims</a></li>
+        <li><a href="#special-primary" data-jump="special-primary">Special primary victims</a></li>
+        <li><a href="#after-2009" data-jump="after-2009">Violence that happened after 2009</a></li>
+        <li><a href="#before-2009" data-jump="before-2009">Violence that happened before 2009</a></li></ul>
+      <p>We can give financial assistance to eligible victims of an act of violence, but the violence must be reported before you apply.</p>
+      <h3 id="all">All victims</h3>
+      <p>All victims&mdash;except special primary victims&mdash;must report the violence to police. You can report violence to the Queensland Police Service yourself or someone else may be able to report it for you.</p>
+      <h3 id="special-primary">Special primary victims</h3>
+      <p>Special primary victim can report the violence to:</p>
+      <ul><li>a doctor, counsellor, psychologist, psychiatrist or domestic violence service</li><li>police.</li></ul>
+      <h3 id="after-2009">Violence that happened after 2009</h3>
+      <p>For acts of violence that happened after 1 December 2009, the offender doesn&rsquo;t need to be convicted for you to be eligible for financial assistance.</p>
+      <h3 id="before-2009">Violence that happened before 2009</h3>
+      <p>For acts of violence that happened before 1 December 2009, a person is only eligible for financial assistance if:</p>
+      <ul><li>the offender was convicted or plead guilty in a District or Supreme Court</li>
+        <li>the police state that the offender could not be located</li>
+        <li>the offender went through the Mental Health Review Tribunal.</li></ul>`},
+    {id:'time-limit-requirements', h:'Time limit requirements', html:`
+      <p>You need to apply for financial assistance within 3 years of the act of violence or if you were under 18 when the violence happened, you have until you are 21.</p>
+      <p>Extra time can only be given in special circumstances. An extension of time may be considered if something directly affected your ability to apply within the required timeframe, such as:</p>
+      <ul><li>the physical or psychological effects of the violence</li>
+        <li>impaired capacity</li>
+        <li>your age at the time of the violence</li>
+        <li>the offender being in a position of power, influence or trust</li>
+        <li>other significant factors relevant to your situation</li></ul>
+      <p>If you apply outside the timeframe, you will need to:</p>
+      <ul><li>explain why you could not apply within time, and</li>
+        <li>provide supporting information to confirm this.
+          <ul><li>Supporting information from a doctor, psychologist, counsellor, or domestic and family violence support service that explains:
+            <ul><li>why you could not apply within time</li>
+              <li>how it prevented you from applying earlier.</li></ul></li></ul></li></ul>`},
+    {id:'types-of-injuries', h:'Types of injuries', html:`
+      <ul class="jumps"><li><a href="#physical" data-jump="physical">Physical injury</a></li>
+        <li><a href="#psychological" data-jump="psychological">Psychological injury</a></li>
+        <li><a href="#aggravation" data-jump="aggravation">Aggravation of pre-existing conditions</a></li>
+        <li><a href="#adverse" data-jump="adverse">Adverse impacts</a></li></ul>
+      <h3 id="physical">Physical injury</h3>
+      <p>An injury to your body directly caused by an act of violence.</p>
+      <p>Examples: Bruises, wounds, muscle or bone injuries, damage to teeth, brain injuries, damage to senses, pregnancy (resulting from rape), or a disease you contracted from the offender during the violence.</p>
+      <h3 id="psychological">Psychological injury</h3>
+      <p>A psychological injury, illness, disorder, or impairment that was directly cause by an act of violence.</p>
+      <p>Examples: depressive disorders, anxiety disorders, acute stress disorders, or post-traumatic stress disorders.</p>
+      <p>Limitations: Substance abuse resulting from violence is not usually considered.</p>
+      <h3 id="aggravation">Aggravation of pre-existing conditions</h3>
+      <p>A medical condition, psychological illness, or disability that was made worse by the act of violence.</p>
+      <p>The health practitioner that usually treats your pre-existing condition will need to complete a ${L('https://www.publications.qld.gov.au/dataset/d5e08dd6-4276-4dcd-8cf8-a3c88713bae1/resource/b68a85df-4677-4fad-97fd-d1ff243188e8','comprehensive clinical report')}. This report will tell us how your condition has changed and what (if any) additional treatment or medical support you need.</p>
+      <h3 id="adverse">Adverse impacts</h3>
+      <p>Adverse impacts are only considered if you have been a victim of a sexual offence that occurred after 19 December 1997 or a victim of domestic violence that occurred after 1 July 2017</p>
+      <p>Examples: A sense of violation, reduced self-worth or perception, lost or reduced physical immunity, lost or reduced physical capacity (including the capacity to have children), increased fear or insecurity, adverse reactions from others, a negative impact on sexual relationships or a negative impact on feelings.</p>`},
+    {id:'types-of-payments', h:'Types of payments', html:`
+      <p>Each type of victim is eligible for different types of payments. Victims under the age of 18 and victims who have an appointed trustee, payment will go to the Queensland Public Trustee.</p>
+      <h3>Primary Victims (including Special Primary Victims)</h3>
+      <p>Special Assistance Payment: This payment is between $3,000 and $15,000 depending on the type of violence.</p>
+      <p>Recovery expenses: All recovery expenses.</p>
+      <h3>Related Victims</h3>
+      <p>Distress payment: This payment is up to $15,000.</p>
+      <p>Dependency payment: This payment is up to $20,000 depending on the dependency of the victim.</p>
+      <p>Funeral payment: This payment is up to $15,000 for the funeral of the family member or an unborn child.</p>
+      <p>Recovery expenses: Counselling, medical, travel, report, other recovery expenses.</p>
+      <h3>Parent Secondary</h3>
+      <p>Recovery expenses: Counselling, medical, travel, report, other recovery expenses and loss of earnings.</p>
+      <h3>Witnesses</h3>
+      <h4>Less serious</h4>
+      <p>Recovery expenses: Only medical, counselling, reports and travelling to medical or counselling.</p>
+      <h4>More serious</h4>
+      <p>Recovery expenses: All witness less serious expenses and loss of earnings, reports and other recovery expenses.</p>`},
+    {id:'offender-debt-recovery-scheme', h:'Offender debt recovery scheme', html:`
+      <p>In some cases, Queensland law allows the government to recover a portion of the victim&rsquo;s payment from the offender.</p>
+      <p>This means we can ask the offender to pay the state back for part of the assistance granted to the victim if the offender is convicted of committing the violence against the victim.</p>
+      <p>The rules about what can be recovered are set out in the ${L('https://www.legislation.qld.gov.au/view/html/inforce/current/act-2009-035#ch.3-pt.16','Victims of Crime Assistance Act 2009')}.</p>
+      <h3>Safety issues</h3>
+      <p>We acknowledge that some victims may have safety concerns about the government recovering money from the offender. Your ongoing safety is our priority and there are steps we can take to protect you.</p>
+      <p>If this is a concern for you and you want to know more about our safety measures, email ${L('mailto:VictimAssist@justice.qld.gov.au?subject=Offender%20debt%20recovery%20concern','VictimAssist@justice.qld.gov.au')} and include:</p>
+      <ul><li>your application reference number</li>
+        <li>information about your safety concerns, such as
+          <ul><li>the offender knows where I live and I am afraid they will cause me further harm if this process occurs</li>
+            <li>the offender has committed domestic violence in the past and I am afraid they will cause further harm to me or others if this process occurs.</li></ul></li></ul>`},
+    {id:'watch-victim-assist-video-resources', h:'Watch Victim Assist video resources', html:`
+      <p>Watch Victim Assist Queensland's video guides on how to apply for financial assistance and the application process.</p>
+      <ul><li>${L('https://www.youtube.com/watch?v=c2VhzOi0m4g&t=2s','Applying for financial assistance')}</li>
+        <li>${L('https://youtu.be/0wGrZAA1uj4?si=AmjDpIXbNM28M4nD','Financial assistance application process')}</li>
+        <li>${L('https://youtu.be/v8oik6d4jiY?si=eKgCZHQhndPGLqD2','Supporting you')}</li></ul>`}
+  ],
+  interested:[{x:'Apply for financial assistance for victims', href:U.financial+'/apply'},
+              {x:'Resources for victims and service providers', href:'https://www.qld.gov.au/justice/for-organisations/victim-support-agencies/resources'}],
+  managed:{x:'Department of Youth Justice and Victim Support', href:'https://www.qld.gov.au/justice/help-centre/contact/youth-justice-and-victim-support'}
+};
+
+GUIDES['attend-court-hearing'] = {
+  title:'Guide to attending a court hearing',
+  crumbs:[{x:'Home', href:U.home}, {x:'Crime and justice', href:U.justice},
+          {x:'Court and mediation', href:U.courtmed}, {x:'Attending court', href:U.attending},
+          {x:'Guide to attending a court hearing'}],
+  partOf:{x:'Attending court', href:U.attending},
+  lead:'Understand the different types of courts in Queensland, and what to expect if you need to attend a court hearing.',
+  otp:[{t:'In short', id:'in-short'},
+       {t:'Courts in Queensland', id:'courts-in-queensland'},
+       {t:'Courtroom rules', id:'what-you-should-know'},
+       {t:'Going to court as a witness or victim', id:'going-to-court-as-a-witness-or-victim'},
+       {t:'Going to court as a defendant or litigant', id:'going-to-court-as-a-defendant-or-litigant'},
+       {t:'Going to court as a juror', id:'going-to-court-as-a-juror'},
+       {t:'Watching court from the public gallery', id:'watching-court-from-the-public-gallery'}],
+  sections:[
+    {id:'in-short', h:'In short', html:`
+      <p>There are 3 types of courts in Queensland that have rules you must follow.</p>
+      <p>This guide will help you understand what to expect if you need to attend a court hearing and what your responsibilities are, so you don&rsquo;t break the law.</p>`},
+    {id:'courts-in-queensland', h:'Courts in Queensland', html:`
+      <p>There are 3 levels of court in Queensland:</p>
+      <ul><li>Magistrates Court</li><li>District Court</li><li>Supreme Court.</li></ul>
+      <p>The type of court that a matter is heard in depends on the seriousness of the crime.</p>
+      <p>There are also special courts to meet the needs of specific categories of offenders&mdash;such as children. And courts to establish specific facts&mdash;such as the Coroners Court&mdash; which may investigate a death.</p>`},
+    {id:'what-you-should-know', h:'Courtroom rules', html:`
+      <p>There are certain rules you must follow when going to court.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/going-to-court/prepare-for-court/courtroom-conduct','courtroom rules')} on the Queensland Courts website.</p>`},
+    {id:'going-to-court-as-a-witness-or-victim', h:'Going to court as a witness or victim', html:`
+      <ul class="jumps"><li><a href="#receiving-a-summons-or-subpoena-notice" data-jump="receiving-a-summons-or-subpoena-notice">Receiving a summons or subpoena notice</a></li>
+        <li><a href="#called-to-give-evidence-witness-victim" data-jump="called-to-give-evidence-witness-victim">Called to give evidence</a></li></ul>
+      <p>You may be asked to attend court as a witness if you saw or heard something relevant to a case or were involved in the events in some way. The information you provide may help the court come to a fair decision. Victims of violent crime are very important witnesses.</p>
+      <p>You may also be asked to go to court as an expert witness&mdash;such as a doctor or engineer&mdash;to provide advice about the evidence presented.</p>
+      <p>You can be asked to appear as a witness for the prosecution or the defence. In either case you may be asked questions about what you know by both the defence and prosecution lawyers. This is to ensure the facts presented about the crime are correct.</p>
+      <p>If you have documents relevant to the case, you may be asked to bring these with you.</p>
+      <h3 id="receiving-a-summons-or-subpoena-notice">Receiving a summons or subpoena notice</h3>
+      <p>You may be legally ordered to go to court as a witness, particularly if you are a witness for the prosecution.</p>
+      <p>This is called a &lsquo;summons&rsquo; if you are needed as a witness in a Magistrates Court, or a &lsquo;subpoena&rsquo; if you are called as a witness in a District or Supreme Court.</p>
+      <p>If you receive a summonsed or subpoenaed notice it will tell you when you need to go to court. If you do not attend court you may be found guilty of contempt of court and a warrant may be issued for your arrest.</p>
+      <h3 id="called-to-give-evidence-witness-victim">Called to give evidence</h3>
+      <p>You will be called to give evidence by a court official, called a court services officer in a Magistrates Court or a bailiff in a District and Supreme Court. They will ask you to go into the witness box and take an oath or affirmation. It is a crime to lie in court.</p>
+      <p>The lawyers for the defence and prosecution will ask you questions about what you know. If you don't understand a question or you didn&rsquo;t hear it properly, you can ask to have the question repeated.</p>
+      <p>When you finish giving evidence you will be released from your oath, you can stand down and leave the witness box.</p>`},
+    {id:'going-to-court-as-a-defendant-or-litigant', h:'Going to court as a defendant or litigant', html:`
+      <ul class="jumps"><li><a href="#receiving-a-notice-to-appear" data-jump="receiving-a-notice-to-appear">Receiving a notice to appear</a></li>
+        <li><a href="#representing-yourself-in-court" data-jump="representing-yourself-in-court">Representing yourself in court</a></li>
+        <li><a href="#called-to-give-evidence-defendant-litigant" data-jump="called-to-give-evidence-defendant-litigant">Called to give evidence</a></li></ul>
+      <p>If you are charged with a criminal offence, you are known as the &lsquo;defendant&rsquo; or &lsquo;accused&rsquo;. In a civil matter you may be known as the &lsquo;litigant&rsquo;.</p>
+      <p>You are considered innocent until proven guilty beyond reasonable doubt.</p>
+      <h3 id="receiving-a-notice-to-appear">Receiving a notice to appear</h3>
+      <p>Your lawyer can tell you when to go to court or you may receive a notice or summons to appear which details what you are charged with, and when and where you need to go to court.</p>
+      <p>If you do not attend court you may be found guilty of contempt of court and a warrant may be issued for your arrest.</p>
+      <p>If you are in custody, you will be notified by corrective services officers or the police to appear in court.</p>
+      <h3 id="representing-yourself-in-court">Representing yourself in court</h3>
+      <p>You don&rsquo;t have to have a lawyer when you go to court&mdash;you can represent yourself in any of Queensland&rsquo;s courts.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/going-to-court/prepare-for-court/representing-yourself','representing yourself')} on the Queensland Courts website.</p>
+      <h3 id="called-to-give-evidence-defendant-litigant">Called to give evidence</h3>
+      <p>You do not have to give evidence in court, however it may help your case. Your lawyer is the best person to advise you whether to give evidence.</p>
+      <p>If you choose to give evidence, the prosecution lawyer and your own lawyer will ask you questions. It is a crime to lie in court.</p>`},
+    {id:'going-to-court-as-a-juror', h:'Going to court as a juror', html:`
+      <p>You may be asked to be on a jury at a court hearing.</p>
+      <p>In most cases, jurors appear in the Supreme and District courts. A jury is made up of 12 people from the community, chosen at random. Together members of the jury decide on the guilty or not guilty verdict.</p>
+      <p>Prospective jurors should discuss their juror notice and summons with their employer and keep them updated during their jury service. Employers need to be aware of their obligations to make their employees available for jury service.</p>
+      <p>See ${L('https://www.courts.qld.gov.au/jury-service','Jury service')} on the Queensland Courts website.</p>`},
+    {id:'watching-court-from-the-public-gallery', h:'Watching court from the public gallery', html:`
+      <p>The public and media can normally watch court matters from the public gallery at the back of the courtroom.</p>
+      <p>Family members of anyone involved in the case may also watch from the public gallery.</p>
+      <p>Witnesses can only watch a trial once they have given their evidence.</p>
+      <p>When you watch from the public gallery you are there as an observer&mdash;you should be quiet, watch and listen. You cannot take photos, record or transmit court proceedings in any way.</p>
+      <p>In special cases&mdash;for example, to protect a vulnerable witness&mdash;the judge may order a closed court, in which case you will not be allowed into the public gallery.</p>
+      <p>Cases heard in the Childrens Court (Magistrates Court) are held in a closed courtroom to protect the accused child&rsquo;s identity, although the child&rsquo;s immediate family are allowed in court to support them.</p>
+      <p>Cases heard in the Childrens Court of Queensland (District Court) and juvenile matters in the Supreme Court Trial Division and Court of Appeal are heard in open court, unless the presiding judge orders the court to be closed. No information identifying a juvenile defendant can be published in print or online media, or via social media.</p>`}
+  ],
+  interested:[{x:'Check upcoming court cases', href:U.attending+'/check-upcoming-cases'},
+              {x:'Support services for attending court', href:U.attending+'/support-services'}],
+  managed:{x:'Department of Justice', href:'https://www.qld.gov.au/justice/help-centre/contact/justice'}
+};
+
+/* A page that lives elsewhere in the IA, rebuilt as published, with the guide navigation added. */
+function renderGuide(s){
+  const p = GUIDES[s.page];
+  const otp = `<nav class="onthispage" aria-labelledby="otp-${s.page}"><h2 id="otp-${s.page}">On this page</h2><ul>${
+    p.otp.map(o => `<li><a href="#${o.id}" data-jump="${o.id}">${o.t}</a></li>`).join('')}</ul></nav>`;
+  const secs = p.sections.map(x => `<h2 class="sec" id="${x.id}">${x.h}</h2>${x.html}`).join('');
+  return `<div class="container"><div class="col">
+    ${crumbsHTML(p.crumbs.slice(0,-1), p.crumbs[p.crumbs.length-1].x)}
+    <a class="backlink" href="${p.partOf.href}">${I.chevLeft}${p.partOf.x}</a>
+    <div><span class="tag">Guidance</span></div>
+    <h1 tabindex="-1">${p.title}</h1>
+    <p class="partof">Part of the ${L(p.partOf.href, p.partOf.x)} topic and ${PL('', GUIDE)}</p>
+    <p class="lead">${p.lead}</p>
+    <hr class="rule">
+    ${otp}
+    <div class="content">${secs}</div>
+    ${inGuideHTML(s.n)}
+    <div class="interested" id="you-may-be-interested-in"><h2>You may be interested in</h2><ul>${
+      p.interested.map(i => `<li>${A(i)}</li>`).join('')}</ul></div>
+    <div class="pagefoot"><div><b>Managed by:</b> ${L(p.managed.href, p.managed.x)}</div><button type="button" class="top" data-top>Back to top ${I.arrowUp}</button></div>
+  </div></div>`;
+}
+
+/* ---------- Build ---------- */
+const mainEl = document.getElementById('main');
+const TITLES = {'': GUIDE};
+function addPage(slug, html, cls){
+  const m = document.createElement('main');
+  m.className = 'page' + (cls ? ' ' + cls : ''); m.dataset.slug = slug; m.hidden = true; m.innerHTML = html;
+  mainEl.appendChild(m);
+}
+addPage('', renderLanding());
+STAGES.forEach(s => {
+  addPage(s.page, s.guide ? renderGuide(s) : renderStage(s));
+  TITLES[s.page] = s.guide ? GUIDES[s.page].title : s.t;
+});
+document.querySelectorAll('[data-icon]').forEach(el => { el.outerHTML = I[el.dataset.icon]; });
+
+/* ---------- Routing ---------- */
+let current = null;
+function show(slug){
+  if (!(slug in TITLES)) slug = '';
+  document.querySelectorAll('main.page').forEach(m => m.hidden = (m.dataset.slug !== slug));
+  current = slug;
+  document.title = `${TITLES[slug]} | Queensland Government`;
+}
+const slugFromHash = () => (location.hash.startsWith('#/') ? decodeURIComponent(location.hash.slice(2)) : '');
+let histOK = true;
+try { history.scrollRestoration = 'manual'; if (!history.state || history.state.slug === undefined) history.replaceState({slug: slugFromHash(), y:0}, ''); } catch(e){ histOK = false; }
+function go(slug){
+  if (slug === current) { window.scrollTo(0,0); return; }
+  if (histOK){
+    try { history.replaceState({slug: current, y: window.scrollY}, '');
+          history.pushState({slug, y:0}, '', '#/' + slug); } catch(e){ histOK = false; }
+  }
+  show(slug); window.scrollTo(0,0);
+  const h1 = document.querySelector(`main.page[data-slug="${slug}"] h1`);
+  if (h1) h1.focus({preventScroll:true});
+}
+window.addEventListener('popstate', e => {
+  const st = e.state || {slug: slugFromHash(), y:0};
+  show(st.slug); requestAnimationFrame(() => window.scrollTo(0, st.y || 0));
+});
+show(slugFromHash());
+
+document.addEventListener('click', e => {
+  const a = e.target.closest('a,button');
+  if (!a) return;
+  if (a.matches('[data-noop]')) { e.preventDefault(); return; }
+  if (a.matches('a[data-page], button[data-page]')) { e.preventDefault(); go(a.dataset.page); return; }
+  if (a.matches('a[data-jump]')) {
+    e.preventDefault();
+    const t = document.querySelector(`main.page:not([hidden]) #${a.dataset.jump}`) || document.getElementById(a.dataset.jump);
+    if (t){ t.scrollIntoView({behavior:'smooth', block:'start'}); t.setAttribute('tabindex','-1'); t.focus({preventScroll:true}); }
+    return;
+  }
+  if (a.matches('[data-top]')) { window.scrollTo({top:0, behavior:'smooth'}); }
+});
+</script>
+</body>
+</html>
